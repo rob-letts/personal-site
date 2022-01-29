@@ -11,14 +11,12 @@ function toggleContent() {
 <template>
 	<nav>
 		<button @click="toggleContent">
-			<span v-if="preContent">&lt;-</span>
-			<span v-else>-></span>
+			<span v-if="preContent">before 2020</span>
+			<span v-else>from 2020</span>
 		</button>
 	</nav>
 
 	<section>
-		<h2 v-if="preContent">before 2020</h2>
-		<h2 v-else>from 2020</h2>
 		<ul>
 			<li v-if="preContent">
 				ran a music venue called
