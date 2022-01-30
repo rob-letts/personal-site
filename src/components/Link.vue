@@ -8,3 +8,11 @@ defineProps<{
 		<slot />
 	</a>
 </template>
+
+<style>
+a {
+	color: coral;
+	text-decoration: dashed;
+	font-weight: 500;
+}
+</style>

@@ -36,7 +36,7 @@ import Link from './Link.vue';
 ul {
 	display: flex;
 	justify-content: center;
-
+	padding-bottom: 1.5rem;
 	gap: 2rem;
 }
 
@@ -49,5 +49,10 @@ ul {
 img {
 	height: 2em;
 	width: 2em;
+	transition: transform 0.2s ease-out;
+}
+
+img:hover {
+	transform: scale(1.2);
 }
 </style>

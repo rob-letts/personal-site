@@ -15,12 +15,11 @@ header {
 }
 
 #name {
-	font-weight: 900px;
+	font-weight: 700;
 	background-image: linear-gradient(to right, coral, deepskyblue);
 	background-clip: text;
 	color: transparent;
 	position: relative;
-	cursor: pointer;
 }
 
 #name:after {
@@ -40,5 +39,15 @@ header {
 
 #name:hover:after {
 	transform: scaleX(1);
+}
+
+header {
+	text-align: center;
+}
+
+@media only screen and (min-width: 400px) {
+	header {
+		text-align: left;
+	}
 }
 </style>

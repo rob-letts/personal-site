@@ -3,20 +3,24 @@ import { ref } from 'vue';
 import Link from './Link.vue';
 
 let preContent = ref(true);
-function toggleContent() {
-	preContent.value = !preContent.value;
-}
 </script>
 
 <template>
 	<main>
 		<nav>
-			<button @click="toggleContent">
-				<span v-if="preContent">◀️</span>
-				<span v-else>➡️</span>
+			<button
+				@click="preContent = true"
+				:class="{ selected: preContent }"
+			>
+				before 2020...
+			</button>
+			<button
+				@click="preContent = false"
+				:class="{ selected: !preContent }"
+			>
+				since 2020
 			</button>
 		</nav>
-		<h2>{{ preContent ? 'before 2020' : 'since 2020' }}</h2>
 
 		<ul>
 			<template v-if="preContent">
@@ -27,6 +31,7 @@ function toggleContent() {
 					>
 					for 8 years.
 				</li>
+
 				<li>
 					made noisy metal music in
 					<Link
@@ -35,7 +40,10 @@ function toggleContent() {
 					>
 					for 6 years.
 				</li>
-				<li>got a BA in sound design and didn't use it. 👎</li>
+				<li>
+					got a BA in sound design and didn't use it.
+					<span id="thumb-down">👎</span>
+				</li>
 			</template>
 			<template v-else>
 				<li>
@@ -50,8 +58,7 @@ function toggleContent() {
 				</li>
 				<li>
 					became deeply fascinated with the
-					<strong>Vue.js</strong> ecosystem, the world of
-					<strong>CSS</strong>, and front-end architecture.
+					<strong>Vue.js</strong> and <strong>CSS</strong> ecosystems.
 				</li>
 			</template>
 		</ul>
@@ -59,9 +66,9 @@ function toggleContent() {
 </template>
 
 <style scoped>
-
 main {
 	margin-bottom: 5rem;
+	text-align: center;
 }
 
 h2 {
@@ -69,22 +76,52 @@ h2 {
 	margin-bottom: 0.5rem;
 }
 
-nav,
-section {
+nav {
+	display: flex;
+	gap: 1rem;
 	margin-bottom: 1.5rem;
+	justify-content: center;
 }
 
 button {
 	padding: 0.25rem 1rem;
+	background: white;
+	border: 1px solid black;
+	border-radius: 7px;
+	transition: background 0.25s ease-out;
+}
+
+button:hover {
+	transform: scale(1.025);
+}
+
+.selected {
+	color: white;
+	background: black;
 }
 
 strong {
 	font-weight: 700;
+	color: deepskyblue;
 }
 
 li {
 	margin-bottom: 1rem;
 	list-style-type: square;
 	list-style-position: inside;
+}
+
+#thumb-down {
+	font-size: 0.8em;
+}
+
+@media only screen and (min-width: 400px) {
+	nav {
+		justify-content: flex-start;
+	}
+
+	main {
+		text-align: left;
+	}
 }
 </style>
