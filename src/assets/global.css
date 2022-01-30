@@ -5,8 +5,8 @@
 	font-size: 12px;
 	--backgroundColor: rgba(0, 0, 0, 0.92);
 	--textColor: rgba(255, 192, 203, 1);
-	--primaryColor: rgb(197, 146, 199);
-	--secondaryColor: rgb(153, 39, 153);
+	--primaryColor: rgb(123, 84, 129);
+	--secondaryColor: rgb(140, 31, 98);
 	--brandGradient: linear-gradient(
 		to right,
 		var(--primaryColor),
@@ -33,7 +33,7 @@ body {
 body {
 	line-height: 1.5;
 	font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
-	padding: 3rem 2rem;
+	padding: 5rem 2rem 3rem;
 	margin: 0 auto;
 	font-family: 'Maven Pro', sans-serif;
 	color: var(--textColor);

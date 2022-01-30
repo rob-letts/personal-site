@@ -26,6 +26,10 @@
 </template>
 
 <style>
+h1 {
+	margin-bottom: 1.5rem;
+}
+
 header {
 	text-align: center;
 }
@@ -55,11 +59,5 @@ header {
 
 #name:hover:after {
 	transform: scaleX(1);
-}
-
-@media only screen and (min-width: 400px) {
-	header {
-		text-align: left;
-	}
 }
 </style>

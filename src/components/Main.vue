@@ -152,14 +152,4 @@ button:not(:disabled):hover:before {
 button:not(:disabled):active {
 	transform: scale(1.05);
 }
-
-@media only screen and (min-width: 400px) {
-	nav {
-		justify-content: flex-start;
-	}
-
-	main {
-		text-align: left;
-	}
-}
 </style>
