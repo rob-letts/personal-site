@@ -8,12 +8,8 @@ let preContent = ref(true);
 <template>
   <main>
     <nav>
-      <button @click="preContent = true" :class="{ selected: !preContent }">
-        before 2020...
-      </button>
-      <button @click="preContent = false" :class="{ selected: preContent }">
-        since 2020
-      </button>
+      <button @click="preContent = true" :disabled="preContent">before 2020</button>
+      <button @click="preContent = false" :disabled="!preContent">since 2020</button>
     </nav>
 
     <ul>
@@ -30,16 +26,27 @@ let preContent = ref(true);
           for 6 years.
         </li>
         <li>
-          got a BA in sound design and didn't use it.
-          <span id="thumb-down">👎</span>
+          got a BA in sound design and barely used it.
+          <span
+            ><img
+              class="emoji"
+              id="thumbs-down"
+              src="/public/logo-thumbs-down.png"
+              alt="a thumbs down emoji"
+          /></span>
         </li>
       </template>
       <template v-else>
         <li>
-          somehow got a distinction grade <strong>MSc</strong> in Computer Science. 🤯
+          somehow got a distinction grade <strong>MSc</strong> in Computer Science.
+          <img
+            class="emoji"
+            src="logo-explode.png"
+            alt="an person's exploding head emoji"
+          />
         </li>
         <li>
-          started working at
+          started as a junior front end dev at
           <Link href="https://www.redsnapper.net/">Red Snapper</Link>, primarily making
           static sites for the British Medical Journal.
         </li>
@@ -72,34 +79,42 @@ nav {
 
 button {
   padding: 0.25rem 1rem;
-  background: var(--textColor);
+  background: transparent;
+  width: clamp(150px, 200px, 25%);
+  color: var(--textColor);
   border: 1px solid var(--textColor);
+  cursor: pointer;
   border-radius: 7px;
   transition: background 0.25s ease-out;
 }
 
 strong {
   font-weight: 700;
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
 }
 
 li {
   margin-bottom: 1rem;
-  list-style-type: square;
+  list-style-type: '+';
   list-style-position: inside;
 }
 
-#thumb-down {
-  font-size: 0.8em;
+#thumbs-down {
+  vertical-align: bottom;
+  margin-left: 0.5rem;
 }
 
-.selected {
-  color: var(--textColor);
-  background: var(--backgroundColor);
+button:disabled {
+  color: var(--backgroundColor);
+  background: var(--textColor);
 }
 
-button:hover {
+button:not(:disabled):hover {
   transform: scale(1.025);
+}
+
+button:not(:disabled):active {
+  transform: scale(1.075);
 }
 
 @media only screen and (min-width: 400px) {

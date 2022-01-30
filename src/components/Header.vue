@@ -1,12 +1,14 @@
 <template>
   <header>
-    <h1>hi there 👋</h1>
+    <h1>hi there <img class="emoji" src="/logo-wave.png" alt="a waving hand emoji" /></h1>
     <p>
       i’m <span id="name" class="text-lg">Rob Letts</span> - a front-end web developer
       based in
       <span class="no-wrap">
         South London.
-        <span class="text-lg">☕️</span>
+        <span class="emoji"
+          ><img class="emoji" src="/logo-coffee.png" alt="a coffee cup emoji"
+        /></span>
       </span>
     </p>
   </header>
@@ -14,7 +16,6 @@
 
 <style>
 header {
-  margin-bottom: 2rem;
   text-align: center;
 }
 

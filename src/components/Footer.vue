@@ -57,7 +57,7 @@ ul {
 }
 
 svg {
-  fill: var(--primaryColor);
+  fill: var(--textColor);
   height: 2em;
   width: 2em;
   transition: transform 0.2s ease-out;

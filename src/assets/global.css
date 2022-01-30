@@ -3,10 +3,10 @@
 
 :root {
 	font-size: 12px;
-	--backgroundColor: black;
-	--textColor: pink;
-	--primaryColor: rgb(238, 151, 166);
-	--secondaryColor: rgb(201, 73, 201);
+	--backgroundColor: rgba(0, 0, 0, 0.92);
+	--textColor: rgba(255, 192, 203, 1);
+	--primaryColor: rgb(197, 146, 199);
+	--secondaryColor: rgb(153, 39, 153);
 }
 
 *,
@@ -90,8 +90,13 @@ select {
 	}
 }
 
-/* UTILITIES */
+.emoji {
+	height: 2.5rem;
+	width: 2.5rem;
+	display: inline-block;
+}
 
+/* UTILITIES */
 .text-lg {
 	font-size: 1.75em;
 }
