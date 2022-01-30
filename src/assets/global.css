@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+
+:root {
+	font-size: 12px;
+}
+
+.text-lg {
+	font-size: 1.75em;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	line-height: 1.5;
+	font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
+	padding: 3rem 2rem;
+	margin: 0 auto;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+picture,
+video,
+iframe,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+img {
+	object-fit: cover;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dl,
+dt,
+blockquote {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+@media (prefers-reduced-motion) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

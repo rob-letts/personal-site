@@ -6,16 +6,48 @@ import Link from './Link.vue';
 	<footer>
 		<ul>
 			<li>
-				<Link href="https://github.com/robertletts">github</Link>
+				<Link href="https://github.com/robertletts">
+					<img src="../../public/logo-github.svg" alt="github logo" />
+				</Link>
 			</li>
 			<li>
-				<Link href="https://www.linkedin.com/in/robertletts/"
-					>linkedin</Link
-				>
+				<Link href="https://www.linkedin.com/in/robertletts/">
+					<img
+						src="../../public/logo-linkedin.svg"
+						alt="linkedin logo"
+					/>
+				</Link>
 			</li>
 			<li>
-				<Link href="mailto:roblettsdev@gmail.com">email</Link>
+				<Link href="mailto:roblettsdev@gmail.com">
+					<img src="../../public/logo-mail.svg" alt="mail logo" />
+				</Link>
+			</li>
+			<li>
+				<Link href="../../public/RobLettsCV.pdf" download>
+					<img src="../../public/logo-cv.svg" alt="cv logo" />
+				</Link>
 			</li>
 		</ul>
 	</footer>
 </template>
+
+<style scoped>
+ul {
+	display: flex;
+	justify-content: center;
+
+	gap: 2rem;
+}
+
+@media only screen and (min-width: 400px) {
+	ul {
+		justify-content: flex-start;
+	}
+}
+
+img {
+	height: 2em;
+	width: 2em;
+}
+</style>

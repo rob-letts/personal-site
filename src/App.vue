@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import Bio from './components/Bio.vue';
-import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
 import Main from './components/Main.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
+	<Header />
 	<Main />
-	<Bio />
 	<Footer />
 </template>
 
 <style>
-@import './assets/reset.css';
 @import './assets/global.css';
+
+#app {
+	height: 100%;
+	display: grid;
+	grid-template-rows: minmax(150px, 15vh) auto 2em;
+}
 </style>
