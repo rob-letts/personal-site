@@ -11,8 +11,7 @@ defineProps<{
 
 <style>
 a {
-	color: coral;
-	text-decoration: dashed;
+	color: var(--primaryColor);
 	font-weight: 500;
 }
 </style>

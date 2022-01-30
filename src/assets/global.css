@@ -3,10 +3,10 @@
 
 :root {
 	font-size: 12px;
-}
-
-.text-lg {
-	font-size: 1.75em;
+	--backgroundColor: black;
+	--textColor: pink;
+	--primaryColor: rgb(238, 151, 166);
+	--secondaryColor: rgb(201, 73, 201);
 }
 
 *,
@@ -31,7 +31,8 @@ body {
 	padding: 3rem 2rem;
 	margin: 0 auto;
 	font-family: 'Maven Pro', sans-serif;
-	background: #f4f4f4;
+	color: var(--textColor);
+	background: var(--backgroundColor);
 }
 
 ul,
@@ -87,4 +88,14 @@ select {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+/* UTILITIES */
+
+.text-lg {
+	font-size: 1.75em;
+}
+
+.no-wrap {
+	white-space: nowrap;
 }

@@ -5,17 +5,17 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-	<Header />
-	<Main />
-	<Footer />
+  <Header />
+  <Main />
+  <Footer />
 </template>
 
 <style>
 @import './assets/global.css';
 
 #app {
-	height: 100%;
-	display: grid;
-	grid-template-rows: minmax(150px, 15vh) auto 2em;
+  display: grid;
+  height: 100%;
+  grid-template-rows: minmax(150px, 15vh) auto 2em;
 }
 </style>
