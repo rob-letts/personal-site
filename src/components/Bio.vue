@@ -18,36 +18,37 @@ function toggleContent() {
 
 	<section>
 		<ul>
-			<li v-if="preContent">
-				ran a music venue called
-				<Link href="https://www.youtube.com/watch?v=cwPCiHk081k"
-					>Corsica Studios</Link
-				>
-				for 8 years.
-			</li>
-			<li v-else>
-				somehow got a distinction grade MSc in Computer Science
-			</li>
-
-			<li v-if="preContent">
-				made noisy metal music in
-				<Link
-					href="https://disciplesofwren.bandcamp.com/album/groundswells"
-					>Wren</Link
-				>
-				for 6 years.
-			</li>
-			<li v-else>
-				started working at
-				<Link href="https://www.redsnapper.net/">Red Snapper</Link>
-				in Richmond, primarily making static sites for the British
-				Medical Journal
-			</li>
-			<li v-if="preContent">got a BA degree in sound design</li>
-			<li v-else>
-				became deeply fascinated with the vue ecosystem, the world of
-				CSS, and front-end architecture
-			</li>
+			<template v-if="preContent">
+				<li>
+					ran a music venue called
+					<Link href="https://www.youtube.com/watch?v=cwPCiHk081k"
+						>Corsica Studios</Link
+					>
+					for 8 years.
+				</li>
+				<li>
+					made noisy metal music in
+					<Link
+						href="https://disciplesofwren.bandcamp.com/album/groundswells"
+						>Wren</Link
+					>
+					for 6 years.
+				</li>
+				<li>got a BA degree in sound design</li>
+			</template>
+			<template v-else>
+				<li>somehow got a distinction grade MSc in Computer Science</li>
+				<li>
+					started working at
+					<Link href="https://www.redsnapper.net/">Red Snapper</Link>
+					in Richmond, primarily making static sites for the British
+					Medical Journal
+				</li>
+				<li>
+					became deeply fascinated with the vue ecosystem, the world
+					of CSS, and front-end architecture
+				</li>
+			</template>
 		</ul>
 	</section>
 </template>
