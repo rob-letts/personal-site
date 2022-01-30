@@ -43,7 +43,7 @@ function toggleContent() {
 						><img
 							class="emoji"
 							id="thumbs-down"
-							src="/public/logo-thumbs-down.png"
+							src="/logo-thumbs-down.png"
 							alt="a thumbs down emoji"
 					/></span>
 				</li>
@@ -93,17 +93,6 @@ nav {
 	justify-content: center;
 }
 
-button {
-	padding: 0.25rem 1rem;
-	background: transparent;
-	width: clamp(150px, 200px, 25%);
-	color: var(--textColor);
-	border: 1px solid var(--textColor);
-	cursor: pointer;
-	border-radius: 7px;
-	transition: background 0.25s ease-out;
-}
-
 strong {
 	font-weight: 700;
 	color: var(--primaryColor);
@@ -113,6 +102,19 @@ li {
 	margin-bottom: 1rem;
 	list-style-type: '+';
 	list-style-position: inside;
+}
+
+button {
+	padding: 0.25rem 1rem;
+	background: transparent;
+	width: clamp(150px, 200px, 25%);
+	color: var(--textColor);
+	border: 1px solid var(--textColor);
+	cursor: pointer;
+	border-radius: 7px;
+	transition: background 0.25s ease-out;
+	position: relative;
+	overflow: hidden;
 }
 
 #thumbs-down {
@@ -129,8 +131,26 @@ button:not(:disabled):hover {
 	transform: scale(1.025);
 }
 
+button:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: var(--brandGradient);
+	transform: translateY(-100%);
+	top: 0;
+	left: 0;
+	border-radius: 7px;
+	z-index: -1;
+	transition: all 0.2s ease-in;
+}
+
+button:not(:disabled):hover:before {
+	transform: translateY(0%);
+}
+
 button:not(:disabled):active {
-	transform: scale(1.075);
+	transform: scale(1.05);
 }
 
 @media only screen and (min-width: 400px) {
@@ -141,15 +161,5 @@ button:not(:disabled):active {
 	main {
 		text-align: left;
 	}
-}
-
-.v-enter-active,
-.v-leave-active {
-	transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-	opacity: 0;
 }
 </style>

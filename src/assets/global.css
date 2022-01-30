@@ -7,6 +7,11 @@
 	--textColor: rgba(255, 192, 203, 1);
 	--primaryColor: rgb(197, 146, 199);
 	--secondaryColor: rgb(153, 39, 153);
+	--brandGradient: linear-gradient(
+		to right,
+		var(--primaryColor),
+		var(--secondaryColor)
+	);
 }
 
 *,

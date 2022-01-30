@@ -32,11 +32,7 @@ header {
 
 #name {
 	font-weight: 700;
-	background-image: linear-gradient(
-		to right,
-		var(--primaryColor),
-		var(--secondaryColor)
-	);
+	background-image: var(--brandGradient);
 	background-clip: text;
 	color: transparent;
 	position: relative;
@@ -49,11 +45,7 @@ header {
 	left: 0px;
 	width: 100%;
 	border-style: solid;
-	border-image: linear-gradient(
-		to right,
-		var(--primaryColor),
-		var(--secondaryColor)
-	);
+	border-image: var(--brandGradient);
 	border-image-slice: 100%;
 	border-image-slice: 1;
 	transform: scaleX(0);
