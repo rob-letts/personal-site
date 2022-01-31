@@ -60,7 +60,7 @@ function toggleContent() {
 					/>
 				</li>
 				<li>
-					started as a junior front end dev at
+					started as a junior front-end dev at
 					<Link href="https://www.redsnapper.net/">Red Snapper</Link>,
 					implementing designs primarily for the British Medical
 					Journal.
