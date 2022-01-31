@@ -29,6 +29,7 @@ header {
 	font-size: 1.75em;
 	background-image: var(--brandGradient);
 	background-clip: text;
+	-webkit-background-clip: text;
 	color: transparent;
 	position: relative;
 }
