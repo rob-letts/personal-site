@@ -41,8 +41,7 @@ function toggleContent() {
 					got a BA in sound design and barely used it.
 					<span
 						><img
-							class="emoji"
-							id="thumbs-down"
+							class="emoji overhang"
 							src="/logo-thumbs-down.png"
 							alt="a thumbs down emoji"
 					/></span>
@@ -99,9 +98,10 @@ strong {
 }
 
 li {
-	margin-bottom: 1rem;
 	list-style-type: '+';
 	list-style-position: inside;
+	max-width: 60ch;
+	margin: 0 auto 0.5em;
 }
 
 button {
@@ -115,9 +115,9 @@ button {
 	transition: background 0.25s ease-out;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0 0 5px currentColor;
 }
-
-#thumbs-down {
+.overhang {
 	vertical-align: bottom;
 	margin-left: 0.5rem;
 }

@@ -16,6 +16,6 @@ import Footer from './components/Footer.vue';
 #app {
 	display: grid;
 	height: 100%;
-	grid-template-rows: minmax(160px, 20%) auto 2em;
+	grid-template-rows: auto 1fr auto;
 }
 </style>

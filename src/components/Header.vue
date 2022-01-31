@@ -2,24 +2,13 @@
 	<header>
 		<h1>
 			hi there
-			<span
-				><img
-					class="emoji"
-					src="/logo-wave.png"
-					alt="a waving hand emoji"
-			/></span>
+			<img class="emoji" src="/logo-wave.png" alt="a waving hand emoji" />
 		</h1>
 		<p>
-			i’m <span id="name" class="text-lg">Rob Letts</span> - a front-end
-			web developer based in
+			i’m <a class="name" href="https://github.com/robertletts">Rob Letts</a> - a front-end web developer based in
 			<span class="no-wrap">
 				South London.
-				<span
-					><img
-						class="emoji"
-						src="/logo-coffee.png"
-						alt="a coffee cup emoji"
-				/></span>
+				<img class="emoji" src="/logo-coffee.png" alt="a coffee cup emoji" />
 			</span>
 		</p>
 	</header>
@@ -27,22 +16,24 @@
 
 <style>
 h1 {
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 header {
 	text-align: center;
+	margin-bottom: 3.5rem;
 }
 
-#name {
+.name {
 	font-weight: 700;
+	font-size: 1.75em;
 	background-image: var(--brandGradient);
 	background-clip: text;
 	color: transparent;
 	position: relative;
 }
 
-#name:after {
+.name:after {
 	content: '';
 	position: absolute;
 	bottom: -0.5rem;
@@ -57,7 +48,7 @@ header {
 	transform-origin: bottom left;
 }
 
-#name:hover:after {
+.name:hover:after {
 	transform: scaleX(1);
 }
 </style>

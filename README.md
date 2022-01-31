@@ -1,5 +1,7 @@
 👋
-A simple 'contact me' SPA built primarily with Vue 3 and vanilla CSS.
-Responsive design built using no media-queries.
 
-Access site here.
+A super minimal 'contact me' SPA built primarily with Vue 3 and regular CSS.
+
+Responsive layout built using no media-queries and a fluid typography.
+
+Site available here: TBC.
