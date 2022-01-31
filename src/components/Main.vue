@@ -55,7 +55,7 @@ function toggleContent() {
 					Computer Science.
 					<img
 						class="emoji"
-						src="logo-explode.png"
+						src="/logo-explode.png"
 						alt="an person's exploding head emoji"
 					/>
 				</li>
