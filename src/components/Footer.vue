@@ -64,7 +64,7 @@ import Link from './Link.vue';
 ul {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 1.5rem;
+	padding-bottom: 3rem;
 	gap: 2rem;
 }
 
