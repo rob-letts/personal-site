@@ -42,7 +42,7 @@ import Link from './Link.vue';
 				</Link>
 			</li>
 			<li>
-				<Link href="../../public/RobLettsCV.pdf" download>
+				<Link href="/RobLettsCV.pdf" download>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 512 512"
