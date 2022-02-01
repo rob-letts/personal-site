@@ -60,7 +60,7 @@ import Link from './Link.vue';
 	</footer>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 ul {
 	display: flex;
 	justify-content: center;
@@ -73,9 +73,10 @@ svg {
 	height: 2em;
 	width: 2em;
 	transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
-svg:hover {
-	transform: scale(1.2);
-}
 </style>
