@@ -1,4 +1,4 @@
-👋 [roblettsdev.netlify.app](roblettsdev.netlify.app)
+👋 [roblettsdev.netlify.app]
 
 A super minimal 'contact me' SPA built primarily with Vue 3 and regular CSS.
 
