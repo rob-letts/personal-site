@@ -74,7 +74,7 @@ function toggleContent() {
 	</main>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 main {
 	margin-bottom: 5rem;
 	text-align: center;
@@ -116,40 +116,40 @@ button {
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 0 5px currentColor;
+
+	&:disabled {
+		color: var(--backgroundColor);
+		background: var(--textColor);
+	}
+
+	&:not(:disabled):hover {
+		transform: scale(1.025);
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: var(--brandGradient);
+		transform: translateY(-100%);
+		top: 0;
+		left: 0;
+		border-radius: 7px;
+		z-index: -1;
+		transition: all 0.2s ease-in;
+	}
+
+	&:not(:disabled):hover:before {
+		transform: translateY(0%);
+	}
+
+	&:not(:disabled):active {
+		transform: scale(1.05);
+	}
 }
 .overhang {
 	vertical-align: bottom;
 	margin-left: 0.5rem;
-}
-
-button:disabled {
-	color: var(--backgroundColor);
-	background: var(--textColor);
-}
-
-button:not(:disabled):hover {
-	transform: scale(1.025);
-}
-
-button:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: var(--brandGradient);
-	transform: translateY(-100%);
-	top: 0;
-	left: 0;
-	border-radius: 7px;
-	z-index: -1;
-	transition: all 0.2s ease-in;
-}
-
-button:not(:disabled):hover:before {
-	transform: translateY(0%);
-}
-
-button:not(:disabled):active {
-	transform: scale(1.05);
 }
 </style>
