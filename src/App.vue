@@ -1,21 +1,13 @@
 <script setup lang="ts">
-import Header from './components/Header.vue';
-import Main from './components/Main.vue';
-import Footer from './components/Footer.vue';
+import SiteHeader from "./components/SiteHeader.vue";
+import SiteFooter from "./components/SiteFooter.vue";
 </script>
 
 <template>
-	<Header />
-	<Main />
-	<Footer />
+	<SiteHeader />
+	<SiteFooter />
 </template>
 
 <style>
-@import './assets/global.css';
-
-#app {
-	display: grid;
-	height: 100%;
-	grid-template-rows: auto 1fr auto;
-}
+@import "./global.css";
 </style>
