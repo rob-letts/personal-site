@@ -10,9 +10,7 @@
 		"sourceMap": true,
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
-		"paths": {
-			"@/*": ["./src/*"]
-		},
+		"paths": {"@/*": ["./src/*"]},
 		"lib": ["esnext", "dom", "dom.iterable", "scripthost"],
 		"skipLibCheck": true
 	},
