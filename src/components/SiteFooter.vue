@@ -34,7 +34,9 @@ function copyToClipboard(value: string) {
 				</LinkWrapper>
 			</li>
 			<li>
-				<MailSVG role="button" @click="clickHandler"/>
+				<button @click="clickHandler">
+					<MailSVG />
+				</button>
 			</li>
 			<li>
 				<LinkWrapper href="/RobLettsCV.pdf" download>
@@ -55,11 +57,18 @@ function copyToClipboard(value: string) {
 	</footer>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 ul {
 	display: flex;
 	padding-bottom: 3rem;
 	gap: 2rem;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 svg {

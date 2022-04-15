@@ -5,9 +5,3 @@
 		/>
 	</svg>
 </template>
-
-<style scoped>
-	svg {
-		cursor: pointer;
-	}
-</style>

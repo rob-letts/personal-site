@@ -81,6 +81,10 @@ button,
 textarea,
 select {
 	font: inherit;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 @media (prefers-reduced-motion) {
@@ -107,4 +111,9 @@ select {
 	height: 1em;
 	width: 1em;
 	display: inline-block;
+}
+
+a {
+	color: var(--primaryColor);
+	font-weight: 700;
 }

@@ -4,13 +4,18 @@
 			hi there
 			<img class="emoji" src="/logo-wave.png" alt="a waving hand emoji" />
 		</h1>
+
 		<p>
 			i’m
 			<a class="name" href="https://github.com/robertletts">Rob Letts</a>
 			- a front-end web developer based in
 			<span class="no-wrap">
 				South London.
-				<img class="emoji" src="/logo-coffee.png" alt="a coffee cup emoji" />
+				<img
+					class="emoji"
+					src="/logo-coffee.png"
+					alt="a coffee cup emoji"
+				/>
 			</span>
 		</p>
 	</header>
@@ -45,11 +50,16 @@ header {
 		border-image-slice: 100%;
 		border-image-slice: 1;
 		transform: scaleX(0);
-		transition: transform 0.25s ease-out;
 		transform-origin: bottom left;
+		transition: transform 0.25s ease-out;
+		animation: underline 1s;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
 	}
+}
 
-	&:hover::after {
+@keyframes underline {
+	to {
 		transform: scaleX(1);
 	}
 }
