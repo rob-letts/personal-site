@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { MoonSVG, SunSVG } from "../svg";
 
-const lightTheme = ref(false);
-function clickHandler() {
-	lightTheme.value = !lightTheme.value;
+const darkThemeActive = ref<null | boolean>(null);
+onMounted(() => {
+	darkThemeActive.value = window?.matchMedia('(prefers-color-scheme: dark)').matches;
+})
+
+function toggleTheme() {
+	darkThemeActive.value = !darkThemeActive.value;
+	document.documentElement.classList.remove(darkThemeActive.value ? "lightTheme" : "darkTheme");
+	document.documentElement.classList.add(darkThemeActive.value ? "darkTheme" : "lightTheme");
 }
 </script>
 
 <template>
-	<button @click="clickHandler">
-		<SunSVG v-if="lightTheme" />
-		<MoonSVG v-else class="" />
+	<button @click="toggleTheme">
+		<MoonSVG v-if="darkThemeActive" />
+		<SunSVG v-else />
 	</button>
 </template>
 
