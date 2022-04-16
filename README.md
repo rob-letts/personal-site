@@ -14,3 +14,8 @@ IN PROGRESS:
 -   format/refactor
 -   tests
 -   redeploy
+-   footer svg sizes and alt text?
+-   focus on active styles
+-   prefers reduced motion
+-   hightlight colors
+-   noscript?

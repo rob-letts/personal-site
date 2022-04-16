@@ -5,11 +5,9 @@ import ThemeToggle from "./components/ThemeToggle.vue";
 </script>
 
 <template>
-	<div>
-		<ThemeToggle />
-		<SiteHeader />
-		<SiteFooter />
-	</div>
+	<ThemeToggle />
+	<SiteHeader />
+	<SiteFooter />
 </template>
 
 <style>
