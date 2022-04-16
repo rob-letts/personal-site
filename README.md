@@ -8,15 +8,15 @@ Light/Dark theme functionality.
 
 IN PROGRESS:
 
--   logical properties
--   types audit
--   a11y audit
 -   format/refactor [ThemeToggle.vue, global.css]
--   tests
--   redeploy
 -   footer svg sizes and alt text?
 -   focus on active styles
 -   prefers reduced motion
--   hightlight colors
 -   noscript?
 -   sort button active focus styles
+-   image filters
+-   logical properties
+-   types audit
+-   a11y audit
+-   tests
+-   redeploy
