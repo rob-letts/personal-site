@@ -65,10 +65,10 @@ ul {
 }
 
 button {
-	outline: none;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	outline: none;
 }
 
 svg {
@@ -76,6 +76,7 @@ svg {
 	height: 2em;
 	width: 2em;
 	transition: transform 0.2s ease-out;
+
 
 	&:hover {
 		transform: scale(1.2);
@@ -87,6 +88,7 @@ footer {
 }
 
 .toast {
+	color: var(--light);
 	position: fixed;
 	bottom: 1rem;
 	z-index: 1;

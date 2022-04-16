@@ -5,10 +5,11 @@
  */
 :root {
 	font-size: 12px;
-	--backgroundColor: orange;
-	--textColor: blue;
-	--primaryColor: black;
-	--secondaryColor: white;
+	--light: rgba(255, 192, 203, 1);
+	--backgroundColor: var(--light);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
 	--brandGradient: linear-gradient(
 		to right,
 		var(--primaryColor),
@@ -19,7 +20,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--backgroundColor: rgba(0, 0, 0, 0.92);
-	    --textColor: rgba(255, 192, 203, 1);
+	    --textColor: var(--light);
 	    --primaryColor: rgb(123, 84, 129);
 	    --secondaryColor: rgb(140, 31, 98);
 	}
@@ -33,10 +34,20 @@
 }
 
 :root.lightTheme {
-	--backgroundColor: orange;
-	--textColor: blue;
-	--primaryColor: black;
-	--secondaryColor: white;
+	--backgroundColor: rgba(255, 192, 203, 1);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
+}
+
+::selection {
+	background: var(--textColor);
+	color: var(--backgroundColor)
+}
+
+*:focus, li:focus-within {
+	outline: 2px solid var(--textColor);
+	border-radius: 3px;
 }
 
 body {
@@ -104,7 +115,7 @@ button,
 textarea,
 select {
 	font: inherit;
-	outline: none;
+	
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -126,6 +137,11 @@ select {
 	}
 }
 
+a {
+	color: var(--primaryColor);
+	font-weight: 700;
+}
+
 /* UTILITIES */
 .no-wrap {
 	white-space: nowrap;
@@ -135,9 +151,4 @@ select {
 	height: 1em;
 	width: 1em;
 	display: inline-block;
-}
-
-a {
-	color: var(--primaryColor);
-	font-weight: 700;
 }

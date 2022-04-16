@@ -4,11 +4,10 @@ import { MoonSVG, SunSVG } from "../svg";
 
 const darkThemeActive = ref<null | boolean>(null);
 onMounted(() => {
-	// Check local storage
 	const previousSetting = localStorage.getItem("darkThemeActive");
+	
 	if (previousSetting) {
 		darkThemeActive.value = JSON.parse(previousSetting);
-		document.documentElement.classList.remove(darkThemeActive.value ? "lightTheme" : "darkTheme");
 		document.documentElement.classList.add(darkThemeActive.value ? "darkTheme" : "lightTheme");
 	} else {
 		darkThemeActive.value = window?.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -17,14 +16,18 @@ onMounted(() => {
 
 function toggleTheme() {
 	darkThemeActive.value = !darkThemeActive.value;
-	document.documentElement.classList.remove(darkThemeActive.value ? "lightTheme" : "darkTheme");
-	document.documentElement.classList.add(darkThemeActive.value ? "darkTheme" : "lightTheme");
+}
+
+function saveThemePreference() {
+	toggleTheme();
 	localStorage.setItem("darkThemeActive", JSON.stringify(darkThemeActive.value));
+	document.documentElement.classList.remove(...document.documentElement.classList);
+	document.documentElement.classList.add(darkThemeActive.value ? "darkTheme" : "lightTheme");
 }
 </script>
 
 <template>
-	<button @click="toggleTheme">
+	<button @click="saveThemePreference">
 		<MoonSVG v-if="darkThemeActive" />
 		<SunSVG v-else />
 	</button>
