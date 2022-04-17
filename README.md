@@ -1,18 +1,15 @@
 👋 [Available here](https://roblettsdev.netlify.app/)
 
-A super minimal 'contact me' static site built with Nuxt, SCSS, TypeScript.
-
-Responsive layout built using no media-queries and fluid typography.
-Light/Dark theme functionality.
+A super minimal 'contact me' static site built with Nuxt, SCSS, and TypeScript.
 Testing with Vitest and Cypress.
 
-IN PROGRESS:
+Includes light/dark theme functionality and a responsive layout built using no media-queries and fluid typography.
 
--   focus inset debug
--   footer svg sizes and alt text?
+FEATURES IN PROGRESS:
+
 -   image filters on lighttheme
--   format/refactor [ThemeToggle.vue, global.css]
--   noscript?
+-   format/refactor [ThemeToggle.vue, global.scss]
+-   noscript =>
 -   logical properties
 -   prefers reduced motion
 -   types audit

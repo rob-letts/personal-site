@@ -2,7 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'LinkWrapper': typeof import("../components/LinkWrapper.vue")['default'],
-    'SiteFooter': typeof import("../components/SiteFooter.vue")['default'],
+    'MainContent': typeof import("../components/MainContent.vue")['default'],
     'SiteHeader': typeof import("../components/SiteHeader.vue")['default'],
     'ThemeToggle': typeof import("../components/ThemeToggle.vue")['default'],
     'SVGDocument': typeof import("../components/SVG/Document.vue")['default'],
@@ -18,7 +18,7 @@ declare module 'vue' {
     'ClientOnly': typeof import("../node_modules/nuxt3/dist/app/components/client-only")['default'],
     'NuxtLink': typeof import("../node_modules/nuxt3/dist/app/components/nuxt-link")['default']
     'LazyLinkWrapper': typeof import("../components/LinkWrapper.vue")['default'],
-    'LazySiteFooter': typeof import("../components/SiteFooter.vue")['default'],
+    'LazyMainContent': typeof import("../components/MainContent.vue")['default'],
     'LazySiteHeader': typeof import("../components/SiteHeader.vue")['default'],
     'LazyThemeToggle': typeof import("../components/ThemeToggle.vue")['default'],
     'LazySVGDocument': typeof import("../components/SVG/Document.vue")['default'],
@@ -36,7 +36,7 @@ declare module 'vue' {
   }
 }
 export const LinkWrapper: typeof import("../components/LinkWrapper.vue")['default']
-export const SiteFooter: typeof import("../components/SiteFooter.vue")['default']
+export const MainContent: typeof import("../components/MainContent.vue")['default']
 export const SiteHeader: typeof import("../components/SiteHeader.vue")['default']
 export const ThemeToggle: typeof import("../components/ThemeToggle.vue")['default']
 export const SVGDocument: typeof import("../components/SVG/Document.vue")['default']
@@ -52,7 +52,7 @@ export const NuxtErrorBoundary: typeof import("../node_modules/nuxt3/dist/app/co
 export const ClientOnly: typeof import("../node_modules/nuxt3/dist/app/components/client-only")['default']
 export const NuxtLink: typeof import("../node_modules/nuxt3/dist/app/components/nuxt-link")['default']
 export const LazyLinkWrapper: typeof import("../components/LinkWrapper.vue")['default']
-export const LazySiteFooter: typeof import("../components/SiteFooter.vue")['default']
+export const LazyMainContent: typeof import("../components/MainContent.vue")['default']
 export const LazySiteHeader: typeof import("../components/SiteHeader.vue")['default']
 export const LazyThemeToggle: typeof import("../components/ThemeToggle.vue")['default']
 export const LazySVGDocument: typeof import("../components/SVG/Document.vue")['default']

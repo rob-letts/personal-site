@@ -35,18 +35,8 @@ function saveThemePreference() {
 </script>
 
 <template>
-	<button @click="saveThemePreference">
+	<button @click="saveThemePreference" class="theme-btn">
 		<SVGMoon v-if="darkThemeActive" />
 		<SVGSun v-else />
 	</button>
 </template>
-
-<style scoped lang="scss">
-button {
-	width: 2rem;
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	fill: var(--textColor);
-}
-</style>

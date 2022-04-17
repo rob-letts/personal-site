@@ -7,28 +7,72 @@
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 	>
-		<title>letterboxd-decal-dots-pos-mono</title>
+		<title>The Letterboxd brand logo</title>
 		<defs>
-			<rect id="path-1" x="0" y="0" width="129.847328" height="141.443299"></rect>
-			<rect id="path-3" x="0" y="0" width="129.847328" height="141.443299"></rect>
+			<rect
+				id="path-1"
+				x="0"
+				y="0"
+				width="129.847328"
+				height="141.443299"
+			></rect>
+			<rect
+				id="path-3"
+				x="0"
+				y="0"
+				width="129.847328"
+				height="141.443299"
+			></rect>
 		</defs>
-		<g id="letterboxd-decal-dots-pos-mono" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			<circle id="Circle" class="background" cx="250" cy="250" r="250" ></circle>
+		<g
+			id="letterboxd-decal-dots-pos-mono"
+			stroke="none"
+			stroke-width="1"
+			fill="none"
+			fill-rule="evenodd"
+		>
+			<circle
+				id="Circle"
+				class="background"
+				cx="250"
+				cy="250"
+				r="250"
+			></circle>
 			<g id="Dots" transform="translate(61.000000, 180.000000)">
-				<ellipse id="Green" class="foreground" cx="189" cy="70" rx="70.0786517" ry="70"></ellipse>
+				<ellipse
+					id="Green"
+					class="foreground"
+					cx="189"
+					cy="70"
+					rx="70.0786517"
+					ry="70"
+				></ellipse>
 				<g id="Blue" transform="translate(248.152672, 0.000000)">
 					<mask id="mask-2" fill="white">
 						<use xlink:href="#path-1"></use>
 					</mask>
 					<g id="Mask"></g>
-					<ellipse class="foreground" mask="url(#mask-2)" cx="59.7686766" cy="70" rx="70.0786517" ry="70"></ellipse>
+					<ellipse
+						class="foreground"
+						mask="url(#mask-2)"
+						cx="59.7686766"
+						cy="70"
+						rx="70.0786517"
+						ry="70"
+					></ellipse>
 				</g>
 				<g id="Orange">
 					<mask id="mask-4" fill="white">
 						<use xlink:href="#path-3"></use>
 					</mask>
 					<g id="Mask"></g>
-					<ellipse class="foreground" mask="url(#mask-4)" cx="70.0786517" cy="70" rx="70.0786517" ry="70"
+					<ellipse
+						class="foreground"
+						mask="url(#mask-4)"
+						cx="70.0786517"
+						cy="70"
+						rx="70.0786517"
+						ry="70"
 					></ellipse>
 				</g>
 				<path
@@ -46,7 +90,7 @@
 	</svg>
 </template>
 
-<style> 
+<style>
 .background {
     fill: var(--textColor);
 }

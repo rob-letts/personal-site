@@ -10,7 +10,7 @@
 
 	<ThemeToggle />
 	<SiteHeader />
-	<SiteFooter />
+	<MainContent />
 </template>
 
 <style lang="scss">

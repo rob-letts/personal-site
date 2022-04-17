@@ -17,7 +17,7 @@ function copyToClipboard(value: string) {
 </script>
 
 <template>
-	<footer>
+	<main>
 		<ul>
 			<li>
 				<LinkWrapper href="https://github.com/robertletts">
@@ -52,7 +52,7 @@ function copyToClipboard(value: string) {
 				<p>roblettsdev@gmail.com copied to clipboard 👍</p>
 			</output>
 		</Transition>
-	</footer>
+	</main>
 </template>
 
 <style scoped lang="scss">
@@ -60,6 +60,10 @@ ul {
 	display: flex;
 	padding-bottom: 3rem;
 	gap: 2rem;
+}
+
+li {
+	height: fit-content;
 }
 
 button {
