@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap");
 
-/* DESIGN SYSTEM
- */
+/* DESIGN SYSTEM */
 :root {
 	font-size: 12px;
-	--light: rgba(255, 192, 203, 1);
+	--lightColor: rgba(255, 192, 203, 1);
+	--darkColor: rgba(0, 0, 0, 0.92);
+
 	--backgroundColor: var(--light);
-	--textColor: rgba(0, 0, 0, 0.92);
+	--textColor: var(--darkColor);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
 	--brandGradient: linear-gradient(
@@ -19,15 +20,15 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--backgroundColor: rgba(0, 0, 0, 0.92);
-	    --textColor: var(--light);
-	    --primaryColor: rgb(123, 84, 129);
-	    --secondaryColor: rgb(140, 31, 98);
+		--backgroundColor: var(--darkColor);
+		--textColor: var(--light);
+		--primaryColor: rgb(123, 84, 129);
+		--secondaryColor: rgb(140, 31, 98);
 	}
 }
 
 :root.darkTheme {
-	--backgroundColor: rgba(0, 0, 0, 0.92);
+	--backgroundColor: var(--darkColor);
 	--textColor: rgba(255, 192, 203, 1);
 	--primaryColor: rgb(123, 84, 129);
 	--secondaryColor: rgb(140, 31, 98);
@@ -35,17 +36,18 @@
 
 :root.lightTheme {
 	--backgroundColor: rgba(255, 192, 203, 1);
-	--textColor: rgba(0, 0, 0, 0.92);
+	--textColor: var(--darkColor);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
 }
 
 ::selection {
 	background: var(--textColor);
-	color: var(--backgroundColor)
+	color: var(--backgroundColor);
 }
 
-*:focus, li:focus-within {
+*:focus,
+li:focus-within {
 	outline: 2px solid var(--textColor);
 	border-radius: 3px;
 }
@@ -55,7 +57,7 @@ body {
 	font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
 	padding: 5rem 2rem 3rem;
 	margin: 0 auto;
-	font-family: 'Maven Pro', sans-serif;
+	font-family: "Maven Pro", sans-serif;
 	color: var(--textColor);
 	background: var(--backgroundColor);
 }
@@ -115,11 +117,10 @@ button,
 textarea,
 select {
 	font: inherit;
-	
+
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
-
 }
 
 @media (prefers-reduced-motion) {

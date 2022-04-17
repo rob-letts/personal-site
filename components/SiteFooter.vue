@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import LinkWrapper from "./LinkWrapper.vue";
-import { DocumentSVG, GitHubSVG, LinkedInSVG, LetterboxdSVG, MailSVG } from "../svg";
-
 const CONTACT_EMAIL = "roblettsdev@gmail.com";
 const showConfirmation = ref(false);
 
@@ -25,27 +21,29 @@ function copyToClipboard(value: string) {
 		<ul>
 			<li>
 				<LinkWrapper href="https://github.com/robertletts">
-					<GitHubSVG />
+					<SVGGitHub />
 				</LinkWrapper>
 			</li>
 			<li>
 				<LinkWrapper href="https://www.linkedin.com/in/robertletts/">
-					<LinkedInSVG />
+					<SVGLinkedIn />
 				</LinkWrapper>
 			</li>
 			<li>
 				<button @click="clickHandler">
-					<MailSVG />
+					<SVGMail />
 				</button>
 			</li>
 			<li>
 				<LinkWrapper href="/RobLettsCV.pdf" download>
-					<DocumentSVG />
+					<SVGDocument />
 				</LinkWrapper>
 			</li>
 			<li>
-				<LinkWrapper href="https://letterboxd.com/robletts/films/diary/">
-					<LetterboxdSVG />
+				<LinkWrapper
+					href="https://letterboxd.com/robletts/films/diary/"
+				>
+					<SVGLetterboxd />
 				</LinkWrapper>
 			</li>
 		</ul>
@@ -77,7 +75,6 @@ svg {
 	width: 2em;
 	transition: transform 0.2s ease-out;
 
-
 	&:hover {
 		transform: scale(1.2);
 	}
@@ -96,7 +93,7 @@ footer {
 	background: var(--secondaryColor);
 	padding: 0.5rem 1.5rem;
 	--delay: 1s;
-	animation: show .3s ease, hide .3s ease var(--delay);
+	animation: show 0.3s ease, hide 0.3s ease var(--delay);
 	animation-fill-mode: forwards;
 
 	p {
@@ -105,15 +102,15 @@ footer {
 }
 
 @keyframes show {
-  from {
-	  opacity: 0;
-	  transform: translateY(2rem);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
 }
 
 @keyframes hide {
-  to {
-	  opacity: 0;
-  }
+	to {
+		opacity: 0;
+	}
 }
 </style>
