@@ -1,26 +1,15 @@
 import 'file:///Users/robletts/Dev/projects/personal-site/node_modules/unenv/runtime/polyfill/fetch.node.mjs';
-import { Server } from 'http';
-import { tmpdir } from 'os';
-import { join } from 'path';
-import { mkdirSync } from 'fs';
-import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/std-env/dist/index.mjs';
-import { toEventHandler, defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler, eventHandler, useQuery } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/h3/dist/index.mjs';
+import { toEventHandler, defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/h3/dist/index.mjs';
 import { createFetch as createFetch$1, Headers } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/ohmyfetch/dist/node.mjs';
 import destr from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/destr/dist/index.mjs';
 import { createRouter as createRouter$1 } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/radix3/dist/index.mjs';
 import { createCall, createFetch } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/unenv/runtime/fetch/index.mjs';
 import { createHooks } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/hookable/dist/index.mjs';
-import { hash } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/ohash/dist/index.mjs';
-import { createStorage } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/unstorage/dist/index.mjs';
-import _unstorage_drivers_fs from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/unstorage/drivers/fs.mjs';
-import { withQuery, joinURL } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/ufo/dist/index.mjs';
-import { createRenderer } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/vue-bundle-renderer/dist/index.mjs';
-import devalue from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/@nuxt/devalue/dist/devalue.mjs';
 import { snakeCase } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/scule/dist/index.mjs';
 import { createDefu } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/defu/dist/defu.mjs';
-import htmlTemplate from '/Users/robletts/Dev/projects/personal-site/.nuxt/views/document.template.mjs';
-import { renderToString as renderToString$2 } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/vue/server-renderer/index.mjs';
+import { hash } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/ohash/dist/index.mjs';
+import { createStorage } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/unstorage/dist/index.mjs';
+import { withQuery } from 'file:///Users/robletts/Dev/projects/personal-site/node_modules/ufo/dist/index.mjs';
 
 const _runtimeConfig = {app:{baseURL:"\u002F",buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:""},nitro:{routes:{},envPrefix:"NUXT_"},public:{}};
 const ENV_PREFIX = "NITRO_";
@@ -68,24 +57,37 @@ function timingMiddleware(_req, res, next) {
   next();
 }
 
-const serverAssets = [{"baseName":"server","dir":"/Users/robletts/Dev/projects/personal-site/server/assets"}];
+const _assets = {
 
-const assets = createStorage();
+};
 
-for (const asset of serverAssets) {
-  assets.mount(asset.baseName, _unstorage_drivers_fs({ base: asset.dir }));
+function normalizeKey(key) {
+  return key.replace(/[/\\]/g, ":").replace(/^:|:$/g, "");
 }
+
+const assets = {
+  getKeys() {
+    return Promise.resolve(Object.keys(_assets))
+  },
+  hasItem (id) {
+    id = normalizeKey(id);
+    return Promise.resolve(id in _assets)
+  },
+  getItem (id) {
+    id = normalizeKey(id);
+    return Promise.resolve(_assets[id] ? _assets[id].import() : null)
+  },
+  getMeta (id) {
+    id = normalizeKey(id);
+    return Promise.resolve(_assets[id] ? _assets[id].meta : {})
+  }
+};
 
 const storage = createStorage({});
 
 const useStorage = () => storage;
 
 storage.mount('/assets', assets);
-
-storage.mount('root', _unstorage_drivers_fs({"driver":"fs","base":"/Users/robletts/Dev/projects/personal-site"}));
-storage.mount('src', _unstorage_drivers_fs({"driver":"fs","base":"/Users/robletts/Dev/projects/personal-site/server"}));
-storage.mount('build', _unstorage_drivers_fs({"driver":"fs","base":"/Users/robletts/Dev/projects/personal-site/.nuxt"}));
-storage.mount('cache', _unstorage_drivers_fs({"driver":"fs","base":"/Users/robletts/Dev/projects/personal-site/.nuxt/cache"}));
 
 const defaultCacheOptions = {
   name: "_",
@@ -276,7 +278,7 @@ const errorHandler = (async function errorhandler(_error, event) {
     statusCode,
     statusMessage,
     message,
-    description: statusCode !== 404 ? `<pre>${stack.map((i) => `<span class="stack${i.internal ? " internal" : ""}">${i.text}</span>`).join("\n")}</pre>` : ""
+    description: ""
   };
   event.res.statusCode = errorObject.statusCode;
   event.res.statusMessage = errorObject.statusMessage;
@@ -297,10 +299,9 @@ const errorHandler = (async function errorhandler(_error, event) {
   event.res.end(html);
 });
 
-const _09a47a = () => Promise.resolve().then(function () { return renderer$1; });
+const _09a47a = () => import('../renderer.mjs');
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _09a47a, lazy: true, method: undefined },
   { route: '/**', handler: _09a47a, lazy: true, method: undefined }
 ];
 
@@ -308,7 +309,7 @@ function createNitroApp() {
   const config = useRuntimeConfig();
   const hooks = createHooks();
   const h3App = createApp({
-    debug: destr(true),
+    debug: destr(false),
     onError: errorHandler
   });
   h3App.use(config.app.baseURL, timingMiddleware);
@@ -347,194 +348,6 @@ function createNitroApp() {
 }
 const nitroApp = createNitroApp();
 
-const server = new Server(nitroApp.h3App.nodeHandler);
-function getAddress() {
-  if (provider === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET) {
-    return "0";
-  }
-  const socketName = `worker-${process.pid}-${threadId}.sock`;
-  if (isWindows) {
-    return join("\\\\.\\pipe\\nitro", socketName);
-  } else {
-    const socketDir = join(tmpdir(), "nitro");
-    mkdirSync(socketDir, { recursive: true });
-    return join(socketDir, socketName);
-  }
-}
-const listenAddress = getAddress();
-server.listen(listenAddress, () => {
-  const _address = server.address();
-  parentPort.postMessage({
-    event: "listen",
-    address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
-  });
-});
-process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection] " + err));
-process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException] " + err));
+const localFetch = nitroApp.localFetch;
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
-const STATIC_ASSETS_BASE = process.env.NUXT_STATIC_BASE + "/" + process.env.NUXT_STATIC_VERSION;
-const NUXT_NO_SSR = process.env.NUXT_NO_SSR;
-const PAYLOAD_JS = "/payload.js";
-const getClientManifest = cachedImport(() => import('/Users/robletts/Dev/projects/personal-site/.nuxt/dist/server/client.manifest.mjs'));
-const getSSRApp = !process.env.NUXT_NO_SSR && cachedImport(() => import('/Users/robletts/Dev/projects/personal-site/.nuxt/dist/server/server.mjs'));
-const getSSRRenderer = cachedResult(async () => {
-  const clientManifest = await getClientManifest();
-  if (!clientManifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getSSRApp();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const { renderToString: renderToString2 } = await Promise.resolve().then(function () { return vue3; });
-  return createRenderer(createSSRApp, { clientManifest, renderToString: renderToString2, publicPath: buildAssetsURL() }).renderToString;
-});
-const getSPARenderer = cachedResult(async () => {
-  const clientManifest = await getClientManifest();
-  return (ssrContext) => {
-    const config = useRuntimeConfig();
-    ssrContext.nuxt = {
-      serverRendered: false,
-      config: {
-        public: config.public,
-        app: config.app
-      }
-    };
-    let entryFiles = Object.values(clientManifest).filter((fileValue) => fileValue.isEntry);
-    if ("all" in clientManifest && "initial" in clientManifest) {
-      entryFiles = clientManifest.initial.map((file) => ({ file }));
-    }
-    return {
-      html: '<div id="__nuxt"></div>',
-      renderResourceHints: () => "",
-      renderStyles: () => entryFiles.flatMap(({ css }) => css).filter((css) => css != null).map((file) => `<link rel="stylesheet" href="${buildAssetsURL(file)}">`).join(""),
-      renderScripts: () => entryFiles.map(({ file }) => {
-        const isMJS = !file.endsWith(".js");
-        return `<script ${isMJS ? 'type="module"' : ""} src="${buildAssetsURL(file)}"><\/script>`;
-      }).join("")
-    };
-  };
-});
-function renderToString$1(ssrContext) {
-  const getRenderer = NUXT_NO_SSR || ssrContext.noSSR ? getSPARenderer : getSSRRenderer;
-  return getRenderer().then((renderToString2) => renderToString2(ssrContext));
-}
-const renderer = eventHandler(async (event) => {
-  const ssrError = event.req.url?.startsWith("/__nuxt_error") ? useQuery(event) : null;
-  let url = ssrError?.url || event.req.url;
-  let isPayloadReq = false;
-  if (url.startsWith(STATIC_ASSETS_BASE) && url.endsWith(PAYLOAD_JS)) {
-    isPayloadReq = true;
-    url = url.slice(STATIC_ASSETS_BASE.length, url.length - PAYLOAD_JS.length) || "/";
-  }
-  const ssrContext = {
-    url,
-    event,
-    req: event.req,
-    res: event.res,
-    runtimeConfig: useRuntimeConfig(),
-    noSSR: event.req.headers["x-nuxt-no-ssr"],
-    error: ssrError,
-    redirected: void 0,
-    nuxt: void 0,
-    payload: void 0
-  };
-  const rendered = await renderToString$1(ssrContext).catch((e) => {
-    if (!ssrError) {
-      throw e;
-    }
-  });
-  if (!rendered) {
-    return;
-  }
-  if (ssrContext.redirected || event.res.writableEnded) {
-    return;
-  }
-  const error = ssrContext.error || ssrContext.nuxt?.error;
-  if (error && !ssrError) {
-    throw error;
-  }
-  if (ssrContext.nuxt?.hooks) {
-    await ssrContext.nuxt.hooks.callHook("app:rendered");
-  }
-  const payload = ssrContext.payload || ssrContext.nuxt;
-  if (process.env.NUXT_FULL_STATIC) {
-    payload.staticAssetsBase = STATIC_ASSETS_BASE;
-  }
-  let data;
-  if (isPayloadReq) {
-    data = renderPayload(payload, url);
-    event.res.setHeader("Content-Type", "text/javascript;charset=UTF-8");
-  } else {
-    data = await renderHTML(payload, rendered, ssrContext);
-    event.res.setHeader("Content-Type", "text/html;charset=UTF-8");
-  }
-  event.res.end(data, "utf-8");
-});
-async function renderHTML(payload, rendered, ssrContext) {
-  const state = `<script>window.__NUXT__=${devalue(payload)}<\/script>`;
-  const html = rendered.html;
-  if ("renderMeta" in ssrContext) {
-    rendered.meta = await ssrContext.renderMeta();
-  }
-  const {
-    htmlAttrs = "",
-    bodyAttrs = "",
-    headAttrs = "",
-    headTags = "",
-    bodyScriptsPrepend = "",
-    bodyScripts = ""
-  } = rendered.meta || {};
-  return htmlTemplate({
-    HTML_ATTRS: htmlAttrs,
-    HEAD_ATTRS: headAttrs,
-    HEAD: headTags + rendered.renderResourceHints() + rendered.renderStyles() + (ssrContext.styles || ""),
-    BODY_ATTRS: bodyAttrs,
-    BODY_PREPEND: ssrContext.teleports?.body || "",
-    APP: bodyScriptsPrepend + html + state + rendered.renderScripts() + bodyScripts
-  });
-}
-function renderPayload(payload, url) {
-  return `__NUXT_JSONP__("${url}", ${devalue(payload)})`;
-}
-function _interopDefault(e) {
-  return e && typeof e === "object" && "default" in e ? e.default : e;
-}
-function cachedImport(importer) {
-  return cachedResult(() => importer().then(_interopDefault));
-}
-function cachedResult(fn) {
-  let res = null;
-  return () => {
-    if (res === null) {
-      res = fn().catch((err) => {
-        res = null;
-        throw err;
-      });
-    }
-    return res;
-  };
-}
-
-const renderer$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': renderer
-});
-
-const renderToString = (...args) => {
-  return renderToString$2(...args).then((result) => `<div id="__nuxt">${result}</div>`);
-};
-
-const vue3 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  renderToString: renderToString
-});
-//# sourceMappingURL=index.mjs.map
+export { localFetch as l, useRuntimeConfig as u };
