@@ -43,13 +43,11 @@
 	color: var(--backgroundColor);
 }
 
-*:focus,
+*:focus-visible,
 li:focus-within {
 	outline: 2px solid var(--textColor);
 	border-radius: 3px;
 }
-
-
 
 body {
 	line-height: 1.75;
@@ -151,4 +149,8 @@ a {
 	height: 1em;
 	width: 1em;
 	display: inline-block;
+}
+
+.invert {
+	filter: invert(1);
 }
