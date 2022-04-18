@@ -85,5 +85,6 @@ declare global {
   const useCssVars: typeof import('vue')['useCssVars']
   const useSlots: typeof import('vue')['useSlots']
   const useTransitionState: typeof import('vue')['useTransitionState']
+  const useThemeStore: typeof import('../../composables/useThemeStore')['useThemeStore']
 }
 export {}

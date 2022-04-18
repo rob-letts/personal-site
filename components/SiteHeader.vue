@@ -1,8 +1,18 @@
+<script setup lang="ts">
+import { useThemeStore } from "../composables/useThemeStore";
+const themeStore = useThemeStore();
+</script>
+
 <template>
 	<header>
 		<h1>
 			hi there
-			<img class="emoji" src="/logo-wave.png" alt="a waving hand emoji" />
+			<img
+				:class="{ invert: !themeStore.darkTheme }"
+				class="emoji"
+				src="/logo-wave.png"
+				alt="a waving hand emoji"
+			/>
 		</h1>
 
 		<p>
@@ -13,6 +23,7 @@
 				South London.
 				<img
 					class="emoji"
+					:class="{ invert: !themeStore.darkTheme }"
 					src="/logo-coffee.png"
 					alt="a coffee cup emoji"
 				/>

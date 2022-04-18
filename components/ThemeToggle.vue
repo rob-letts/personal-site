@@ -1,42 +1,25 @@
 <script setup lang="ts">
-const darkThemeActive = ref<null | boolean>(null);
+import { useThemeStore } from "../composables/useThemeStore";
+const themeStore = useThemeStore();
+
 onMounted(() => {
-	const previousSetting = localStorage.getItem("darkThemeActive");
-
-	if (previousSetting) {
-		darkThemeActive.value = JSON.parse(previousSetting);
-		document.documentElement.classList.add(
-			darkThemeActive.value ? "darkTheme" : "lightTheme"
-		);
-	} else {
-		darkThemeActive.value = window?.matchMedia(
-			"(prefers-color-scheme: dark)"
-		).matches;
-	}
+	themeStore.initialiseTheme();
 });
-
-function toggleTheme() {
-	darkThemeActive.value = !darkThemeActive.value;
-}
-
-function saveThemePreference() {
-	toggleTheme();
-	localStorage.setItem(
-		"darkThemeActive",
-		JSON.stringify(darkThemeActive.value)
-	);
-	document.documentElement.classList.remove(
-		...document.documentElement.classList
-	);
-	document.documentElement.classList.add(
-		darkThemeActive.value ? "darkTheme" : "lightTheme"
-	);
-}
 </script>
 
 <template>
-	<button @click="saveThemePreference" class="theme-btn">
-		<SVGMoon v-if="darkThemeActive" />
+	<button @click="themeStore.setTheme">
+		<SVGMoon v-if="themeStore.darkTheme" />
 		<SVGSun v-else />
 	</button>
 </template>
+
+<style scoped>
+button {
+	width: 2rem;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	fill: var(--textColor);
+}
+</style>

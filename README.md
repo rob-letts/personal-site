@@ -5,14 +5,21 @@ Testing with Vitest and Cypress.
 
 Includes light/dark theme functionality and a responsive layout built using no media-queries and fluid typography.
 
-FEATURES IN PROGRESS:
+IN PROGRESS:
 
--   image filters on lighttheme
--   format/refactor [ThemeToggle.vue, global.scss]
--   noscript =>
--   logical properties
--   prefers reduced motion
--   types audit
--   a11y audit
+-   features
+    -   made with nuxt/netlify
+    -   CV click => show tech experience modal
+    -   uses page
+-   refactor
+    -   logical properties
+    -   global.scss
+-   audit
+    -   types
+    -   a11y
+    -   prefers reduced motion
+    -   noscript => static content only and disable buttons?
+    -   performance
 -   tests
--   redeploy
+    -   unit [Awaiting Nuxt Test Utils API to finalise]
+    -   e2e
