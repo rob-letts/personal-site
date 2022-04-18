@@ -1,9 +1,7 @@
 👋 [Available here](https://roblettsdev.netlify.app/)
 
-A super minimal 'contact me' static site built with Nuxt, SCSS, and TypeScript.
-Testing with Vitest and Cypress.
-
-Includes light/dark theme functionality and a responsive layout built using no media-queries and fluid typography.
+A super minimal 'contact me' static site built with Nuxt and Netlify.
+Includes light/dark theme functionality and a responsive layout with fluid typography.
 
 IN PROGRESS:
 

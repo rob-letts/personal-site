@@ -4,7 +4,8 @@
 		"dev": "nuxi dev",
 		"build": "nuxi generate",
 		"start": "node .output/server/index.mjs",
-		"test": "vitest"
+		"test:unit": "vitest",
+		"test:e2e": "npx cypress open"
 	},
 	"devDependencies": {
 		"@nuxt/test-utils-edge": "^3.0.0-27501460.04a72f8",
