@@ -20,7 +20,7 @@ function copyToClipboard(value: string) {
 	<main>
 		<ul>
 			<li>
-				<LinkWrapper href="https://github.com/robertletts">
+				<LinkWrapper href="https://github.com/rob-letts">
 					<SVGGitHub />
 				</LinkWrapper>
 			</li>

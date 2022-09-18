@@ -19,7 +19,7 @@ const themeStore = useThemeStore();
       i’m
       <a
         class="name"
-        href="https://github.com/robertletts"
+        href="https://github.com/rob-letts"
       >Rob Letts</a>
       - a front-end web developer based in
       <span class="no-wrap">
@@ -32,6 +32,7 @@ const themeStore = useThemeStore();
         />
       </span>
     </p>
+    <p>Specialist in Vue.js and CSS.</p>
   </header>
 </template>
 
@@ -42,6 +43,10 @@ h1 {
 
 header {
 	margin-bottom: 3.5rem;
+
+  & > p:not(:first-of-type) {
+    margin-top: 1em;
+  }
 }
 
 .name {
