@@ -3,3 +3,15 @@
 A super minimal 'contact me' static site built with Nuxt and SCSS. Deployed on Netlify.
 
 Includes light/dark theme functionality and a responsive layout with fluid typography.
+
+#### Roadmap
+
+- Convert from Nuxt 3 -> Vue 3 + Vite-SSG
+
+- Fix dimensions of SVGs
+
+- SVG Outlines Consistent
+
+- Subtle Animations
+
+- Convert SASS to PostCSS
