@@ -1,12 +1,10 @@
 👋 [Available here](https://roblettsdev.netlify.app/)
 
-A super minimal 'contact me' static site built with Nuxt and SCSS. Deployed on Netlify.
+A super minimal 'contact me' static site on Netlify built with Vite, TypeScript, and PostCSS.
 
 Includes light/dark theme functionality and a responsive layout with fluid typography.
 
 #### Roadmap
-
-- Convert from Nuxt 3
 
 - Update CV
 

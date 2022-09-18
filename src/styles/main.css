@@ -8,11 +8,7 @@
 	--textColor: rgba(0, 0, 0, 0.92);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
-	--brandGradient: linear-gradient(
-		to right,
-		var(--primaryColor),
-		var(--secondaryColor)
-	);
+	--brandGradient: linear-gradient(to right,var(--primaryColor),var(--secondaryColor));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -153,4 +149,16 @@ a {
 
 .invert {
 	filter: invert(1);
+}
+
+.display-none {
+  display: none;
+}
+
+.letterboxd-bg {
+  fill: var(--textColor);
+}
+
+.letterboxd-fg {
+  fill: var(--backgroundColor);
 }

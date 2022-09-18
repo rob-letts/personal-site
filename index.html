@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rob Letts Dev</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>" />
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+
+<body>
+  <button class="theme-btn">
+    <img src="/src/assets/sun.svg" alt="an icon of the sun">
+    <img src="/src/assets/moon.svg" alt="an icon of the moon">
+  </button>
+
+  <header>
+    <h1>
+      hi there
+      <img class="emoji" src="/src/assets/logo-wave.png" alt="a waving hand emoji" />
+    </h1>
+
+    <p>
+      i’m
+      <a class="name" href="https://github.com/rob-letts">Rob Letts</a>
+      - a front-end web developer based in
+      <span class="no-wrap">
+        South London.
+        <img class="emoji" src="/src/assets/logo-coffee.png" alt="a coffee cup emoji" />
+      </span>
+    </p>
+    <p>Specialist in Vue.js and CSS.</p>
+  </header>
+
+
+
+  <main>
+  <ul>
+    <li>
+      <a href="https://github.com/rob-letts">
+        <img src="/src/assets/github.svg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/robertletts/">
+        <img src="/src/assets/linkedin.svg" alt="">
+      </a>
+    </li>
+    <li>
+      <button @click="clickHandler">
+        <img src="/src/assets/mail.svg" alt="">
+      </button>
+    </li>
+    <li>
+      <a href="/RobLettsCV.pdf" download>
+        <img src="/src/assets/document.svg" alt="">
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://letterboxd.com/robletts/films/diary/"
+      >
+        <img src="/src/assets/letterboxd.svg" alt="">
+      </a>
+    </li>
+  </ul>
+</main>
+
+<!-- <Transition name="toast" @enter="toggleConfirmation">
+  <output v-show="showConfirmation" role="status" class="toast">
+    <p>roblettsdev@gmail.com copied to clipboard 👍</p>
+  </output>
+</Transition> -->
+
+
+
+
+  <script src="/src/scripts/main.ts"></script>
+</body>
+</html>
