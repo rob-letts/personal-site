@@ -151,14 +151,131 @@ a {
 	filter: invert(1);
 }
 
-.display-none {
-  display: none;
-}
-
 .letterboxd-bg {
   fill: var(--textColor);
 }
 
 .letterboxd-fg {
   fill: var(--backgroundColor);
+}
+
+.theme-btn {
+	width: 2rem;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	fill: var(--textColor);
+
+  & > img {
+    /* display: none; */
+  }
+}
+
+h1 {
+	margin-bottom: 1rem;
+}
+
+header {
+	margin-bottom: 3.5rem;
+
+  & > p:not(:first-of-type) {
+    margin-top: 1em;
+  }
+}
+
+.name {
+	font-weight: 700;
+	font-size: 1.75em;
+	background-image: var(--brandGradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0px;
+		width: 100%;
+		border-style: solid;
+		border-image: var(--brandGradient);
+		border-image-slice: 100%;
+		border-image-slice: 1;
+		transform: scaleX(0);
+		transform-origin: bottom left;
+		transition: transform 0.25s ease-out;
+		animation: underline 1s;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+}
+
+@keyframes underline {
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.icon-list {
+	display: flex;
+	padding-bottom: 3rem;
+	gap: 2rem;
+
+  & > * {
+    height: fit-content;
+  }
+}
+
+
+#contact-btn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+svg {
+	fill: var(--textColor);
+	height: 2em;
+	width: 2em;
+	transition: transform 0.2s ease-out;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+footer {
+	position: relative;
+}
+
+.toast {
+	color: var(--light);
+	position: fixed;
+	bottom: 1rem;
+	z-index: 1;
+	border-radius: 3px;
+	background: var(--secondaryColor);
+	padding: 0.5rem 1.5rem;
+	--delay: 1s;
+	animation: show 0.3s ease, hide 0.3s ease var(--delay);
+	animation-fill-mode: forwards;
+
+	& p {
+		font-size: 10px;
+	}
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+}
+
+@keyframes hide {
+	to {
+		opacity: 0;
+	}
 }

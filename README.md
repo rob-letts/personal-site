@@ -6,12 +6,14 @@ Includes light/dark theme functionality and a responsive layout with fluid typog
 
 #### Roadmap
 
-- Update CV
+- Add TypeScript functionality
 
 - Fix dimensions of SVGs
 
 - SVG Outlines Consistent
 
-- Subtle Animations
+- Update CV
 
-- Convert SASS to PostCSS
+- Add Subtle bubble Animations
+
+- Add Cascade layers and preset env features
