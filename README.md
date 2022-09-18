@@ -6,7 +6,9 @@ Includes light/dark theme functionality and a responsive layout with fluid typog
 
 #### Roadmap
 
-- Convert from Nuxt 3 -> Vue 3 + Vite-SSG
+- Convert from Nuxt 3
+
+- Update CV
 
 - Fix dimensions of SVGs
 
