@@ -80,7 +80,7 @@
         ".nuxt/*"
       ],
       "#nitro": [
-        "/Users/robletts/Dev/projects/personal-site/node_modules/nitropack/dist/runtime/index.mjs"
+        "/Users/rob/Dev/personal-site/node_modules/nitropack/dist/runtime/index.mjs"
       ]
     }
   },

@@ -4,32 +4,35 @@ const themeStore = useThemeStore();
 </script>
 
 <template>
-	<header>
-		<h1>
-			hi there
-			<img
-				:class="{ invert: !themeStore.darkTheme }"
-				class="emoji"
-				src="/logo-wave.png"
-				alt="a waving hand emoji"
-			/>
-		</h1>
+  <header>
+    <h1>
+      hi there
+      <img
+        :class="{ invert: !themeStore.darkTheme }"
+        class="emoji"
+        src="/logo-wave.png"
+        alt="a waving hand emoji"
+      />
+    </h1>
 
-		<p>
-			i’m
-			<a class="name" href="https://github.com/robertletts">Rob Letts</a>
-			- a front-end web developer based in
-			<span class="no-wrap">
-				South London.
-				<img
-					class="emoji"
-					:class="{ invert: !themeStore.darkTheme }"
-					src="/logo-coffee.png"
-					alt="a coffee cup emoji"
-				/>
-			</span>
-		</p>
-	</header>
+    <p>
+      i’m
+      <a
+        class="name"
+        href="https://github.com/robertletts"
+      >Rob Letts</a>
+      - a front-end web developer based in
+      <span class="no-wrap">
+        South London.
+        <img
+          class="emoji"
+          :class="{ invert: !themeStore.darkTheme }"
+          src="/logo-coffee.png"
+          alt="a coffee cup emoji"
+        />
+      </span>
+    </p>
+  </header>
 </template>
 
 <style lang="scss">

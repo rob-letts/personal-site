@@ -3,15 +3,15 @@ import { useThemeStore } from "../composables/useThemeStore";
 const themeStore = useThemeStore();
 
 onMounted(() => {
-	themeStore.initialiseTheme();
+  themeStore.initialiseTheme();
 });
 </script>
 
 <template>
-	<button @click="themeStore.setTheme">
-		<SVGMoon v-if="themeStore.darkTheme" />
-		<SVGSun v-else />
-	</button>
+  <button @click="themeStore.setTheme">
+    <SVGMoon v-if="themeStore.darkTheme" />
+    <SVGSun v-else />
+  </button>
 </template>
 
 <style scoped>
