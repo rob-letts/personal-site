@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useThemeStore } from "../composables/useThemeStore";
+import { useThemeStore } from "../public/useThemeStore";
 const themeStore = useThemeStore();
 
 onMounted(() => {
