@@ -1,12 +1,14 @@
 ---
+import coffeeLogo from '../assets/coffee-logo.png';
+import waveLogo from '../assets/wave-logo.png';
 import Layout from "../layouts/Layout.astro";
-import SunIcon from '@components/SunIcon.astro';
-import MoonIcon from '@components/MoonIcon.astro';
-import DocumentIcon from '@components/DocumentIcon.astro';
-import GitHubIcon from '@components/GitHubIcon.astro';
-import LetterboxdIcon from '@components/LetterboxdIcon.astro';
-import EmailIcon from '@components/EmailIcon.astro';
-import LinkedInIcon from '@components/LinkedInIcon.astro';
+import SunIcon from '../components/SunIcon.astro';
+import MoonIcon from '../components/MoonIcon.astro';
+import DocumentIcon from '../components/DocumentIcon.astro';
+import GitHubIcon from '../components/GitHubIcon.astro';
+import LetterboxdIcon from '../components/LetterboxdIcon.astro';
+import EmailIcon from '../components/EmailIcon.astro';
+import LinkedInIcon from '../components/LinkedInIcon.astro';
 ---
 <script>
   // CLIPBOARD LOGIC
@@ -81,7 +83,7 @@ new MutationObserver(mutationList => {
       hi there
       <img
         class="emoji"
-        src="/src/assets/logo-wave.png"
+        src={waveLogo}
         alt="a waving hand emoji"
         loading="lazy"
       />
@@ -94,7 +96,7 @@ new MutationObserver(mutationList => {
         South London.
         <img
           class="emoji"
-          src="/src/assets/logo-coffee.png"
+          src={coffeeLogo}
           alt="a coffee cup emoji"
           loading="lazy"
         />

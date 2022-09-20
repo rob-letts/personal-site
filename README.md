@@ -4,6 +4,8 @@ A super minimal 'contact me' static site on Netlify built with Astro, TypeScript
 
 ### Improvement Roadmap!
 
+- Streamline templating
+
 - Fix dimensions of SVGs
 
 - alt text not gigantic!
