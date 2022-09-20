@@ -1,8 +1,8 @@
 👋 [Available here](https://roblettsdev.netlify.app/)
 
-A super minimal 'contact me' static site on Netlify built with Vite, TypeScript, and PostCSS.
+A super minimal 'contact me' static site on Netlify built with Astro, TypeScript, and PostCSS.
 
-#### Roadmap
+### Improvement Roadmap!
 
 - Fix dimensions of SVGs
 
