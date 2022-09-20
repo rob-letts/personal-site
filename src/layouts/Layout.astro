@@ -1,0 +1,314 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="generator" content={Astro.generator} />
+    <title>Rob Letts Dev</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+
+/* THEME */
+:root {
+	font-size: 12px;
+	--backgroundColor: rgba(255, 192, 203, 1);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
+	--brandGradient: linear-gradient(to right,var(--primaryColor),var(--secondaryColor));
+  --lightColor: rgba(255, 192, 203, 1);
+}
+
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--backgroundColor: rgba(0, 0, 0, 0.92);
+		--textColor: rgba(255, 192, 203, 1);
+		--primaryColor: rgb(123, 84, 129);
+		--secondaryColor: rgb(140, 31, 98);
+	}
+}
+
+:root.dark-theme {
+	--backgroundColor: rgba(0, 0, 0, 0.92);
+	--textColor: rgba(255, 192, 203, 1);
+	--primaryColor: rgb(123, 84, 129);
+	--secondaryColor: rgb(140, 31, 98);
+}
+
+:root.light-theme {
+	--backgroundColor: rgba(255, 192, 203, 1);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
+}
+
+
+/* DEFAULT / RESET */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+  font-size: 12px;
+}
+
+::selection {
+	background: var(--textColor);
+	color: var(--backgroundColor);
+}
+
+*:focus-visible,
+li:focus-within {
+	outline: 2px solid var(--textColor);
+	border-radius: 3px;
+}
+
+body {
+	line-height: 1.75;
+	font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
+	padding: 5rem 2rem 3rem;
+	margin: 0 auto;
+	font-family: "Maven Pro", sans-serif;
+	color: var(--textColor);
+	background: var(--backgroundColor);
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+picture,
+video,
+iframe,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+img {
+	object-fit: cover;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dl,
+dt,
+blockquote {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+h1 {
+	margin-bottom: 1rem;
+}
+
+header {
+	margin-bottom: 3.5rem;
+
+  & > p:not(:first-of-type) {
+    margin-top: 1em;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+@media (prefers-reduced-motion) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+a {
+	color: var(--primaryColor);
+	font-weight: 700;
+}
+
+svg {
+	fill: var(--textColor);
+	height: 2em;
+	width: 2em;
+	transition: transform 0.2s ease-out;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+footer {
+	position: relative;
+}
+
+/* UTILITIES */
+.no-wrap {
+	white-space: nowrap;
+}
+
+.emoji {
+	height: 1em;
+	width: 1em;
+	display: inline-block;
+}
+
+.invert {
+	filter: invert(1);
+}
+
+.letterboxd-bg {
+  fill: var(--textColor);
+}
+
+.letterboxd-fg {
+  fill: var(--backgroundColor);
+}
+
+.theme-btn {
+	width: 2rem;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	fill: var(--textColor);
+}
+
+.name {
+	font-weight: 700;
+	font-size: 1.75em;
+	background-image: var(--brandGradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0px;
+		width: 100%;
+		border-style: solid;
+		border-image: var(--brandGradient);
+		border-image-slice: 100%;
+		border-image-slice: 1;
+		transform: scaleX(0);
+		transform-origin: bottom left;
+		transition: transform 0.25s ease-out;
+		animation: underline 1s;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+}
+
+.icon-list {
+	display: flex;
+	padding-bottom: 3rem;
+	gap: 2rem;
+
+  & > * {
+    height: fit-content;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.toast {
+  display: none;
+	color: var(--lightColor);
+	position: fixed;
+	bottom: 1rem;
+	z-index: 1;
+	border-radius: 3px;
+	background: var(--secondaryColor);
+	padding: 0.5rem 1.5rem;
+
+	& p {
+		font-size: 10px;
+	}
+}
+
+.pop-toast {
+  display: block;
+  --delay: 1s;
+	animation: show 0.5s ease, hide 0.3s ease var(--delay);
+	animation-fill-mode: forwards;
+}
+
+#contact-btn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+#light-theme-icon,
+#dark-theme-icon {
+  display: none;
+}
+
+/* ANIMATIONS */
+@keyframes show {
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+}
+
+@keyframes hide {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes underline {
+	to {
+		transform: scaleX(1);
+	}
+}
+</style>

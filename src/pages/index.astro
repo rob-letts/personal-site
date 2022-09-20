@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SunIcon from '@components/SunIcon.astro';
+import MoonIcon from '@components/MoonIcon.astro';
+import DocumentIcon from '@components/DocumentIcon.astro';
+import GitHubIcon from '@components/GitHubIcon.astro';
+import LetterboxdIcon from '@components/LetterboxdIcon.astro';
+import EmailIcon from '@components/EmailIcon.astro';
+import LinkedInIcon from '@components/LinkedInIcon.astro';
+---
+<script>
+  // CLIPBOARD LOGIC
+const CONTACT_EMAIL = `roblettsdev@gmail.com`;
+const toast = document.querySelector(`.toast`) as HTMLButtonElement;
+
+document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
+  copyTextToClipboard(CONTACT_EMAIL);
+
+  if (toast && !toast.classList.contains(`pop-toast`)) {
+    toast.classList.add(`pop-toast`);
+    setTimeout(() => toast.classList.remove(`pop-toast`), 1500);
+  }
+});
+
+function copyTextToClipboard (text: string) {
+  navigator.clipboard.writeText(text);
+}
+
+// COLOR THEME LOGIC
+let darkTheme: boolean | null = null;
+const themeBtn = document.querySelector(`.theme-btn`) as HTMLButtonElement;
+const lightThemeIcon = document.querySelector(`#light-theme-icon`) as SVGElement;
+const darkThemeIcon = document.querySelector(`#dark-theme-icon`) as SVGElement;
+
+document.addEventListener(`DOMContentLoaded`, () => loadPreviousTheme());
+themeBtn?.addEventListener(`click`, () => toggleTheme());
+
+function loadPreviousTheme () {
+  const previousSetting = localStorage.getItem(`darkThemeActive`);
+
+  if (previousSetting) {
+    darkTheme = JSON.parse(previousSetting);
+    document.documentElement.setAttribute(`class`, darkTheme ? `dark-theme` : `light-theme`);
+  } else {
+    darkTheme = window?.matchMedia(`(prefers-color-scheme: dark)`).matches;
+  }
+
+  setTheme();
+}
+
+function toggleTheme () {
+  darkTheme = !darkTheme;
+  localStorage.setItem(`darkThemeActive`, JSON.stringify(darkTheme));
+  document.documentElement.setAttribute(`class`, darkTheme ? `dark-theme` : `light-theme`);
+  setTheme();
+}
+
+function setTheme () {
+  darkThemeIcon.style.display = darkTheme ? `block` : `none`;
+  lightThemeIcon.style.display = darkTheme ? `none` : `block`;
+}
+
+new MutationObserver(mutationList => {
+  const target = mutationList.at(0)?.target as HTMLHtmlElement;
+  const isDarkTheme = target.classList.contains(`dark-theme`);
+
+  document.querySelectorAll(`.emoji`).forEach(item => {
+    isDarkTheme ? item.classList.remove(`invert`) : item.classList.add(`invert`);
+  });
+}).observe(document.documentElement, { attributes: true });
+</script>
+
+<Layout>
+  <button class="theme-btn">
+    <SunIcon />
+    <MoonIcon />
+  </button>
+
+  <header>
+    <h1>
+      hi there
+      <img
+        class="emoji"
+        src="/src/assets/logo-wave.png"
+        alt="a waving hand emoji"
+        loading="lazy"
+      />
+    </h1>
+
+    <p>
+      i’m <a class="name" href="https://github.com/rob-letts">Rob Letts</a>
+      - a front-end web developer based in
+      <span class="no-wrap">
+        South London.
+        <img
+          class="emoji"
+          src="/src/assets/logo-coffee.png"
+          alt="a coffee cup emoji"
+          loading="lazy"
+        />
+      </span>
+    </p>
+    <p>Specialist in Vue.js and CSS.</p>
+  </header>
+
+  <main>
+    <ul class="icon-list">
+    <li><a href="https://github.com/rob-letts"><GitHubIcon /></a></li>
+    <li><a href="https://www.linkedin.com/in/robertletts/"><LinkedInIcon /></a></li>
+    <li>
+      <button id="contact-btn">
+        <EmailIcon />
+      </button>
+    </li>
+    <li><a href="/RobLettsCV.pdf" download><DocumentIcon /></a></li>
+    <li><a href="https://letterboxd.com/robletts/films/diary/"><LetterboxdIcon /></a></li>
+    </ul>
+  </main>
+
+  <output role="status" class="toast display-none">
+    <p>roblettsdev@gmail.com copied to clipboard 👍</p>
+  </output>
+</Layout>
