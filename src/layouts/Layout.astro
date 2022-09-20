@@ -1,6 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
-@import '@/styles/theme.css';
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="generator" content={Astro.generator} />
+    <title>Rob Letts Dev</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
 
+<style is:global>
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
+
+/* THEME */
+:root {
+	font-size: 12px;
+	--backgroundColor: rgba(255, 192, 203, 1);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
+	--brandGradient: linear-gradient(to right,var(--primaryColor),var(--secondaryColor));
+  --lightColor: rgba(255, 192, 203, 1);
+}
+
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--backgroundColor: rgba(0, 0, 0, 0.92);
+		--textColor: rgba(255, 192, 203, 1);
+		--primaryColor: rgb(123, 84, 129);
+		--secondaryColor: rgb(140, 31, 98);
+	}
+}
+
+:root.dark-theme {
+	--backgroundColor: rgba(0, 0, 0, 0.92);
+	--textColor: rgba(255, 192, 203, 1);
+	--primaryColor: rgb(123, 84, 129);
+	--secondaryColor: rgb(140, 31, 98);
+}
+
+:root.light-theme {
+	--backgroundColor: rgba(255, 192, 203, 1);
+	--textColor: rgba(0, 0, 0, 0.92);
+	--primaryColor: rgb(140, 31, 98);
+	--secondaryColor: rgb(123, 84, 129);
+}
+
+
+/* DEFAULT / RESET */
 *,
 *::before,
 *::after {
@@ -132,6 +185,7 @@ footer {
 	position: relative;
 }
 
+/* UTILITIES */
 .no-wrap {
 	white-space: nowrap;
 }
@@ -238,6 +292,7 @@ footer {
   display: none;
 }
 
+/* ANIMATIONS */
 @keyframes show {
 	from {
 		opacity: 0;
@@ -256,3 +311,4 @@ footer {
 		transform: scaleX(1);
 	}
 }
+</style>
