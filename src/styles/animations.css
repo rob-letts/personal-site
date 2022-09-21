@@ -1,0 +1,18 @@
+@keyframes show {
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+}
+
+@keyframes hide {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes underline {
+	to {
+		transform: scaleX(1);
+	}
+}

@@ -2,137 +2,41 @@
 import coffeeLogo from "../assets/coffee-logo.png";
 import waveLogo from "../assets/wave-logo.png";
 import Layout from "../layouts/Layout.astro";
-import SunIcon from "../components/SunIcon.astro";
-import MoonIcon from "../components/MoonIcon.astro";
-import DocumentIcon from "../components/DocumentIcon.astro";
-import GitHubIcon from "../components/GitHubIcon.astro";
-import LetterboxdIcon from "../components/LetterboxdIcon.astro";
-import EmailIcon from "../components/EmailIcon.astro";
-import LinkedInIcon from "../components/LinkedInIcon.astro";
+import DocumentIcon from "../components/icons/DocumentIcon.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import LetterboxdIcon from "../components/icons/LetterboxdIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import ContactButton from "../components/ContactButton.vue";
+import ThemeButton from "../components/ThemeButton.vue";
 
-type Resource = { element: `button` | `a`, icon: typeof DocumentIcon }
-export type ButtonResource = Resource & { element: `button`, id: string }
-export type LinkResource = Resource & { element: `a`, href: string, download?: boolean };
+type ButtonResource = { element: `button`, Icon: typeof DocumentIcon }
+type LinkResource = { element: `a`, href: string, download?: boolean, Icon: typeof DocumentIcon };
 
 const resources: (ButtonResource | LinkResource)[] = [
-  { element: `button`, id: `contact-btn`, icon: EmailIcon },
-  { element: `a`, href: `https://www.linkedin.com/in/robertletts/`, icon: LinkedInIcon },
-  { element: `a`, href: `https://github.com/rob-letts`, icon: GitHubIcon },
-  { element: `a`, href: `https://letterboxd.com/robletts/films/diary/`, icon: LetterboxdIcon },
-  { element: `a`, href: `/RobLettsCV.pdf`, download: true, icon: DocumentIcon },
+  { element: `button`, Icon: EmailIcon },
+  { element: `a`, href: `https://www.linkedin.com/in/robertletts/`, Icon: LinkedInIcon },
+  { element: `a`, href: `https://github.com/rob-letts`, Icon: GitHubIcon },
+  { element: `a`, href: `https://letterboxd.com/robletts/films/diary/`, Icon: LetterboxdIcon },
+  { element: `a`, href: `/RobLettsCV.pdf`, download: true, Icon: DocumentIcon },
 ];
 ---
-
-<script>
-  // CLIPBOARD LOGIC
-  const CONTACT_EMAIL = `roblettsdev@gmail.com`;
-  const toast = document.querySelector(`.toast`) as HTMLButtonElement;
-
-  document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
-    copyTextToClipboard(CONTACT_EMAIL);
-
-    if (toast && !toast.classList.contains(`pop-toast`)) {
-      toast.classList.add(`pop-toast`);
-      setTimeout(() => toast.classList.remove(`pop-toast`), 1500);
-    }
-  });
-
-  function copyTextToClipboard(text: string) {
-    navigator.clipboard.writeText(text);
-  }
-
-  // COLOR THEME LOGIC
-  let darkTheme: boolean | null = null;
-  const themeBtn = document.querySelector(`.theme-btn`) as HTMLButtonElement;
-  const lightThemeIcon = document.querySelector(
-    `#light-theme-icon`
-  ) as SVGElement;
-  const darkThemeIcon = document.querySelector(
-    `#dark-theme-icon`
-  ) as SVGElement;
-
-  document.addEventListener(`DOMContentLoaded`, () => loadPreviousTheme());
-  themeBtn?.addEventListener(`click`, () => toggleTheme());
-
-  function loadPreviousTheme() {
-    const previousSetting = localStorage.getItem(`darkThemeActive`);
-
-    if (previousSetting) {
-      darkTheme = JSON.parse(previousSetting);
-      document.documentElement.setAttribute(
-        `class`,
-        darkTheme ? `dark-theme` : `light-theme`
-      );
-    } else {
-      darkTheme = window?.matchMedia(`(prefers-color-scheme: dark)`).matches;
-    }
-
-    setTheme();
-  }
-
-  function toggleTheme() {
-    darkTheme = !darkTheme;
-    localStorage.setItem(`darkThemeActive`, JSON.stringify(darkTheme));
-    document.documentElement.setAttribute(
-      `class`,
-      darkTheme ? `dark-theme` : `light-theme`
-    );
-    setTheme();
-  }
-
-  function setTheme() {
-    darkThemeIcon.style.display = darkTheme ? `block` : `none`;
-    lightThemeIcon.style.display = darkTheme ? `none` : `block`;
-  }
-
-  new MutationObserver((mutationList) => {
-    const target = mutationList.at(0)?.target as HTMLHtmlElement;
-    const isDarkTheme = target.classList.contains(`dark-theme`);
-
-    document.querySelectorAll(`.emoji`).forEach((item) => {
-      isDarkTheme
-        ? item.classList.remove(`invert`)
-        : item.classList.add(`invert`);
-    });
-  }).observe(document.documentElement, { attributes: true });
-</script>
-
 <Layout>
-  <button class="theme-btn">
-    <SunIcon />
-    <MoonIcon />
-  </button>
+  <ThemeButton client:load />
 
   <header>
     <h1>
       hi there
-      <img
-        class="emoji"
-        src={waveLogo}
-        alt="a waving hand emoji"
-        loading="lazy"
-      />
+      <img class="emoji" src={waveLogo} alt="a waving hand emoji" loading="lazy" />
     </h1>
 
     <p>
       i’m
-      <a
-        class="name"
-        href="https://github.com/rob-letts"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Rob Letts
-      </a>
+      <a class="name" href="https://github.com/rob-letts" target="_blank" rel="noopener noreferrer">Rob Letts</a>
       - a front-end web developer based in
       <span class="no-wrap">
         South London.
-        <img
-          class="emoji"
-          src={coffeeLogo}
-          alt="a coffee cup emoji"
-          loading="lazy"
-        />
+        <img class="emoji" src={coffeeLogo} alt="a coffee cup emoji" loading="lazy" />
       </span>
     </p>
     <p>specialising in CSS, Vue.js, and TypeScript.</p>
@@ -144,9 +48,9 @@ const resources: (ButtonResource | LinkResource)[] = [
         resources.map((item) =>
           item.element === "button" ? (
             <li>
-              <button id={item.id}>
-                <item.icon />
-              </button>
+              <ContactButton client:load>
+                <item.Icon />
+              </ContactButton>
             </li>
           ) : (
             <li>
@@ -156,7 +60,7 @@ const resources: (ButtonResource | LinkResource)[] = [
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <item.icon />
+                <item.Icon />
               </a>
             </li>
           )
@@ -164,8 +68,4 @@ const resources: (ButtonResource | LinkResource)[] = [
       }
     </ul>
   </main>
-
-  <output role="status" class="toast display-none">
-    <p>roblettsdev@gmail.com copied to clipboard 👍</p>
-  </output>
 </Layout>
