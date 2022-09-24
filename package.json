@@ -1,5 +1,7 @@
 {
-  "name": "@example/basics",
+  "name": "roblettsdev",
+  "private": true,
+  "version": "2.0.0",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -17,6 +19,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.11",
-    "postcss-preset-env": "^7.8.2"
+    "eslint": "^8.23.1",
+    "postcss-preset-env": "^7.8.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.2"
   }
 }
