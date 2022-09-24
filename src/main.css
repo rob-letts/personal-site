@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap");
 
-/* THEME */
 :root {
-	color-scheme: light;
 	font-size: 12px;
 	--backgroundColor: rgba(255, 192, 203, 1);
 	--textColor: rgba(0, 0, 0, 0.92);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
 	--brandGradient: linear-gradient(to right,var(--primaryColor),var(--secondaryColor));
+  --lightColor: rgba(255, 192, 203, 1);
 }
+
 
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -20,18 +20,33 @@
 	}
 }
 
-:root.darkTheme {
+:root.dark-theme {
 	--backgroundColor: rgba(0, 0, 0, 0.92);
 	--textColor: rgba(255, 192, 203, 1);
 	--primaryColor: rgb(123, 84, 129);
 	--secondaryColor: rgb(140, 31, 98);
 }
 
-:root.lightTheme {
+:root.light-theme {
 	--backgroundColor: rgba(255, 192, 203, 1);
 	--textColor: rgba(0, 0, 0, 0.92);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+  font-size: 12px;
 }
 
 ::selection {
@@ -53,18 +68,6 @@ body {
 	font-family: "Maven Pro", sans-serif;
 	color: var(--textColor);
 	background: var(--backgroundColor);
-}
-
-/* SETUP / RESET */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-* {
-	padding: 0;
-	margin: 0;
 }
 
 html,
@@ -105,12 +108,23 @@ blockquote {
 	hyphens: auto;
 }
 
+h1 {
+	margin-bottom: 1rem;
+}
+
+header {
+	margin-bottom: 3.5rem;
+
+  & > p:not(:first-of-type) {
+    margin-top: 1em;
+  }
+}
+
 input,
 button,
 textarea,
 select {
 	font: inherit;
-
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -136,7 +150,21 @@ a {
 	font-weight: 700;
 }
 
-/* UTILITIES */
+svg {
+	fill: var(--textColor);
+	height: 2em;
+	width: 2em;
+	transition: transform 0.2s ease-out;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+
+footer {
+	position: relative;
+}
+
 .no-wrap {
 	white-space: nowrap;
 }
@@ -165,22 +193,6 @@ a {
 	top: 1rem;
 	right: 1rem;
 	fill: var(--textColor);
-
-  & > img {
-    /* display: none; */
-  }
-}
-
-h1 {
-	margin-bottom: 1rem;
-}
-
-header {
-	margin-bottom: 3.5rem;
-
-  & > p:not(:first-of-type) {
-    margin-top: 1em;
-  }
 }
 
 .name {
@@ -211,12 +223,6 @@ header {
 	}
 }
 
-@keyframes underline {
-	to {
-		transform: scaleX(1);
-	}
-}
-
 .icon-list {
 	display: flex;
 	padding-bottom: 3rem;
@@ -227,6 +233,31 @@ header {
   }
 }
 
+.display-none {
+  display: none;
+}
+
+.toast {
+  display: none;
+	color: var(--lightColor);
+	position: fixed;
+	bottom: 1rem;
+	z-index: 1;
+	border-radius: 3px;
+	background: var(--secondaryColor);
+	padding: 0.5rem 1.5rem;
+
+	& p {
+		font-size: 10px;
+	}
+}
+
+.pop-toast {
+  display: block;
+  --delay: 1s;
+	animation: show 0.5s ease, hide 0.3s ease var(--delay);
+	animation-fill-mode: forwards;
+}
 
 #contact-btn {
 	border: none;
@@ -235,36 +266,9 @@ header {
 	outline: none;
 }
 
-svg {
-	fill: var(--textColor);
-	height: 2em;
-	width: 2em;
-	transition: transform 0.2s ease-out;
-
-	&:hover {
-		transform: scale(1.2);
-	}
-}
-
-footer {
-	position: relative;
-}
-
-.toast {
-	color: var(--light);
-	position: fixed;
-	bottom: 1rem;
-	z-index: 1;
-	border-radius: 3px;
-	background: var(--secondaryColor);
-	padding: 0.5rem 1.5rem;
-	--delay: 1s;
-	animation: show 0.3s ease, hide 0.3s ease var(--delay);
-	animation-fill-mode: forwards;
-
-	& p {
-		font-size: 10px;
-	}
+#light-theme-icon,
+#dark-theme-icon {
+  display: none;
 }
 
 @keyframes show {
@@ -277,5 +281,11 @@ footer {
 @keyframes hide {
 	to {
 		opacity: 0;
+	}
+}
+
+@keyframes underline {
+	to {
+		transform: scaleX(1);
 	}
 }
