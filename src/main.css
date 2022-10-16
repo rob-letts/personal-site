@@ -266,6 +266,14 @@ footer {
 	outline: none;
 }
 
+#bandcamp-logo-inner {
+  fill: var(--backgroundColor);
+}
+
+#bandcamp-logo-outer {
+  fill: var(--textColor);
+}
+
 #light-theme-icon,
 #dark-theme-icon {
   display: none;
