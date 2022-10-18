@@ -3,7 +3,7 @@
 :root {
 	font-size: 12px;
 	--backgroundColor: rgba(255, 192, 203, 1);
-	--textColor: rgba(0, 0, 0, 0.92);
+	--textColor: rgba(0, 0, 0, 0.9);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
 	--brandGradient: linear-gradient(to right,var(--primaryColor),var(--secondaryColor));
@@ -13,7 +13,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--backgroundColor: rgba(0, 0, 0, 0.92);
+		--backgroundColor: rgba(0, 0, 0, 0.9);
 		--textColor: rgba(255, 192, 203, 1);
 		--primaryColor: rgb(123, 84, 129);
 		--secondaryColor: rgb(140, 31, 98);
@@ -21,7 +21,7 @@
 }
 
 :root.dark-theme {
-	--backgroundColor: rgba(0, 0, 0, 0.92);
+	--backgroundColor: rgba(0, 0, 0, 0.9);
 	--textColor: rgba(255, 192, 203, 1);
 	--primaryColor: rgb(123, 84, 129);
 	--secondaryColor: rgb(140, 31, 98);
@@ -29,7 +29,7 @@
 
 :root.light-theme {
 	--backgroundColor: rgba(255, 192, 203, 1);
-	--textColor: rgba(0, 0, 0, 0.92);
+	--textColor: rgba(0, 0, 0, 0.9);
 	--primaryColor: rgb(140, 31, 98);
 	--secondaryColor: rgb(123, 84, 129);
 }
