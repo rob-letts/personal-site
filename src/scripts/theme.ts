@@ -39,3 +39,5 @@ new MutationObserver(mutationList => {
     isDarkTheme ? item.classList.remove(`invert`) : item.classList.add(`invert`);
   });
 }).observe(document.documentElement, { attributes: true });
+
+export {};

@@ -13,3 +13,5 @@ document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
 function copyTextToClipboard (text: string) {
   navigator.clipboard.writeText(text);
 }
+
+export {};
