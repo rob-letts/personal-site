@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "isolatedModules": false,
+    "target": "es2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+  },
+  "include": ["src/**/*"],
+  "checkJs": true
+}

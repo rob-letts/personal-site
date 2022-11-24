@@ -1,5 +1,5 @@
 const CONTACT_EMAIL = `roblettsdev@gmail.com`;
-const toast = document.querySelector(`.toast`) as HTMLOutputElement;
+const toast = document.querySelector(`.toast`);
 
 document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
   copyTextToClipboard(CONTACT_EMAIL);
@@ -10,6 +10,7 @@ document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
   }
 });
 
-function copyTextToClipboard (text: string) {
+/** @param {string} text */
+function copyTextToClipboard (text) {
   navigator.clipboard.writeText(text);
 }

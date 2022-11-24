@@ -1,7 +1,7 @@
-let darkTheme: null | boolean = null;
-const themeBtn = document.querySelector(`.theme-btn`) as HTMLButtonElement;
-const lightThemeIcon = document.querySelector(`#light-theme-icon`) as SVGElement;
-const darkThemeIcon = document.querySelector(`#dark-theme-icon`) as SVGElement;
+let darkTheme = null;
+const themeBtn = document.querySelector(`.theme-btn`);
+const lightThemeIcon = document.querySelector(`#light-theme-icon`);
+const darkThemeIcon = document.querySelector(`#dark-theme-icon`);
 
 document.addEventListener(`DOMContentLoaded`, () => loadPreviousTheme());
 themeBtn?.addEventListener(`click`, () => toggleTheme());
@@ -32,7 +32,7 @@ function setTheme () {
 }
 
 new MutationObserver(mutationList => {
-  const target = mutationList.at(0)?.target as HTMLImageElement;
+  const target = mutationList.at(0)?.target;
   const isDarkTheme = target.classList.contains(`dark-theme`);
 
   document.querySelectorAll(`.emoji`).forEach(item => {
