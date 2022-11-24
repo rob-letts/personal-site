@@ -9,9 +9,8 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@types/postcss-preset-env": "^7.7.0",
     "autoprefixer": "^10.4.11",
+    "eslint": "^8.28.0",
     "postcss-preset-env": "^7.8.1",
     "vite": "^3.1.0"
   }
