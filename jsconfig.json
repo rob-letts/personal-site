@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "isolatedModules": false,
+    "isolatedModules": true,
     "target": "es2015",
     "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "checkJs": true
   },
-  "include": ["src/**/*"],
-  "checkJs": true
+  "include": ["src/**/*", "index.d.ts"]
 }
