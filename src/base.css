@@ -105,7 +105,7 @@ h1 {
 header {
   margin-bottom: 3.5rem;
 
-  & > p:is(:not(:first-of-type)) {
+  & > p:where(:not(:first-of-type)) {
     margin-top: 1em;
   }
 }
@@ -149,6 +149,10 @@ svg {
   &:hover {
     transform: scale(1.2);
   }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 footer {
@@ -157,7 +161,7 @@ footer {
 
 *:focus-visible,
 li:focus-within {
-  outline: 2px solid var(--text-color);
+  outline: 2px dashed var(--text-color);
   border-radius: 3px;
 }
 
@@ -184,7 +188,7 @@ li:focus-within {
 }
 
 .theme-btn {
-  width: 2rem;
+  width: 2.5rem;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -199,7 +203,7 @@ li:focus-within {
   color: transparent;
   position: relative;
 
-  &::after {
+  &:not(:focus)::after {
     content: "";
     position: absolute;
     bottom: -0.5rem;
@@ -224,7 +228,7 @@ li:focus-within {
   gap: 2rem;
 
   & > * {
-    height: fit-content;
+    height: 32px;
   }
 }
 
