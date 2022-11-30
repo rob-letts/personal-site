@@ -4,13 +4,13 @@ import {
 
 // Query DOM and setup theme variable
 
-/** @type {HTMLButtonElement} */
+/** @type {?HTMLButtonElement} */
 const themeBtn = document.querySelector(DOM_SELECTORS.themeBtn);
 
-/** @type {SVGElement} */
+/** @type {?SVGElement} */
 const lightThemeIcon = document.querySelector(DOM_SELECTORS.lightThemeIcon);
 
-/** @type {SVGElement} */
+/** @type {?SVGElement} */
 const darkThemeIcon = document.querySelector(DOM_SELECTORS.darkThemeIcon);
 
 /** @type {boolean | null} */
@@ -27,7 +27,7 @@ invertIconsOnThemeChange();
 /** @returns {void} */
 function invertIconsOnThemeChange () {
   new MutationObserver(mutationList => {
-    const target = /** @type {HTMLButtonElement} */ (mutationList.at(0).target);
+    const target = /** @type {HTMLButtonElement} */ (mutationList.at(0)?.target);
     const targetHasDarkTheme = target.classList.contains(DARK_THEME_KEY);
 
     document.querySelectorAll(DOM_SELECTORS.emojiIcons).forEach(item => {
@@ -62,15 +62,17 @@ function toggleTheme () {
 
 // Helpers
 
-/** @param {boolean} darkThemeIsActive */
+/** @param {?boolean} darkThemeIsActive */
 function setTheme (darkThemeIsActive) {
   document.documentElement.setAttribute(`class`,
     darkThemeIsActive ? DARK_THEME_KEY : LIGHT_THEME_KEY
   );
 }
 
-/** @param {boolean} darkThemeIsActive */
+/** @param {?boolean} darkThemeIsActive */
 function setIconTheme (darkThemeIsActive) {
-  darkThemeIcon.style.display = darkThemeIsActive ? `block` : `none`;
-  lightThemeIcon.style.display = darkThemeIsActive ? `none` : `block`;
+  if (darkThemeIcon && lightThemeIcon) {
+    darkThemeIcon.style.display = darkThemeIsActive ? `block` : `none`;
+    lightThemeIcon.style.display = darkThemeIsActive ? `none` : `block`;
+  }
 }

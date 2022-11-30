@@ -2,7 +2,7 @@ import {
   DOM_SELECTORS, CONTACT_EMAIL, TOAST_SELECTOR, TOAST_ACTIVE_CLASS, TOAST_TIMEOUT
 } from '@/scripts/constants.js';
 
-/** @type {HTMLOutputElement} */
+/** @type {?HTMLOutputElement} */
 const toast = document.querySelector(TOAST_SELECTOR);
 
 document.querySelector(DOM_SELECTORS.contactBtn)?.addEventListener(`click`, () => {

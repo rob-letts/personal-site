@@ -1,14 +1,32 @@
 {
   "compilerOptions": {
+    "lib": [
+      "ES2016",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "preserve",
+    "strict": true,
+    "noImplicitThis": true,
     "isolatedModules": true,
+    "preserveValueImports": true,
+    "importsNotUsedAsValues": "error",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "target": "es2015",
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "checkJs": true
   },
-  "include": ["src/**/*", "index.d.ts"]
+  "include": [
+    "src/**/*",
+    "index.d.ts"
+  ]
 }
