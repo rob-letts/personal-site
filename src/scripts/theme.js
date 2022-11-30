@@ -49,7 +49,7 @@ function invertIconsOnThemeChange () {
     const target = /** @type {HTMLButtonElement} */ (mutationList.at(0).target);
     const isDarkTheme = target.classList.contains(DARK_THEME_KEY);
 
-    document.querySelectorAll(DOM_SELECTORS.icons).forEach(item => {
+    document.querySelectorAll(DOM_SELECTORS.emojiIcons).forEach(item => {
       isDarkTheme
         ? item.classList.remove(ICON_THEME_INVERSION)
         : item.classList.add(ICON_THEME_INVERSION);

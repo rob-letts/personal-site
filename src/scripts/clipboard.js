@@ -1,9 +1,11 @@
-import { CONTACT_EMAIL, TOAST_SELECTOR, TOAST_ACTIVE_CLASS, TOAST_TIMEOUT } from '@/scripts/constants.js';
+import {
+  DOM_SELECTORS, CONTACT_EMAIL, TOAST_SELECTOR, TOAST_ACTIVE_CLASS, TOAST_TIMEOUT
+} from '@/scripts/constants.js';
 
 /** @type {HTMLOutputElement} */
 const toast = document.querySelector(TOAST_SELECTOR);
 
-document.querySelector(`#contact-btn`)?.addEventListener(`click`, () => {
+document.querySelector(DOM_SELECTORS.contactBtn)?.addEventListener(`click`, () => {
   copyTextToClipboard(CONTACT_EMAIL);
 
   if (toast && !toast.classList.contains(TOAST_ACTIVE_CLASS)) {
