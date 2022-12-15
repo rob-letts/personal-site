@@ -1,9 +1,8 @@
 import {
   DOM_SELECTORS, CONTACT_EMAIL, TOAST_SELECTOR, TOAST_ACTIVE_CLASS, TOAST_TIMEOUT
-} from '@/scripts/constants.js';
+} from '@/scripts/constants';
 
-/** @type {?HTMLOutputElement} */
-const toast = document.querySelector(TOAST_SELECTOR);
+const toast = document.querySelector(TOAST_SELECTOR) as HTMLOutputElement;
 
 document.querySelector(DOM_SELECTORS.contactBtn)?.addEventListener(`click`, () => {
   copyTextToClipboard(CONTACT_EMAIL);
@@ -14,7 +13,6 @@ document.querySelector(DOM_SELECTORS.contactBtn)?.addEventListener(`click`, () =
   }
 });
 
-/** @param {string} text */
-function copyTextToClipboard (text) {
+function copyTextToClipboard (text: string) {
   navigator.clipboard.writeText(text);
 }

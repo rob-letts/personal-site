@@ -9,9 +9,6 @@ export const LIGHT_THEME_KEY = `light-theme`;
 export const DARK_THEME_KEY = `dark-theme`;
 export const ICON_THEME_INVERSION = `invert`;
 
-/**
- * @type { Record<'themeBtn' | 'emojiIcons' | 'lightThemeIcon' | 'darkThemeIcon' | 'contactBtn', string> }
- */
 export const DOM_SELECTORS = {
   themeBtn: `.theme-btn`,
   emojiIcons: `.emoji`,

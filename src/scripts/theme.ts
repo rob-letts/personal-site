@@ -1,33 +1,22 @@
 import {
   DOM_SELECTORS, LOCAL_STORAGE_THEME_KEY, LIGHT_THEME_KEY, DARK_THEME_KEY, ICON_THEME_INVERSION
-} from '@/scripts/constants.js';
+} from '@/scripts/constants';
 
 // Query DOM and setup theme variable
-
-/** @type {?HTMLButtonElement} */
-const themeBtn = document.querySelector(DOM_SELECTORS.themeBtn);
-
-/** @type {?SVGElement} */
-const lightThemeIcon = document.querySelector(DOM_SELECTORS.lightThemeIcon);
-
-/** @type {?SVGElement} */
-const darkThemeIcon = document.querySelector(DOM_SELECTORS.darkThemeIcon);
-
-/** @type {boolean | null} */
-let darkThemeIsActive = null;
+const themeBtn = document.querySelector(DOM_SELECTORS.themeBtn) as HTMLButtonElement;
+const lightThemeIcon = document.querySelector(DOM_SELECTORS.lightThemeIcon) as SVGElement;
+const darkThemeIcon = document.querySelector(DOM_SELECTORS.darkThemeIcon) as SVGElement;
+let darkThemeIsActive: boolean = true;
 
 // Setup Event Listeners and Mutation Observers
-
 document.addEventListener(`DOMContentLoaded`, () => loadPreviousTheme());
 themeBtn?.addEventListener(`click`, () => toggleTheme());
 invertIconsOnThemeChange();
 
 // Core functions for this module
-
-/** @returns {void} */
-function invertIconsOnThemeChange () {
+function invertIconsOnThemeChange (): void {
   new MutationObserver(mutationList => {
-    const target = /** @type {HTMLButtonElement} */ (mutationList.at(0)?.target);
+    const target = (mutationList.at(0)?.target) as HTMLButtonElement;
     const targetHasDarkTheme = target.classList.contains(DARK_THEME_KEY);
 
     document.querySelectorAll(DOM_SELECTORS.emojiIcons).forEach(item => {
@@ -38,8 +27,7 @@ function invertIconsOnThemeChange () {
   }).observe(document.documentElement, { attributes: true });
 }
 
-/** @returns {void} */
-function loadPreviousTheme () {
+function loadPreviousTheme (): void {
   const previousSetting = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
 
   if (previousSetting) {
@@ -52,8 +40,7 @@ function loadPreviousTheme () {
   setIconTheme(darkThemeIsActive);
 }
 
-/** @returns {void} */
-function toggleTheme () {
+function toggleTheme (): void {
   darkThemeIsActive = !darkThemeIsActive;
   localStorage.setItem(LOCAL_STORAGE_THEME_KEY, JSON.stringify(darkThemeIsActive));
   setTheme(darkThemeIsActive);
@@ -61,16 +48,13 @@ function toggleTheme () {
 }
 
 // Helpers
-
-/** @param {?boolean} darkThemeIsActive */
-function setTheme (darkThemeIsActive) {
+function setTheme (darkThemeIsActive: boolean) {
   document.documentElement.setAttribute(`class`,
     darkThemeIsActive ? DARK_THEME_KEY : LIGHT_THEME_KEY
   );
 }
 
-/** @param {?boolean} darkThemeIsActive */
-function setIconTheme (darkThemeIsActive) {
+function setIconTheme (darkThemeIsActive: boolean) {
   if (darkThemeIcon && lightThemeIcon) {
     darkThemeIcon.style.display = darkThemeIsActive ? `block` : `none`;
     lightThemeIcon.style.display = darkThemeIsActive ? `none` : `block`;

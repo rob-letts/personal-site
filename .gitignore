@@ -4,3 +4,4 @@ npm-debug.log*
 .env
 .env.production
 .DS_Store
+plan-of-work.md
