@@ -4,17 +4,17 @@ A super minimal 'contact me' static site built with Vite, PostCSS, TypeScript, a
 
 # Plan of Work
 
-- [ ]  Fix Outlines
-- [ ]  SVG Clean markup
-- [ ]  Reduce Image sizes and convert to WebP or AVIF
-- [ ]  Alt text not gigantic!
-- [ ]  Bg Twinkles
-- [ ]  Animations
-- [ ]  Transitions
-- [ ]  Add @layer, :has(), @container, subgrid
-- [ ]  Longer bio in dialog ⇒ Linkedin profile / chill description with animated toggle switcher
-- [ ]  2022 Best: Games, Music, Films
-- [ ]  Add fancy drawer on mobile with SVG links
+- [ ]  Fix SVG Focus Outlines
+- [ ]  SVG Markup Housekeeping
+- [ ]  Reduce image sizes and convert to WebP
+- [ ]  Reduce alt text font sizes
+- [ ]  Add background twinkles
 - [ ]  Greyed out ufo logo moving around (WAAPI)
+- [ ]  Animations / Transitions
+- [ ]  Add @layer, :has(), @container, subgrid
+- [ ]  Longer bio and long/short bio switcher
 - [ ]  Change font (Woff2)
-- [ ]  Pages: Uses [[Arc, Warp, VSCode, Raycast, Tig, LazyGit], [HTML, CSS, JavaScript, Vue.js, Vite (PostCSS, ESlint, StyleLint, TypeScript)], [MacBook M1 Pro (14-inch, 2021), Keychron K6, MX Master 3S, LG Monitor 34" Ultrawide]]
+- [ ]  Uses Page
+  - [ ] Tools: Neovim, Warp, Chrome, Tig, Raycast
+  - [ ] Tech: HTML, CSS, Sass, JavaScript, TypeScript, Vue.js, Vite, PostCSS, ESlint, StyleLint, Git
+  - [ ] Gear: MacBook M1 Pro (14-inch, 2021), Keychron K6, MX Master 3S, LG Monitor 34" Ultrawide
