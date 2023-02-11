@@ -65,16 +65,20 @@ body {
   height: 100vh;
 }
 
+section > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
 ul,
 ol {
   list-style: none;
 }
 
-img,
-picture,
-video,
-iframe,
-svg {
+:is(img, picture, video, iframe, svg) {
   max-width: 100%;
   display: block;
 }
@@ -83,37 +87,12 @@ img {
   object-fit: cover;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-dl,
-dt,
-blockquote {
+:is(p, h1, h2, h3, h4, h5, h6, li, dl, dt, blockquote) {
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-h1 {
-  margin-bottom: 1rem;
-}
-
-header {
-  margin-bottom: 3.5rem;
-
-  & > p:where(:not(:first-of-type)) {
-    margin-top: 1em;
-  }
-}
-
-input,
-button,
-textarea,
-select {
+:is(input, button, textarea, select) {
   font: inherit;
   border: none;
   background-color: transparent;
@@ -142,8 +121,6 @@ a {
 
 svg {
   fill: var(--text-color);
-  height: 2em;
-  width: 2em;
   transition: transform 0.2s ease-out;
 
   &:hover {
@@ -162,6 +139,7 @@ footer {
 *:focus-visible,
 li:focus-within {
   outline: 2px dashed var(--text-color);
+  outline-offset: 0.5rem;
   border-radius: 3px;
 }
 
@@ -224,12 +202,7 @@ li:focus-within {
 
 .icon-list {
   display: flex;
-  padding-bottom: 3rem;
   gap: 2rem;
-
-  & > * {
-    height: 32px;
-  }
 }
 
 .display-none {
