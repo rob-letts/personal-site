@@ -53,8 +53,11 @@
 body {
   line-height: 1.75;
   font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
-  padding: 5rem 2rem 3rem;
-  margin: 0 auto;
+  padding-block-start: 5rem;
+  padding-inline: 2rem;
+  padding-block-end: 3rem;
+  margin-block: 0;
+  margin-inline: auto;
   font-family: "Maven Pro", sans-serif;
   color: var(--text-color);
   background: var(--background-color);
@@ -66,11 +69,11 @@ body {
 }
 
 section > *:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 footer {
-  margin-top: 3rem;
+  margin-block-start: 3rem;
 }
 
 ul,
@@ -217,7 +220,8 @@ li:focus-within {
   z-index: 1;
   border-radius: 3px;
   background: var(--secondary-color);
-  padding: 0.5rem 1.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
 
   & p {
     font-size: 10px;
