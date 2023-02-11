@@ -1,24 +1,19 @@
-- [ ]  Unwrap OTT Scripts directory
+# Updates
+- [ ] Convert Font to Woff2
+- [ ] Add background twinkles (WAAPI)
+- [ ] @layer, :has(), @container, subgrid
 
-- [ ]  Update base.css 'reset'
+# "/"
+    - [ ] Current Site
 
-- [ ]  Audit Type, ESLint, and StyleLint diagnostics
+# "About Me"
+    - [ ] Expanded Bio
 
-- [ ]  CSS Integrate: @layer, :has(), @container, subgrid
+# "Uses" 
+    - [ ] Stack: HTML, CSS, TypeScript, Vue, Astro, Vite
+    - [ ] Tools: Neovim, Warp, Chrome, Tig, Raycast, Ripgrep
+    - [ ] Apps: Slack, Jira, GitHub, Figma, Feedbin, Notion, Bandcamp, Letterboxd
+    - [ ] Gear: MacBook M1 Pro (14-inch, 2021), Keychron K6, MX Master 3S, LG Monitor 34" Ultrawide
 
-- [ ]  JS Integrate: Add background twinkles (WAAPI)
-
-- [ ]  Convert Font to Woff2
-
-- [ ] Redesign
-    - index
-        - title, bio, nav, footer (links)
-        - expand sections for skills (tech) and experience (jobs)
-    - Uses Page
-        - Tools: Neovim, Warp, Arc / Chrome, Tig, Raycast
-        - Tech: HTML, CSS, Sass, JavaScript, TypeScript, Vue.js, Astro, Vite, PostCSS, ESlint, StyleLint, Git
-        - Gear: MacBook M1 Pro (14-inch, 2021), Keychron K6, MX Master 3S, LG Monitor 34" Ultrawide
-    - Upvotes Page
-        - games
-        - movies
-        - shows
+# "Contact"
+    - [ ] Email form?
