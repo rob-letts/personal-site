@@ -22,8 +22,8 @@ const footerItems: FooterLink[] = [
         <li>
           <a 
             href={ item.href } 
-            target={ item.download ? `` : `_blank` }
-            download={ item.download }
+            { item.download && `download` }
+            target="_blank"
           >
             <item.icon />
           </a>
