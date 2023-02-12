@@ -1,0 +1,34 @@
+---
+import BandcampIcon from '@icons/BandcampIcon.astro';
+import GitHubIcon from '@icons/GitHubIcon.astro';
+import LinkedinIcon from '@icons/LinkedinIcon.astro';
+import LetterboxdIcon from '@icons/LetterboxdIcon.astro';
+import DocumentIcon from '@icons/DocumentIcon.astro';
+type AstroComponent = (_props: Record<string, any>) => any;
+type FooterLink = { href: string, download?: boolean, icon: AstroComponent }
+
+const footerItems: FooterLink[] = [
+  { href: `https://github.com/rob-letts`, icon: GitHubIcon },
+  { href: `https://www.linkedin.com/in/robertletts/`, icon: LinkedinIcon },
+  { href: `/RobLettsCV.pdf`, download: true, icon: DocumentIcon },
+  { href: `https://letterboxd.com/robletts/films/diary/`, icon: LetterboxdIcon },
+  { href: `https://bandcamp.com/robletts`, icon: BandcampIcon }
+]
+---
+<footer>
+  <ul class="icon-list">
+    {
+      footerItems.map(item => (
+        <li>
+          <a 
+            href={ item.href } 
+            target={ item.download ? `` : `_blank` }
+            download={ item.download }
+          >
+            <item.icon />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>

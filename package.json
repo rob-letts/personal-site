@@ -1,23 +1,31 @@
 {
-  "name": "rob-letts-dev",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite serve"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.15",
-    "@types/postcss-preset-env": "^7.7.0",
-    "autoprefixer": "^10.4.11",
-    "eslint": "^8.28.0",
-    "postcss-preset-env": "^7.8.1",
-    "stylelint": "^14.15.0",
-    "stylelint-config-standard": "^29.0.0",
-    "vite": "^3.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "typescript": "^4.6.4"
-  }
+	"name": "roblettsdev",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && tsc --noEmit && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@fontsource/dm-mono": "^4.5.10",
+		"astro": "^2.0.10"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.37.0",
+		"autoprefixer": "^10.4.11",
+		"cssnano": "^5.1.14",
+		"eslint": "^8.34.0",
+		"eslint-config-standard-with-typescript": "^34.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"postcss-preset-env": "^7.8.1",
+		"stylelint": "^14.15.0",
+		"stylelint-config-standard": "^29.0.0",
+		"typescript": "^4.9.5"
+	}
 }
