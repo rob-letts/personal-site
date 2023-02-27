@@ -1,22 +1,18 @@
 ---
-import Page from "@layouts/SiteLayout.astro";
+import SiteLayout from "@layouts/SiteLayout.astro";
+import SiteLinks from '@components/SiteLinks.astro'
 ---
-<Page>
+<SiteLayout>
   <h1>
     hi there
     <img class="emoji" src="/wave-logo.png" alt="a waving hand emoji" />
   </h1>
 
   <p>
-    i'm 
+    i'm
     <a class="name" href="https://github.com/rob-letts">Rob Letts</a>
     - a front-end web developer based in South London.
   </p>
-</Page>
 
-<style>
-.emoji {
-  position: relative;
-  bottom: -0.5rem;
-}
-</style>
+  <SiteLinks />
+</SiteLayout>

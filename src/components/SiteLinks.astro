@@ -6,29 +6,29 @@ import LetterboxdIcon from '@icons/LetterboxdIcon.astro';
 import DocumentIcon from '@icons/DocumentIcon.astro';
 
 type AstroComponent = (_props: Record<string, any>) => any;
-type FooterLink = { href: string, icon: AstroComponent }
+type Link = { href: string, icon: AstroComponent }
 
-const footerItems: FooterLink[] = [
+const links: Link[] = [
   { href: `https://github.com/rob-letts`, icon: GitHubIcon },
-  { href: `https://www.linkedin.com/in/robertletts/`, icon: LinkedinIcon },
+  { href: `https://www.ålinkedin.com/in/robertletts/`, icon: LinkedinIcon },
   { href: `/RobLettsCV.pdf`, icon: DocumentIcon },
   { href: `https://letterboxd.com/robletts/films/diary/`, icon: LetterboxdIcon },
   { href: `https://bandcamp.com/robletts`, icon: BandcampIcon }
 ]
 ---
-<footer>
+<aside>
   <ul class="icon-list">
     {
-      footerItems.map(item => (
+      links.map(link => (
         <li>
-          <a 
-            href={ item.href } 
+          <a
+            href={ link.href }
             target="_blank"
           >
-            <item.icon />
+            <link.icon />
           </a>
         </li>
       ))
     }
   </ul>
-</footer>
+</aside>

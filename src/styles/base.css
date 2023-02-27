@@ -51,9 +51,8 @@
 body {
   line-height: 1.75;
   font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
-  padding-block-start: 5rem;
+  padding-block: 3rem;
   padding-inline: 2rem;
-  padding-block-end: 3rem;
   margin-block: 0;
   margin-inline: auto;
   font-family: "DM Mono", monospace;
@@ -64,11 +63,6 @@ body {
 html,
 body {
   height: 100vh;
-}
-
-footer {
-  margin-block-start: 3rem;
-  position: relative;
 }
 
 ul,
@@ -115,6 +109,7 @@ img {
 a {
   color: var(--primary-color);
   font-weight: 700;
+  text-underline-offset: 8px;
 }
 
 svg {
@@ -131,14 +126,15 @@ svg {
 }
 
 *:focus-visible,
-li:focus-within {
+aside li:focus-within {
   outline: 2px dashed var(--text-color);
   outline-offset: 0.5rem;
   border-radius: 3px;
+  text-decoration: none;
 }
 
-section > *:not(:last-child) {
-  margin-block-end: 1.5rem;
+body > *:not(:last-child) {
+  margin-block-end: 2.5rem;
 }
 
 .no-wrap {
@@ -149,26 +145,12 @@ section > *:not(:last-child) {
   height: 1em;
   width: 1em;
   display: inline-block;
+  position: relative;
+  bottom: -0.5rem;
 }
 
 .invert {
   filter: invert(1);
-}
-
-.letterboxd-bg {
-  fill: var(--text-color);
-}
-
-.letterboxd-fg {
-  fill: var(--background-color);
-}
-
-.theme-btn {
-  width: 2.5rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  fill: var(--text-color);
 }
 
 .name {
@@ -198,37 +180,8 @@ section > *:not(:last-child) {
   }
 }
 
-.icon-list {
-  display: flex;
-  gap: 2rem;
-}
-
 .display-none {
   display: none;
-}
-
-.toast {
-  display: none;
-  color: var(--light-color);
-  position: fixed;
-  bottom: 1rem;
-  z-index: 1;
-  border-radius: 3px;
-  background: var(--secondary-color);
-  padding-block: 0.5rem;
-  padding-inline: 1.5rem;
-
-  & p {
-    font-size: 10px;
-  }
-}
-
-.pop-toast {
-  --delay: 1s;
-
-  display: block;
-  animation: show 0.5s ease, hide 0.3s ease var(--delay);
-  animation-fill-mode: forwards;
 }
 
 #contact-btn {
@@ -268,4 +221,34 @@ section > *:not(:last-child) {
   to {
     transform: scaleX(1);
   }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  margin-block-start: 3rem;
+  position: relative;
+}
+
+nav > ul,
+.icon-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.theme-btn {
+  width: 2.5rem;
+  fill: var(--text-color);
+}
+
+.letterboxd-bg {
+  fill: var(--text-color);
+}
+
+.letterboxd-fg {
+  fill: var(--background-color);
 }
