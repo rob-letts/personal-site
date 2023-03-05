@@ -1,4 +1,6 @@
-- [ ] Refactor: refactor, gutter styles
-- [ ] About: content + Telescope style dashed outline animation
-- [ ] Uses: content
-- [ ] Index: background wobbles (WAAPI?)
+- [ ] skills: extend bio + central telescope style dashed outline animation, rotating billboards
+- [ ] resources: parse json for content
+- [ ] uses: parse markdown for content
+- [ ] index: background wobbles (waapi?)
+---
+- [ ] refactor: styles refactor, types refactor, brand scrollbars

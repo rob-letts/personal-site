@@ -4,6 +4,7 @@ import GitHubIcon from '@icons/GitHubIcon.astro';
 import LinkedinIcon from '@icons/LinkedinIcon.astro';
 import LetterboxdIcon from '@icons/LetterboxdIcon.astro';
 import DocumentIcon from '@icons/DocumentIcon.astro';
+import CodepenIcon from '@icons/CodepenIcon.astro';
 
 type AstroComponent = (_props: Record<string, any>) => any;
 type Link = { href: string, icon: AstroComponent }
@@ -13,7 +14,8 @@ const links: Link[] = [
   { href: `https://www.ålinkedin.com/in/robertletts/`, icon: LinkedinIcon },
   { href: `/RobLettsCV.pdf`, icon: DocumentIcon },
   { href: `https://letterboxd.com/robletts/films/diary/`, icon: LetterboxdIcon },
-  { href: `https://bandcamp.com/robletts`, icon: BandcampIcon }
+  { href: `https://bandcamp.com/robletts`, icon: BandcampIcon },
+  { href: `https://codepen.io/rob-letts`, icon: CodepenIcon }
 ]
 ---
 <aside>

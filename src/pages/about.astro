@@ -1,11 +1,36 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
+import about from "../data/about.json";
 ---
 
 <SiteLayout>
-<section>
-<p>
-  Text content about me
-</p>
-</section>
+  <section>
+    <h2>Present:</h2>
+    <ul>
+      <li>I'm Rob Letts, a Front-End Web Developer based in South London.</li>
+      <li>I like CSS a lot.</li>
+      <li>I work with an awesome team at <a href="https://www.tixtrack.com/" target="_blank">TixTrack</a>. We use Vue.js.</li>
+      <li>I care deeply about A11y, UI/UX, and making both co-workers and users feel good about the web.</li>
+    </ul>
+
+    <h2>Past:</h2>
+    <ul>
+      <li>Played bass in <a href="https://disciplesofwren.bandcamp.com/album/groundswells-2" target="_blank">Wren</a>.</li>
+      <li>I helped run a venue called <a href="https://www.corsicastudios.com/" target="_blank">Corsica Studios</a>.</li>
+      <li>And made websites with <a href="https://www.redsnapper.net/" target="_blank">Red Snapper</a>.</li>
+    </ul>
+  </section>
+
+  {
+    Object.entries(about).map(([key, value]) => (
+      <h2>{key}</h2>
+      <ul>
+        {
+          value.map(item => (
+            <li>{item}</li>
+          ))
+        }
+      </ul>
+    ))
+  }
 </SiteLayout>

@@ -1,0 +1,17 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import resources from "../data/resources.json";
+---
+
+<SiteLayout>
+  <p>Ongoing collection of resources that I like, use, or consume.</p>
+  <ul>
+    {
+      resources.map((item) => (
+        <li>
+          <a href={item.link}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</SiteLayout>
