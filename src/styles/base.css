@@ -199,11 +199,6 @@ body > *:not(:last-child) {
   fill: var(--text-color);
 }
 
-#light-theme-icon,
-#dark-theme-icon {
-  display: none;
-}
-
 @keyframes show {
   from {
     opacity: 0;
@@ -240,9 +235,13 @@ nav > ul,
   gap: 2rem;
 }
 
-.theme-btn {
+#theme-btn {
   width: 2.5rem;
   fill: var(--text-color);
+}
+
+#sun-icon {
+  display: none;
 }
 
 .letterboxd-bg {
