@@ -15,4 +15,3 @@ Laptop: MacBook M1 Pro (14-inch, 2021)
 Keyboard: Keychron K6
 Mouse: MX Master 3S
 Monitor: LG 34" Ultrawide
-

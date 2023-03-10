@@ -1,6 +1,4 @@
-- [ ] skills: extend bio + central telescope style dashed outline animation, rotating billboards
-- [ ] resources: parse json for content
-- [ ] uses: parse markdown for content
-- [ ] index: background wobbles (waapi?)
----
-- [ ] refactor: styles refactor, types refactor, brand scrollbars
+- [ ] uses: vertical telescope view, scrollable list on left and change right view on select
+- [ ] resources: convert to 'bookmarks' (radio as tabs that filter a terminal display, keyboard controllable)
+- [ ] about: bio and skills + concepts (rotating billboards)
+- [ ] /: background wobbles (waapi?)
