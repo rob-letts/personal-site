@@ -1,5 +1,5 @@
 {
-  "concepts": [
+  "Concepts": [
     "BEM",
     "SMACSS",
     "ITCSS",
@@ -23,7 +23,7 @@
     "Version Control",
     "Agile Rituals and Practices"
   ],
-  "tech": [
+  "Tech": [
     "HTML",
     "CSS",
     "SCSS",

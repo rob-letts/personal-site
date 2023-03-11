@@ -1,35 +1,29 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import aboutData from "../data/about.json";
+import { createClient } from '@supabase/supabase-js';
+const supabase = createClient(import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_KEY)
+const { data } = await supabase.from("skills").select('*');
 ---
 <SiteLayout>
   <section>
-    <h2>Present:</h2>
+    <h2>Present</h2>
     <ul>
-      <li>I'm Rob Letts, a Front-End Web Developer based in South London.</li>
       <li>I like CSS a lot.</li>
       <li>I work with an awesome team at <a href="https://www.tixtrack.com/" target="_blank">TixTrack</a>. We use Vue.js.</li>
-      <li>I care deeply about A11y, UI/UX, and making both co-workers and users feel good about the web.</li>
+      <li>I care deeply about A11y, UX, and Front End Architecture.</li>
     </ul>
 
-    <h2>Past:</h2>
+    <h2>Past</h2>
     <ul>
-      <li>Played bass in <a href="https://disciplesofwren.bandcamp.com/album/groundswells-2" target="_blank">Wren</a>.</li>
-      <li>I helped run a venue called <a href="https://www.corsicastudios.com/" target="_blank">Corsica Studios</a>.</li>
-      <li>And made websites with <a href="https://www.redsnapper.net/" target="_blank">Red Snapper</a>.</li>
+      <li>I played bass in noisy metal band called <a href="https://disciplesofwren.bandcamp.com/album/groundswells-2" target="_blank">Wren</a>.</li>
+      <li>I helped run a very loud music venue called <a href="https://www.corsicastudios.com/" target="_blank">Corsica Studios</a>.</li>
     </ul>
   </section>
 
   {
-    Object.entries(aboutData).map(([key, value]) => (
-      <h2>{key}</h2>
-      <ul>
-        {
-          value.map(item => (
-            <li>{item}</li>
-          ))
-        }
-      </ul>
+    data?.map(item => (
+        <h2>{item.category}</h2>
+        <ul>{item.title}</ul>
     ))
   }
 </SiteLayout>

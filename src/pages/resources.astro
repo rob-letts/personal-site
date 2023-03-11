@@ -1,16 +1,18 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import resourcesData from "../data/resources.json";
+import { createClient } from '@supabase/supabase-js';
+const supabase = createClient(import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_KEY)
+const { data } = await supabase.from("resources").select('*');
 ---
 <SiteLayout>
   <p>Ongoing collection of resources that I like, use, or consume.</p>
   <ul>
     {
-      resourcesData.map((item) => (
-        <li>
-          <a href={item.link}>{item.title}</a>
-        </li>
-      ))
+      data?.map(item => (
+        <h2>{item.link}</h2>
+        <h2>{item.title}</h2>
+        <ul>{item.category}</ul>
+    ))
     }
   </ul>
 </SiteLayout>
