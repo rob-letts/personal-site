@@ -1,0 +1,20 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import usesData from "../data/uses.json";
+---
+<SiteLayout>
+  {
+    Object.entries(usesData).map(([key, value]) => (
+      <>
+        <h2>{key}</h2>
+        <ul>
+          {
+            typeof value === "string"
+            ? value
+            : value.map((item) => <li>{item}</li>)
+          }
+        </ul>
+      </>
+    ))
+  }
+</SiteLayout>

@@ -1,6 +1,5 @@
 ---
 const astroPages = await Astro.glob('../pages/*.astro');
-const markdownPages = await Astro.glob('../pages/*.md');
 
 function getName(filePath: string, sequenceToRemove: string) {
   return filePath.split('/').at(-1)?.replace(sequenceToRemove, "");
@@ -8,8 +7,7 @@ function getName(filePath: string, sequenceToRemove: string) {
 
 const navItems = [
   "/",
-  ...astroPages.map(page => getName(page.file, ".astro")).filter(item => item !== 'index'),
-  ...markdownPages.map(page => getName(page.file, ".md"))
+  ...astroPages.map(page => getName(page.file, ".astro")).filter(item => item !== 'index')
 ];
 ---
 <nav>

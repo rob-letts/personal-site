@@ -1,8 +1,7 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro";
-import about from "../data/about.json";
+import aboutData from "../data/about.json";
 ---
-
 <SiteLayout>
   <section>
     <h2>Present:</h2>
@@ -22,7 +21,7 @@ import about from "../data/about.json";
   </section>
 
   {
-    Object.entries(about).map(([key, value]) => (
+    Object.entries(aboutData).map(([key, value]) => (
       <h2>{key}</h2>
       <ul>
         {
