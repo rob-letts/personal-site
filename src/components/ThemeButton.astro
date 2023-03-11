@@ -3,69 +3,69 @@ import SunIcon from "./icons/SunIcon.astro";
 import MoonIcon from "./icons/MoonIcon.astro";
 ---
 <script>
-  // Query DOM and setup theme variable
-  const themeBtn = document.querySelector("#theme-btn") as HTMLButtonElement;
-  const sunIcon = document.querySelector("#sun-icon") as SVGElement;
-  const moonIcon = document.querySelector("#moon-icon") as SVGElement;
-  let darkThemeIsActive: boolean = true;
+// Query DOM and setup theme variable
+const themeBtn = document.querySelector("#theme-btn") as HTMLButtonElement;
+const sunIcon = document.querySelector("#sun-icon") as SVGElement;
+const moonIcon = document.querySelector("#moon-icon") as SVGElement;
+let darkThemeIsActive: boolean = true;
 
-  // Setup Event Listeners and Mutation Observers
-  document.addEventListener(`DOMContentLoaded`, loadTheme);
-  themeBtn?.addEventListener(`click`, toggleTheme);
-  observeThemeChange();
+// Setup Event Listeners and Mutation Observers
+document.addEventListener(`DOMContentLoaded`, loadTheme);
+themeBtn?.addEventListener(`click`, toggleTheme);
+observeThemeChange();
 
-  function observeThemeChange(): void {
-    new MutationObserver((mutationList) => {
-      const target = mutationList.at(0)?.target as HTMLButtonElement;
-      const targetHasDarkTheme = target.classList.contains("dark-theme");
+function observeThemeChange(): void {
+  new MutationObserver((mutationList) => {
+    const target = mutationList.at(0)?.target as HTMLButtonElement;
+    const targetHasLightTheme = target.classList.contains("light-theme");
 
-      const dependencies: Set<string> = new Set();
-      const inversionClassName = "invert";
-      dependencies.add(".emoji");
+    const dependencies: Set<string> = new Set();
+    const inversionClassName = "invert";
+    dependencies.add(".emoji");
 
-      dependencies.forEach((dependency: string) => {
-        document.querySelectorAll(dependency).forEach((item) => {
-          targetHasDarkTheme
-            ? item.classList.remove(inversionClassName)
-            : item.classList.add(inversionClassName);
-        });
+    dependencies.forEach((dependency: string) => {
+      document.querySelectorAll(dependency).forEach((item) => {
+        targetHasLightTheme
+          ? item.classList.add(inversionClassName)
+          : item.classList.remove(inversionClassName);
       });
+    });
 
-      if (moonIcon && sunIcon) {
-        moonIcon.style.display = darkThemeIsActive ? `block` : `none`;
-        sunIcon.style.display = darkThemeIsActive ? `none` : `block`;
-      }
-    }).observe(document.documentElement, { attributes: true });
-  }
-
-  function loadTheme(): void {
-    const previousSetting = localStorage.getItem("darkThemeIsActive");
-
-    if (previousSetting) {
-      darkThemeIsActive = JSON.parse(previousSetting);
-      setTheme(darkThemeIsActive);
-    } else {
-      darkThemeIsActive = window?.matchMedia(
-        `(prefers-color-scheme: dark)`
-      ).matches;
+    if (moonIcon && sunIcon) {
+      moonIcon.style.display = darkThemeIsActive ? `block` : `none`;
+      sunIcon.style.display = darkThemeIsActive ? `none` : `block`;
     }
-  }
+  }).observe(document.documentElement, { attributes: true });
+}
 
-  function toggleTheme(): void {
-    darkThemeIsActive = !darkThemeIsActive;
-    localStorage.setItem(
-      "darkThemeIsActive",
-      JSON.stringify(darkThemeIsActive)
-    );
+function loadTheme(): void {
+  const previousSetting = localStorage.getItem("darkThemeIsActive");
+
+  if (previousSetting) {
+    darkThemeIsActive = JSON.parse(previousSetting);
     setTheme(darkThemeIsActive);
+  } else {
+    darkThemeIsActive = window?.matchMedia(
+      `(prefers-color-scheme: dark)`
+    ).matches;
   }
+}
 
-  function setTheme(darkThemeIsActive: boolean) {
-    document.documentElement.setAttribute(
-      `class`,
-      darkThemeIsActive ? "dark-theme" : "light-theme"
-    );
-  }
+function toggleTheme(): void {
+  darkThemeIsActive = !darkThemeIsActive;
+  localStorage.setItem(
+    "darkThemeIsActive",
+    JSON.stringify(darkThemeIsActive)
+  );
+  setTheme(darkThemeIsActive);
+}
+
+function setTheme(darkThemeIsActive: boolean) {
+  document.documentElement.setAttribute(
+    `class`,
+    darkThemeIsActive ? "" : "light-theme"
+  );
+}
 </script>
 
 <button id="theme-btn">

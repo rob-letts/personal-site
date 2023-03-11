@@ -1,28 +1,10 @@
 :root {
-  font-size: 12px;
-
-  --background-color: rgb(255 192 203 / 100%);
-  --text-color: rgb(0 0 0 / 90%);
-  --primary-color: rgb(140 31 98);
-  --secondary-color: rgb(123 84 129);
-  --brand-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  --light-color: rgb(255 192 203 / 100%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: rgb(0 0 0 / 90%);
-    --text-color: rgb(255 192 203 / 100%);
-    --primary-color: rgb(123 84 129);
-    --secondary-color: rgb(140 31 98);
-  }
-}
-
-:root.dark-theme {
   --background-color: rgb(0 0 0 / 90%);
   --text-color: rgb(255 192 203 / 100%);
   --primary-color: rgb(123 84 129);
   --secondary-color: rgb(140 31 98);
+  --brand-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  --light-color: rgb(255 192 203 / 100%);
 }
 
 :root.light-theme {
@@ -32,6 +14,7 @@
   --secondary-color: rgb(123 84 129);
 }
 
+/* Reset + Defaults */
 *,
 *::before,
 *::after {
@@ -48,6 +31,11 @@
   color: var(--background-color);
 }
 
+html {
+  font-size: 12px;
+  height: 100dvh;
+}
+
 body {
   line-height: 1.75;
   font-size: clamp(1rem, 0.6415rem + 1.1321vw, 2rem);
@@ -58,11 +46,6 @@ body {
   font-family: "DM Mono", monospace;
   color: var(--text-color);
   background: var(--background-color);
-}
-
-html,
-body {
-  height: 100vh;
 }
 
 ul,
@@ -106,6 +89,7 @@ img {
   }
 }
 
+/* Elements */
 a {
   color: var(--primary-color);
   font-weight: 700;
@@ -137,8 +121,67 @@ body > *:not(:last-child) {
   margin-block-end: 2.5rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  margin-block-start: 3rem;
+  position: relative;
+}
+
+nav > ul,
+.icon-list {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Utilities */
 .no-wrap {
   white-space: nowrap;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.display-none {
+  display: none;
+}
+
+/* Components */
+#contact-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+#bandcamp-logo-inner {
+  fill: var(--background-color);
+}
+
+#bandcamp-logo-outer {
+  fill: var(--text-color);
+}
+
+#theme-btn {
+  width: 2.5rem;
+  fill: var(--text-color);
+}
+
+#sun-icon {
+  display: none;
+}
+
+.letterboxd-bg {
+  fill: var(--text-color);
+}
+
+.letterboxd-fg {
+  fill: var(--background-color);
 }
 
 .emoji {
@@ -147,10 +190,6 @@ body > *:not(:last-child) {
   display: inline-block;
   position: relative;
   bottom: -0.5rem;
-}
-
-.invert {
-  filter: invert(1);
 }
 
 .name {
@@ -180,25 +219,7 @@ body > *:not(:last-child) {
   }
 }
 
-.display-none {
-  display: none;
-}
-
-#contact-btn {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-}
-
-#bandcamp-logo-inner {
-  fill: var(--background-color);
-}
-
-#bandcamp-logo-outer {
-  fill: var(--text-color);
-}
-
+/* Animations */
 @keyframes show {
   from {
     opacity: 0;
@@ -216,38 +237,4 @@ body > *:not(:last-child) {
   to {
     transform: scaleX(1);
   }
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-aside {
-  margin-block-start: 3rem;
-  position: relative;
-}
-
-nav > ul,
-.icon-list {
-  display: flex;
-  gap: 2rem;
-}
-
-#theme-btn {
-  width: 2.5rem;
-  fill: var(--text-color);
-}
-
-#sun-icon {
-  display: none;
-}
-
-.letterboxd-bg {
-  fill: var(--text-color);
-}
-
-.letterboxd-fg {
-  fill: var(--background-color);
 }

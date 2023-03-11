@@ -16,13 +16,14 @@
   "Work": [
     "Slack",
     "Jira",
+    "Confluence",
     "GitHub",
     "Figma"
   ],
   "RSS": "Feedbin",
   "Notes": "Notion",
   "Music": "Bandcamp",
-  "Film Log": "Letterboxd",
+  "Film Logger": "Letterboxd",
   "Laptop": "MacBook M1 Pro (14-inch, 2021)",
   "Keyboard": "Keychron K6",
   "Mouse": "MX Master 3S",

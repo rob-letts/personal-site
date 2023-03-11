@@ -18,29 +18,27 @@
     "I18n",
     "Data-Driven Component Architectures",
     "Design Systems Maintenance",
-    "Linting Configuration and Team Standards Definitions",
+    "Linting Configurations",
+    "Team Standards Definitions",
     "Version Control",
-    "Atlassian",
-    "Agile Workflows and Practices"
+    "Agile Rituals and Practices"
   ],
-  "skills": [
+  "tech": [
     "HTML",
     "CSS",
     "SCSS",
     "TailwindCSS",
+    "PostCSS",
     "Javascript",
-    "TypeScript",
     "Vue.js",
+    "TypeScript",
+    "Astro",
     "Vite",
-    "Vue",
-    "Router",
+    "Vue Router",
     "Pinia",
-    "Vue",
-    "i18n",
+    "Vue i18n",
     "Vitest",
-    "Vue",
-    "Test",
-    "Utils",
+    "Vue Test Utils",
     "Cypress"
   ]
 }
