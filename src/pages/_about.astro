@@ -1,0 +1,47 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient( import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_KEY );
+const { data, error } = await supabase.from("skills").select("category, title");
+---
+
+<SiteLayout>
+  <section>
+    <h2>Present</h2>
+    <ul>
+      <li>I like CSS a lot.</li>
+      <li>
+        I work with an awesome team at <a
+          href="https://www.tixtrack.com/"
+          target="_blank">TixTrack</a
+        >. We use Vue.js.
+      </li>
+      <li>I care deeply about A11y, UX, and Front End Architecture.</li>
+    </ul>
+
+    <h2>Past</h2>
+    <ul>
+      <li>
+        I played bass in noisy metal band called <a
+          href="https://disciplesofwren.bandcamp.com/album/groundswells-2"
+          target="_blank">Wren</a
+        >.
+      </li>
+      <li>
+        I helped run a very loud music venue called <a
+          href="https://www.corsicastudios.com/"
+          target="_blank">Corsica Studios</a
+        >.
+      </li>
+    </ul>
+  </section>
+
+  {
+    data?.map((item) => (
+      <>
+        <h2>{item.category}</h2>
+        <ul>{item.title}</ul>
+      </>
+    ))
+  }
+</SiteLayout>

@@ -7,7 +7,7 @@ function getName(filePath: string, sequenceToRemove: string) {
 
 const navItems = [
   "/",
-  ...astroPages.map(page => getName(page.file, ".astro")).filter(item => item !== 'index')
+  ...astroPages.map(page => getName(page.file, ".astro")).filter(item => item !== 'index' && !item?.startsWith("_"))
 ];
 ---
 <nav>

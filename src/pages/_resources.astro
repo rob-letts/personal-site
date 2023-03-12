@@ -2,7 +2,7 @@
 import SiteLayout from "@layouts/SiteLayout.astro";
 import { createClient } from '@supabase/supabase-js';
 const supabase = createClient(import.meta.env.SUPABASE_URL, import.meta.env.SUPABASE_KEY)
-const { data } = await supabase.from("resources").select('*');
+const { data, error } = await supabase.from("resources").select("category, title, link");
 ---
 <SiteLayout>
   <p>Ongoing collection of resources that I like, use, or consume.</p>
