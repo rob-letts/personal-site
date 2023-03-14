@@ -13,3 +13,4 @@ Improvements
 - [ ] anime js?
 - [ ] animation blobs?
 - [ ] 404 route?
+- [ ] scrollbar: https://scrollbar.app/
