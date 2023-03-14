@@ -1,3 +1,7 @@
+light-color?
+
+main > *?
+
 Features
 - [ ] about: convert to rotating billboards
 - [ ] uses: convert to vertical telescope view
