@@ -1,11 +1,13 @@
 ---
-import SiteLayout from "@layouts/SiteLayout.astro";
-import SiteLinks from "@components/SiteLinks.astro";
+import SiteLayout from "src/layouts/SiteLayout.astro";
+import SiteLinks from "src/components/SiteLinks.astro";
+
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``;
 ---
-<SiteLayout>
+<SiteLayout theme={theme}>
   <h1>
     hi there
-    <img class="emoji" src="/wave-logo.png" alt="a waving hand emoji" />
+    <img class="emoji" src="src/assets/images/wave-emoji.png" alt="a waving hand emoji" />
   </h1>
 
   <p>
