@@ -132,11 +132,6 @@
     text-underline-offset: clamp(4px, 1vw, 8px);
   }
 
-  a.active {
-    color: var(--text-color);
-    font-weight: 600;
-  }
-
   svg {
     fill: var(--text-color);
     transition: scale var(--transition-speed-slow) var(--transition-timing);
@@ -206,6 +201,24 @@
     display: flex;
   }
 
+  .nav-link {
+    color: var(--text-color);
+  }
+
+  .nav-link-active {
+    color: var(--background-color);
+    font-weight: 600;
+  }
+
+  .nav-item:has(.nav-link-active) {
+    --offset: 0.5rem;
+
+    border-radius: 4px;
+    background: var(--text-color);
+    padding: var(--offset);
+    translate: 0 calc(var(--offset) * -1);
+  }
+
   .name {
     font-weight: 700;
     text-decoration: none;
@@ -235,12 +248,12 @@
   }
 
   .corner-wobbles {
-    animation: gradient-fade 5s infinite;
+    animation: gradient-wobble 5s infinite;
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 25vw;
-    height: 25vw;
+    width: 350px;
+    height: 350px;
     rotate: 45deg;
     translate: 50% 50%;
     background-image:
@@ -248,8 +261,8 @@
         to right,
         var(--text-color),
         var(--text-color) 5px,
-        var(--background-color) 5px,
-        var(--background-color) 10px
+        transparent 5px,
+        transparent 10px
       );
   }
 }
@@ -273,7 +286,7 @@
     }
   }
 
-  @keyframes gradient-fade {
+  @keyframes gradient-wobble {
     0% {
       background-position: 0 0;
     }
