@@ -1,10 +1,21 @@
+# index
 - [ ] trim svg viewboxes
 - [ ] aria text for new SVGs
+- [ ] corner animation
+
+# about
+- [x] rewrite bio
+- [ ] aside diamond animation
+
+# uses
+- [ ] update content
+- [ ] convert to vertical telescope view
+
+# resources
+- [ ] audit and categorise content
+- [ ] convert to 'bookmarks' panel view
+
+# misc:
+- [ ] 404 redirect
 - [ ] custom favicon
-- [ ] about: rewrite bio
-- [ ] uses: convert to vertical telescope view
-- [ ] resources: convert to 'bookmarks' panel view
-- [ ] likes: create cards that can be flicked through
-- [ ] index: bg faded animation blobs? [anime js?]
-- [ ] 404: redirect?
 - [ ] https://scrollbar.app/
