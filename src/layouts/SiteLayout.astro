@@ -2,9 +2,10 @@
 import 'src/styles/base.css';
 import SiteNav from 'src/components/SiteNav.astro';
 import ThemeButton from 'src/components/ThemeButton.astro';
+const { theme } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class={theme}>
 
 <head>
   <meta charset="UTF-8">
