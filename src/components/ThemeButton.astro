@@ -1,74 +1,30 @@
 ---
-import SunIcon from "@icons/SunIcon.astro";
-import MoonIcon from "@icons/MoonIcon.astro";
+import SunIcon from "src/components/icons/SunIcon.astro";
+import MoonIcon from "src/components/icons/MoonIcon.astro";
 ---
 <script>
-// Query DOM and setup theme variable
-const themeBtn = document.querySelector("#theme-btn") as HTMLButtonElement;
-const sunIcon = document.querySelector("#sun-icon") as SVGElement;
-const moonIcon = document.querySelector("#moon-icon") as SVGElement;
-let darkThemeIsActive: boolean = true;
+  import { updateTheme, getTheme, saveTheme } from 'src/scripts/theme';
 
-// Setup Event Listeners and Mutation Observers
-document.addEventListener(`DOMContentLoaded`, loadTheme);
-themeBtn?.addEventListener(`click`, toggleTheme);
-observeThemeChange();
+  document.addEventListener(`DOMContentLoaded`, () => {
+    const theme = getTheme();
 
-function observeThemeChange(): void {
-  new MutationObserver((mutationList) => {
-    const target = mutationList.at(0)?.target as HTMLButtonElement;
-    const targetHasLightTheme = target.classList.contains("light-theme");
+    if (theme === undefined) {
+      const shouldSetDarkTheme = window?.matchMedia(`(prefers-color-scheme: dark)`).matches;
+        saveTheme(shouldSetDarkTheme);
+        updateTheme(shouldSetDarkTheme);
+      } else {
+        updateTheme(theme.includes(`dark`));
+      }
+  });
 
-    const dependencies: Set<string> = new Set();
-    const inversionClassName = "invert";
-    dependencies.add(".emoji");
-
-    dependencies.forEach((dependency: string) => {
-      document.querySelectorAll(dependency).forEach((item) => {
-        targetHasLightTheme
-          ? item.classList.add(inversionClassName)
-          : item.classList.remove(inversionClassName);
-      });
-    });
-
-    if (moonIcon && sunIcon) {
-      moonIcon.style.display = darkThemeIsActive ? `block` : `none`;
-      sunIcon.style.display = darkThemeIsActive ? `none` : `block`;
-    }
-  }).observe(document.documentElement, { attributes: true });
-}
-
-function loadTheme(): void {
-  const previousSetting = localStorage.getItem("darkThemeIsActive");
-
-  if (previousSetting) {
-    darkThemeIsActive = JSON.parse(previousSetting);
-    setTheme(darkThemeIsActive);
-  } else {
-    darkThemeIsActive = window?.matchMedia(
-      `(prefers-color-scheme: dark)`
-    ).matches;
-  }
-}
-
-function toggleTheme(): void {
-  darkThemeIsActive = !darkThemeIsActive;
-  localStorage.setItem(
-    "darkThemeIsActive",
-    JSON.stringify(darkThemeIsActive)
-  );
-  setTheme(darkThemeIsActive);
-}
-
-function setTheme(darkThemeIsActive: boolean) {
-  document.documentElement.setAttribute(
-    `class`,
-    darkThemeIsActive ? "" : "light-theme"
-  );
-}
+  document.querySelector("#theme-button")?.addEventListener(`click`, () => {
+    const shouldSetDarkTheme = getTheme()?.includes(`light`) ?? false;
+    saveTheme(shouldSetDarkTheme);
+    updateTheme(shouldSetDarkTheme);
+  });
 </script>
 
-<button id="theme-btn">
-  <MoonIcon id="moon-icon" />
-  <SunIcon id="sun-icon" />
+<button id="theme-button" class="theme-button">
+  <MoonIcon />
+  <SunIcon />
 </button>
