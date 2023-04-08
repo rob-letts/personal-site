@@ -1,0 +1,658 @@
+﻿{
+  "data": [
+    {
+      "id": "1",
+      "link": "https://yeun.github.io/open-color/#gray",
+      "name": "Open Color",
+      "category": "web development"
+    },
+    {
+      "id": "2",
+      "link": "https://www.hsluv.org/",
+      "name": "HSLuv - Human-friendly HSL",
+      "category": "web development"
+    },
+    {
+      "id": "3",
+      "link": "https://coolors.co/palettes/trending",
+      "name": "Trending Color Palettes - Coolors",
+      "category": "web development"
+    },
+    {
+      "id": "4",
+      "link": "https://m2.material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=6002ee",
+      "name": "Color Tool - Material Design",
+      "category": "web development"
+    },
+    {
+      "id": "5",
+      "link": "https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4",
+      "name": "Hexadecimal color code for transparency",
+      "category": "web development"
+    },
+    {
+      "id": "6",
+      "link": "https://coolors.co/",
+      "name": "Coolors - The super fast color palettes generator!",
+      "category": "web development"
+    },
+    {
+      "id": "7",
+      "link": "https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/A3BC99/163/188/156/d-0",
+      "name": "Scale — color scale generator",
+      "category": "web development"
+    },
+    {
+      "id": "8",
+      "link": "https://hihayk.github.io/wheel/",
+      "name": "Wheel",
+      "category": "web development"
+    },
+    {
+      "id": "9",
+      "link": "https://cssgradient.io/",
+      "name": "CSS Gradient — Generator, Maker, and Background",
+      "category": "web development"
+    },
+    {
+      "id": "10",
+      "link": "Reasonable Colors",
+      "name": "https://mothereffinghsl.com/",
+      "category": "web development"
+    },
+    {
+      "id": "11",
+      "link": "Mothereffing HSL",
+      "name": "Conic.css - nice, simple conic gradients",
+      "category": "web development"
+    },
+    {
+      "id": "12",
+      "link": "https://larsenwork.com/easing-gradients/",
+      "name": "Easing Gradients",
+      "category": "web development"
+    },
+    {
+      "id": "13",
+      "link": "https://modern-fluid-typography.vercel.app/",
+      "name": "https://modern-fluid-typography.vercel.app/",
+      "category": "web development"
+    },
+    {
+      "id": "14",
+      "link": "https://www.fluid-type-scale.com/",
+      "name": "https://www.fluid-type-scale.com/",
+      "category": "web development"
+    },
+    {
+      "id": "15",
+      "link": "https://fontsource.org/fonts/open-sans",
+      "name": "https://fontsource.org/fonts/open-sans",
+      "category": "web development"
+    },
+    {
+      "id": "16",
+      "link": "https://fonts.google.com/",
+      "name": "https://fonts.google.com/",
+      "category": "web development"
+    },
+    {
+      "id": "17",
+      "link": "https://play.typedetail.com/",
+      "name": "https://play.typedetail.com/",
+      "category": "web development"
+    },
+    {
+      "id": "18",
+      "link": "https://utopia.fyi/",
+      "name": "https://utopia.fyi/",
+      "category": "web development"
+    },
+    {
+      "id": "19",
+      "link": "https://typescale.com/",
+      "name": "https://typescale.com/",
+      "category": "web development"
+    },
+    {
+      "id": "20",
+      "link": "https://v-fonts.com/",
+      "name": "https://v-fonts.com/",
+      "category": "web development"
+    },
+    {
+      "id": "21",
+      "link": "https://www.fontshare.com/",
+      "name": "https://www.fontshare.com/",
+      "category": "web development"
+    },
+    {
+      "id": "22",
+      "link": "https://mediaquery.style/",
+      "name": "https://mediaquery.style/",
+      "category": "web development"
+    },
+    {
+      "id": "23",
+      "link": "https://magicstudio.com/",
+      "name": "https://magicstudio.com/",
+      "category": "web development"
+    },
+    {
+      "id": "24",
+      "link": "https://cleanup.pictures/",
+      "name": "https://cleanup.pictures/",
+      "category": "web development"
+    },
+    {
+      "id": "25",
+      "link": "https://pavellaptev.github.io/warp-svg/",
+      "name": "https://pavellaptev.github.io/warp-svg/",
+      "category": "web development"
+    },
+    {
+      "id": "26",
+      "link": "https://svg-path-visualizer.netlify.app/#M140%2020C73%2020%2020%2074%2020%20140c0%20135%20136%20170%20228%20303%2088-132%20229-173%20229-303%200-66-54-120-120-120-48%200-90%2028-109%2069-19-41-60-69-108-69z",
+      "name": "https://svg-path-visualizer.netlify.app/#M140%2020C73%2020%2020%2074%2020%20140c0%20135%20136%20170%20228%20303%2088-132%20229-173%20229-303%200-66-54-120-120-120-48%200-90%2028-109%2069-19-41-60-69-108-69z",
+      "category": "web development"
+    },
+    {
+      "id": "27",
+      "link": "https://boxy-svg.com/?utm_source=pocket_saves",
+      "name": "https://boxy-svg.com/?utm_source=pocket_saves",
+      "category": "web development"
+    },
+    {
+      "id": "28",
+      "link": "https://jakearchibald.github.io/svgomg/",
+      "name": "https://jakearchibald.github.io/svgomg/",
+      "category": "web development"
+    },
+    {
+      "id": "29",
+      "link": "https://squoosh.app/",
+      "name": "https://squoosh.app/",
+      "category": "web development"
+    },
+    {
+      "id": "30",
+      "link": "https://publicdomainreview.org/",
+      "name": "https://publicdomainreview.org/",
+      "category": "web development"
+    },
+    {
+      "id": "31",
+      "link": "https://avif.io/?utm_source=Codrops+Subscribers&utm_campaign=ed751ddd23-EMAIL_CAMPAIGN_2022_12_21_12_50_COPY_01&utm_medium=email&utm_term=0_-75f5eff7b4-%5BLIST_EMAIL_ID%5D",
+      "name": "https://avif.io/?utm_source=Codrops+Subscribers&utm_campaign=ed751ddd23-EMAIL_CAMPAIGN_2022_12_21_12_50_COPY_01&utm_medium=email&utm_term=0_-75f5eff7b4-%5BLIST_EMAIL_ID%5D",
+      "category": "web development"
+    },
+    {
+      "id": "32",
+      "link": "https://fffuel.co/sssvg/",
+      "name": "https://fffuel.co/sssvg/",
+      "category": "web development"
+    },
+    {
+      "id": "33",
+      "link": "https://www.logggos.club/?utm_source=Codrops+Subscribers&utm_campaign=3d91df7cf7-EMAIL_CAMPAIGN_2023_01_20_03_25_COPY_01&utm_medium=email&utm_term=0_-a43123b2e4-%5BLIST_EMAIL_ID%5D",
+      "name": "https://www.logggos.club/?utm_source=Codrops+Subscribers&utm_campaign=3d91df7cf7-EMAIL_CAMPAIGN_2023_01_20_03_25_COPY_01&utm_medium=email&utm_term=0_-a43123b2e4-%5BLIST_EMAIL_ID%5D",
+      "category": "web development"
+    },
+    {
+      "id": "34",
+      "link": "https://ionic.io/ionicons",
+      "name": "https://ionic.io/ionicons",
+      "category": "web development"
+    },
+    {
+      "id": "35",
+      "link": "https://feathericons.com/",
+      "name": "https://feathericons.com/",
+      "category": "web development"
+    },
+    {
+      "id": "36",
+      "link": "https://heroicons.com/",
+      "name": "https://heroicons.com/",
+      "category": "web development"
+    },
+    {
+      "id": "37",
+      "link": "https://animate.style/",
+      "name": "https://animate.style/",
+      "category": "web development"
+    },
+    {
+      "id": "38",
+      "link": "https://lab.skk.moe/css-triggers",
+      "name": "https://lab.skk.moe/css-triggers",
+      "category": "web development"
+    },
+    {
+      "id": "39",
+      "link": "https://easings.net/#",
+      "name": "https://easings.net/#",
+      "category": "web development"
+    },
+    {
+      "id": "40",
+      "link": "https://www.autoregex.xyz/",
+      "name": "https://www.autoregex.xyz/",
+      "category": "web development"
+    },
+    {
+      "id": "41",
+      "link": "https://www.toptal.com/developers/keycode",
+      "name": "https://www.toptal.com/developers/keycode",
+      "category": "web development"
+    },
+    {
+      "id": "42",
+      "link": "https://www.fetoolkit.io/",
+      "name": "https://www.fetoolkit.io/",
+      "category": "web development"
+    },
+    {
+      "id": "43",
+      "link": "https://regex101.com/",
+      "name": "https://regex101.com/",
+      "category": "web development"
+    },
+    {
+      "id": "44",
+      "link": "https://purifycss.online/",
+      "name": "https://purifycss.online/",
+      "category": "web development"
+    },
+    {
+      "id": "45",
+      "link": "https://min-max-calculator.9elements.com/",
+      "name": "https://min-max-calculator.9elements.com/",
+      "category": "web development"
+    },
+    {
+      "id": "46",
+      "link": "https://cssgradient.io/",
+      "name": "https://cssgradient.io/",
+      "category": "web development"
+    },
+    {
+      "id": "47",
+      "link": "https://stylojs.com/",
+      "name": "https://stylojs.com/",
+      "category": "web development"
+    },
+    {
+      "id": "48",
+      "link": "https://css.land/ranges/",
+      "name": "https://css.land/ranges/",
+      "category": "web development"
+    },
+    {
+      "id": "49",
+      "link": "https://www.projectwallace.com/css-code-quality?url=http%3A%2F%2Froblettsdev.netlify.com%2F",
+      "name": "https://www.projectwallace.com/css-code-quality?url=http%3A%2F%2Froblettsdev.netlify.com%2F",
+      "category": "web development"
+    },
+    {
+      "id": "50",
+      "link": "https://eslint.org/play/",
+      "name": "https://eslint.org/play/",
+      "category": "web development"
+    },
+    {
+      "id": "51",
+      "link": "https://www.canidev.tools/?category=css",
+      "name": "https://www.canidev.tools/?category=css",
+      "category": "web development"
+    },
+    {
+      "id": "52",
+      "link": "https://www.projectwallace.com/analyze-css",
+      "name": "https://www.projectwallace.com/analyze-css",
+      "category": "web development"
+    },
+    {
+      "id": "53",
+      "link": "https://jsoncrack.com/editor",
+      "name": "https://jsoncrack.com/editor",
+      "category": "web development"
+    },
+    {
+      "id": "54",
+      "link": "https://codepo8.github.io/dearconsole/",
+      "name": "https://codepo8.github.io/dearconsole/",
+      "category": "web development"
+    },
+    {
+      "id": "55",
+      "link": "https://msurguy.github.io/flow-lines/",
+      "name": "https://msurguy.github.io/flow-lines/",
+      "category": "web development"
+    },
+    {
+      "id": "56",
+      "link": "https://patternico.com/",
+      "name": "https://patternico.com/",
+      "category": "web development"
+    },
+    {
+      "id": "57",
+      "link": "https://colormixer.web.app/02332971ff623007ff9bc9505a440301ffff7c5f55610300/Sunset",
+      "name": "https://colormixer.web.app/02332971ff623007ff9bc9505a440301ffff7c5f55610300/Sunset",
+      "category": "web development"
+    },
+    {
+      "id": "58",
+      "link": "https://huetone.ardov.me/",
+      "name": "https://huetone.ardov.me/",
+      "category": "web development"
+    },
+    {
+      "id": "59",
+      "link": "https://csshero.org/mesher/?utm_source=pocket_saves",
+      "name": "https://csshero.org/mesher/?utm_source=pocket_saves",
+      "category": "web development"
+    },
+    {
+      "id": "60",
+      "link": "https://www.joshwcomeau.com/gradient-generator/",
+      "name": "https://www.joshwcomeau.com/gradient-generator/",
+      "category": "web development"
+    },
+    {
+      "id": "61",
+      "link": "https://www.joshwcomeau.com/shadow-palette/",
+      "name": "https://www.joshwcomeau.com/shadow-palette/",
+      "category": "web development"
+    },
+    {
+      "id": "62",
+      "link": "https://neumorphism.io/#e0e0e0",
+      "name": "https://neumorphism.io/#e0e0e0",
+      "category": "web development"
+    },
+    {
+      "id": "63",
+      "link": "https://wweb.dev/resources/css-separator-generator/",
+      "name": "https://wweb.dev/resources/css-separator-generator/",
+      "category": "web development"
+    },
+    {
+      "id": "64",
+      "link": "https://www.learnui.design/tools/gradient-generator.html",
+      "name": "https://www.learnui.design/tools/gradient-generator.html",
+      "category": "web development"
+    },
+    {
+      "id": "65",
+      "link": "https://randoma11y.com/?color=hotpink",
+      "name": "https://randoma11y.com/?color=hotpink",
+      "category": "web development"
+    },
+    {
+      "id": "66",
+      "link": "https://iwanttouse.com/",
+      "name": "https://iwanttouse.com/",
+      "category": "web development"
+    },
+    {
+      "id": "67",
+      "link": "https://modernizr.com/",
+      "name": "https://modernizr.com/",
+      "category": "web development"
+    },
+    {
+      "id": "68",
+      "link": "https://www.buttoncheatsheet.com/",
+      "name": "https://www.buttoncheatsheet.com/",
+      "category": "web development"
+    },
+    {
+      "id": "69",
+      "link": "https://www.webpagetest.org/",
+      "name": "https://www.webpagetest.org/",
+      "category": "web development"
+    },
+    {
+      "id": "70",
+      "link": "https://pagespeed.web.dev/",
+      "name": "https://pagespeed.web.dev/",
+      "category": "web development"
+    },
+    {
+      "id": "71",
+      "link": "https://www.npmjs.com/package/source-map-explorer",
+      "name": "https://www.npmjs.com/package/source-map-explorer",
+      "category": "web development"
+    },
+    {
+      "id": "72",
+      "link": "https://bundle-buddy.com/",
+      "name": "https://bundle-buddy.com/",
+      "category": "web development"
+    },
+    {
+      "id": "73",
+      "link": "https://unpkg.com/",
+      "name": "https://unpkg.com/",
+      "category": "web development"
+    },
+    {
+      "id": "74",
+      "link": "https://packagephobia.com/",
+      "name": "https://packagephobia.com/",
+      "category": "web development"
+    },
+    {
+      "id": "75",
+      "link": "https://bundlephobia.com/",
+      "name": "https://bundlephobia.com/",
+      "category": "web development"
+    },
+    {
+      "id": "76",
+      "link": "https://www.debugbear.com/chrome-extension-performance-lookup",
+      "name": "https://www.debugbear.com/chrome-extension-performance-lookup",
+      "category": "web development"
+    },
+    {
+      "id": "77",
+      "link": "https://www.debugbear.com/resource-hint-validator",
+      "name": "https://www.debugbear.com/resource-hint-validator",
+      "category": "web development"
+    },
+    {
+      "id": "78",
+      "link": "https://www.debugbear.com/html-size-analyzer",
+      "name": "https://www.debugbear.com/html-size-analyzer",
+      "category": "web development"
+    },
+    {
+      "id": "79",
+      "link": "https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/#bundle-size",
+      "name": "https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/#bundle-size",
+      "category": "web development"
+    },
+    {
+      "id": "80",
+      "link": "https://roadmap.sh/best-practices/frontend-performance",
+      "name": "https://roadmap.sh/best-practices/frontend-performance",
+      "category": "web development"
+    },
+    {
+      "id": "81",
+      "link": "https://www.checklist.design/element-checklists",
+      "name": "https://www.checklist.design/element-checklists",
+      "category": "web development"
+    },
+    {
+      "id": "82",
+      "link": "https://github.com/Heydon/inclusive-design-checklist",
+      "name": "https://github.com/Heydon/inclusive-design-checklist",
+      "category": "web development"
+    },
+    {
+      "id": "83",
+      "link": "https://uiverse.io/",
+      "name": "https://uiverse.io/",
+      "category": "web development"
+    },
+    {
+      "id": "84",
+      "link": "https://shoelace.style/components/skeleton",
+      "name": "https://shoelace.style/components/skeleton",
+      "category": "web development"
+    },
+    {
+      "id": "85",
+      "link": "https://explore.fast.design/components/fast-accordion",
+      "name": "https://explore.fast.design/components/fast-accordion",
+      "category": "web development"
+    },
+    {
+      "id": "86",
+      "link": "https://www.uiguideline.com/components",
+      "name": "https://www.uiguideline.com/components",
+      "category": "web development"
+    },
+    {
+      "id": "87",
+      "link": "https://open-ui.org/components/alert.research",
+      "name": "https://open-ui.org/components/alert.research",
+      "category": "web development"
+    },
+    {
+      "id": "88",
+      "link": "https://htmlwithsuperpowers.netlify.app/using/systems.html",
+      "name": "https://htmlwithsuperpowers.netlify.app/using/systems.html",
+      "category": "web development"
+    },
+    {
+      "id": "89",
+      "link": "https://fontsource.org/fonts/league-mono",
+      "name": "https://fontsource.org/fonts/league-mono",
+      "category": "web development"
+    },
+    {
+      "id": "90",
+      "link": "https://helios.hashicorp.design/components",
+      "name": "https://helios.hashicorp.design/components",
+      "category": "web development"
+    },
+    {
+      "id": "91",
+      "link": "https://www.designsystemchecklist.com/",
+      "name": "https://www.designsystemchecklist.com/",
+      "category": "web development"
+    },
+    {
+      "id": "92",
+      "link": "https://roadmap.sh/design-system",
+      "name": "https://roadmap.sh/design-system",
+      "category": "web development"
+    },
+    {
+      "id": "93",
+      "link": "https://gitexplorer.com/",
+      "name": "https://gitexplorer.com/",
+      "category": "web development"
+    },
+    {
+      "id": "94",
+      "link": "https://ohshitgit.com/",
+      "name": "https://ohshitgit.com/",
+      "category": "web development"
+    },
+    {
+      "id": "95",
+      "link": "https://app.netlify.com/drop",
+      "name": "https://app.netlify.com/drop",
+      "category": "web development"
+    },
+    {
+      "id": "96",
+      "link": "https://app.spline.design/tutorials",
+      "name": "https://app.spline.design/tutorials",
+      "category": "web development"
+    },
+    {
+      "id": "97",
+      "link": "https://www.frontendinterviewhandbook.com/",
+      "name": "https://www.frontendinterviewhandbook.com/",
+      "category": "web development"
+    },
+    {
+      "id": "98",
+      "link": "https://h5bp.org/Front-end-Developer-Interview-Questions/questions/css-questions/",
+      "name": "https://h5bp.org/Front-end-Developer-Interview-Questions/questions/css-questions/",
+      "category": "web development"
+    },
+    {
+      "id": "99",
+      "link": "https://uxtools.co/challenges/",
+      "name": "https://uxtools.co/challenges/",
+      "category": "web development"
+    },
+    {
+      "id": "100",
+      "link": "https://www.matuzo.at/blog/2022/100daysof-day27/",
+      "name": "https://www.matuzo.at/blog/2022/100daysof-day27/",
+      "category": "web development"
+    },
+    {
+      "id": "101",
+      "link": "https://jobs.console.dev/",
+      "name": "https://jobs.console.dev/",
+      "category": "web development"
+    },
+    {
+      "id": "102",
+      "link": "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
+      "name": "https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/",
+      "category": "web development"
+    },
+    {
+      "id": "103",
+      "link": "https://builtformars.com/ux-glossary",
+      "name": "https://builtformars.com/ux-glossary",
+      "category": "web development"
+    },
+    {
+      "id": "104",
+      "link": "https://www.uiguideline.com/components",
+      "name": "https://www.uiguideline.com/components",
+      "category": "web development"
+    },
+    {
+      "id": "105",
+      "link": "https://github.com/davidtheclark/scalable-css-reading-list",
+      "name": "https://github.com/davidtheclark/scalable-css-reading-list",
+      "category": "web development"
+    },
+    {
+      "id": "106",
+      "link": "https://github.com/lydiahallie/javascript-questions",
+      "name": "https://github.com/lydiahallie/javascript-questions",
+      "category": "web development"
+    },
+    {
+      "id": "107",
+      "link": "https://www.fontpair.co/",
+      "name": "https://www.fontpair.co/",
+      "category": "web development"
+    },
+    {
+      "id": "108",
+      "link": "https://oklch.com/#67.65,0.244,327.555,100",
+      "name": "https://oklch.com/#67.65,0.244,327.555,100",
+      "category": "web development"
+    },
+    {
+      "id": "109",
+      "link": "https://joshcollinsworth.com/blog/great-transitions?utm_source=CSS-Weekly&utm_campaign=Issue-543&utm_medium=email",
+      "name": "https://joshcollinsworth.com/blog/great-transitions?utm_source=CSS-Weekly&utm_campaign=Issue-543&utm_medium=email",
+      "category": "web development"
+    }
+  ]
+}

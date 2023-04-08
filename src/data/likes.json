@@ -1,0 +1,22 @@
+﻿{
+  "data": [
+    {
+      "id": "1",
+      "category": "Music",
+      "name": "Pile, All Fiction",
+      "link": "https://pile.bandcamp.com/album/all-fiction"
+    },
+    {
+      "id": "3",
+      "category": "Film",
+      "name": "Sissy",
+      "link": "https://letterboxd.com/film/sissy-2022/"
+    },
+    {
+      "id": "2",
+      "category": "Games",
+      "name": "Risk of Rain 2",
+      "link": "https://store.steampowered.com/app/632360/Risk_of_Rain_2/"
+    }
+  ]
+}

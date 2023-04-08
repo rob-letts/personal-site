@@ -1,0 +1,119 @@
+﻿{
+  "data": [
+    {
+      "id": "1",
+      "category": "RSS",
+      "name": "Feedbin"
+    },
+    {
+      "id": "2",
+      "category": "Control",
+      "name": "Raycast"
+    },
+    {
+      "id": "3",
+      "category": "Terminal",
+      "name": "Warp"
+    },
+    {
+      "id": "4",
+      "category": "Prompt",
+      "name": "Starship"
+    },
+    {
+      "id": "5",
+      "category": "Terminal Multiplexer",
+      "name": "Zellij"
+    },
+    {
+      "id": "6",
+      "category": "Notes",
+      "name": "Notion"
+    },
+    {
+      "id": "7",
+      "category": "Music",
+      "name": "Bandcamp"
+    },
+    {
+      "id": "8",
+      "category": "Film Logger",
+      "name": "Letterboxd"
+    },
+    {
+      "id": "9",
+      "category": "Laptop",
+      "name": "MacBook M1 Pro (14-inch, 2021)"
+    },
+    {
+      "id": "10",
+      "category": "Keyboard",
+      "name": "Keychron K6"
+    },
+    {
+      "id": "11",
+      "category": "Mouse",
+      "name": "MX Master 3S"
+    },
+    {
+      "id": "12",
+      "category": "Monitor",
+      "name": "LG 34 inch Ultrawide"
+    },
+    {
+      "id": "17",
+      "category": "Git Interface",
+      "name": "Tig"
+    },
+    {
+      "id": "18",
+      "category": "Git Interface",
+      "name": "Lazygit"
+    },
+    {
+      "id": "19",
+      "category": "Work",
+      "name": "Slack"
+    },
+    {
+      "id": "20",
+      "category": "Work",
+      "name": "Jira"
+    },
+    {
+      "id": "21",
+      "category": "Work",
+      "name": "Confluence"
+    },
+    {
+      "id": "22",
+      "category": "Work",
+      "name": "GitHub"
+    },
+    {
+      "id": "23",
+      "category": "Work",
+      "name": "Figma"
+    },
+    {
+      "id": "13",
+      "category": "Browser",
+      "name": "Chrome"
+    },
+    {
+      "id": "15",
+      "category": "Code Editor",
+      "name": "VSCode"
+    },
+    {
+      "id": "16",
+      "category": "Code Editor",
+      "name": "Neovim"
+    },
+    {
+      "id": "14",
+      "category": "Browser",
+      "name": "Arc"
+    }
+  ]
+}

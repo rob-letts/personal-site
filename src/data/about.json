@@ -1,0 +1,194 @@
+﻿{
+  "data": [
+    {
+      "id": "1",
+      "name": "HTML",
+      "category": "Technologies"
+    },
+    {
+      "id": "2",
+      "name": "CSS",
+      "category": "Technologies"
+    },
+    {
+      "id": "3",
+      "name": "SCSS",
+      "category": "Technologies"
+    },
+    {
+      "id": "4",
+      "name": "TailwindCSS",
+      "category": "Technologies"
+    },
+    {
+      "id": "5",
+      "name": "PostCSS",
+      "category": "Technologies"
+    },
+    {
+      "id": "6",
+      "name": "JavaScript",
+      "category": "Technologies"
+    },
+    {
+      "id": "7",
+      "name": "Vue.js",
+      "category": "Technologies"
+    },
+    {
+      "id": "8",
+      "name": "TypeScript",
+      "category": "Technologies"
+    },
+    {
+      "id": "9",
+      "name": "Astro",
+      "category": "Technologies"
+    },
+    {
+      "id": "10",
+      "name": "Vite",
+      "category": "Technologies"
+    },
+    {
+      "id": "11",
+      "name": "Vue Router",
+      "category": "Technologies"
+    },
+    {
+      "id": "12",
+      "name": "Pinia",
+      "category": "Technologies"
+    },
+    {
+      "id": "13",
+      "name": "Vue I18n",
+      "category": "Technologies"
+    },
+    {
+      "id": "14",
+      "name": "Vitest",
+      "category": "Technologies"
+    },
+    {
+      "id": "15",
+      "name": "Cypress",
+      "category": "Technologies"
+    },
+    {
+      "id": "16",
+      "name": "Vue Test Utils",
+      "category": "Technologies"
+    },
+    {
+      "id": "21",
+      "name": "BEM",
+      "category": "Concepts"
+    },
+    {
+      "id": "23",
+      "name": "SMACSS",
+      "category": "Concepts"
+    },
+    {
+      "id": "24",
+      "name": "ITCSS",
+      "category": "Concepts"
+    },
+    {
+      "id": "25",
+      "name": "CUBE",
+      "category": "Concepts"
+    },
+    {
+      "id": "26",
+      "name": "OOCSS",
+      "category": "Concepts"
+    },
+    {
+      "id": "27",
+      "name": "Atomic Styles",
+      "category": "Concepts"
+    },
+    {
+      "id": "28",
+      "name": "MPA",
+      "category": "Concepts"
+    },
+    {
+      "id": "29",
+      "name": "SPA",
+      "category": "Concepts"
+    },
+    {
+      "id": "30",
+      "name": "SSR",
+      "category": "Concepts"
+    },
+    {
+      "id": "31",
+      "name": "Islands",
+      "category": "Concepts"
+    },
+    {
+      "id": "32",
+      "name": "SSG",
+      "category": "Concepts"
+    },
+    {
+      "id": "33",
+      "name": "Unit Testing",
+      "category": "Concepts"
+    },
+    {
+      "id": "34",
+      "name": "Component Testing",
+      "category": "Concepts"
+    },
+    {
+      "id": "35",
+      "name": "E2E Testing",
+      "category": "Concepts"
+    },
+    {
+      "id": "36",
+      "name": "State Management",
+      "category": "Concepts"
+    },
+    {
+      "id": "37",
+      "name": "I18n",
+      "category": "Concepts"
+    },
+    {
+      "id": "38",
+      "name": "Data-Driven Component Architectures",
+      "category": "Concepts"
+    },
+    {
+      "id": "39",
+      "name": "Design Systems Maintenance",
+      "category": "Concepts"
+    },
+    {
+      "id": "40",
+      "name": "Linting Configurations",
+      "category": "Concepts"
+    },
+    {
+      "id": "41",
+      "name": "Team Standards Definitions",
+      "category": "Concepts"
+    },
+    {
+      "id": "42",
+      "name": "Version Control",
+      "category": "Concepts"
+    },
+    {
+      "id": "43",
+      "name": "Agile Rituals and Practices",
+      "category": "Concepts"
+    }
+  ]
+}
