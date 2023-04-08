@@ -1,0 +1,18 @@
+---
+import SiteLayout from "src/layouts/SiteLayout.astro";
+import { data } from "src/data/likes.json";
+
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``;
+---
+<SiteLayout theme={theme}>
+  <p>Ongoing record of the latest games, films, and albums I've enjoyed</p>
+  {
+    data?.map(({ category, name, link }) => (
+      <>
+        <h2>{category}</h2>
+        <ul>{name}</ul>
+        <a>{link}</a>
+      </>
+    ))
+  }
+</SiteLayout>
