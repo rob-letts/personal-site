@@ -1,7 +1,5 @@
 ---
 import SiteLayout from "src/layouts/SiteLayout.astro";
-import { data } from "src/data/about.json";
-
 const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``;
 ---
 <SiteLayout theme={theme}>
@@ -38,13 +36,4 @@ const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``
       <li>Got a degree in Music and Sonic Media.</li>
     </ul>
   </section>
-
-  {
-    data?.map(({ category, name }) => (
-      <>
-        <h2>{category}</h2>
-        <ul>{name}</ul>
-      </>
-    ))
-  }
 </SiteLayout>
