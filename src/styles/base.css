@@ -12,7 +12,6 @@
     --primary-color: rgb(140 31 98);
     --secondary-color: rgb(123 84 129);
     --brand-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    --filter-invert: 1;
     --display-light-icon: block;
     --display-dark-icon: none;
     --step-0: clamp(0.75rem, calc(0.53rem + 1vw), 1.5rem);
@@ -30,7 +29,6 @@
     --text-color: rgb(255 192 203 / 100%);
     --primary-color: rgb(123 84 129);
     --secondary-color: rgb(140 31 98);
-    --filter-invert: 0;
     --display-light-icon: none;
     --display-dark-icon: block;
   }
@@ -124,6 +122,8 @@
 
   main {
     max-width: 65ch;
+    opacity: 0;
+    animation: fade-in var(--transition-speed-slow) var(--transition-timing) forwards;
   }
 
   a {
@@ -202,15 +202,6 @@
     display: flex;
   }
 
-  .emoji {
-    height: 1em;
-    width: 1em;
-    display: inline-block;
-    position: relative;
-    top: 3px;
-    filter: invert(var(--filter-invert));
-  }
-
   .name {
     font-weight: 700;
     text-decoration: none;
@@ -238,6 +229,25 @@
     animation-fill-mode: forwards;
     animation-delay: 1s;
   }
+
+  .corner-wobbles {
+    animation: gradient-fade 5s infinite;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 25vw;
+    height: 25vw;
+    rotate: 45deg;
+    translate: 50% 50%;
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        var(--text-color),
+        var(--text-color) 5px,
+        var(--background-color) 5px,
+        var(--background-color) 10px
+      );
+  }
 }
 
 @layer utility {
@@ -247,9 +257,25 @@
 }
 
 @layer animation {
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+    }
+  }
+
   @keyframes underline {
     to {
       scale: 1;
+    }
+  }
+
+  @keyframes gradient-fade {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: -100px 0;
     }
   }
 }

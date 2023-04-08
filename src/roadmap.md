@@ -1,7 +1,7 @@
 # index
+- [x] corner animation
 - [ ] trim svg viewboxes
 - [ ] aria text for new svgs
-- [ ] corner animation
 
 # about
 - [x] rewrite bio
