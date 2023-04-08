@@ -15,7 +15,12 @@ const navItems = [
   <ul class="nav-items icon-list">
     {navItems.map((item) => (
       <li>
-        <a href={item}>{item}</a>
+        <a
+          href={item}
+          class={[item, `/${item}`].includes(Astro.url.pathname) ? "active" : ""}
+        >
+          {item}
+        </a>
       </li>
     ))}
   </ul>
