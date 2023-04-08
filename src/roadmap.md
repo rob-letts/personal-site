@@ -8,12 +8,14 @@
 - [ ] aside diamond animation
 
 # uses
-- [ ] update content
+- [x] update content
 - [ ] convert to vertical telescope view
+- [ ] Go 'live'
 
 # resources
 - [ ] audit and categorise content
 - [ ] convert to 'bookmarks' panel view
+- [ ] Go 'live'
 
 # misc:
 - [ ] 404 redirect
