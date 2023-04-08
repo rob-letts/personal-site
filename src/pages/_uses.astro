@@ -4,14 +4,14 @@ import { data } from "src/data/uses.json"
 
 const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
 
-const formattedData = new Map();
+const formattedData = new Map<string, string[]>();
 
 data.forEach(item => {
   if (!formattedData.has(item.category)) {
     formattedData.set(item.category, []);
   }
 
-  formattedData.get(item.category).push(item.name);
+  formattedData.get(item.category)?.push(item.name);
 });
 ---
 <SiteLayout theme={theme}>
@@ -22,7 +22,7 @@ data.forEach(item => {
           <h2>{category}</h2>
           <ul>
             {
-              items.map(item => <li>{item}</li>)
+              items.map((item: string) => <li>{item}</li>)
             }
           </ul>
         </div>

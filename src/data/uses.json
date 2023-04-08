@@ -79,6 +79,10 @@
     {
       "category": "Tools",
       "name": "Arc"
+    },
+    {
+      "category": "Tools",
+      "name": "1Password"
     }
   ]
 }

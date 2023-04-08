@@ -1,6 +1,6 @@
 # index
 - [ ] trim svg viewboxes
-- [ ] aria text for new SVGs
+- [ ] aria text for new svgs
 - [ ] corner animation
 
 # about
@@ -10,12 +10,12 @@
 # uses
 - [x] update content
 - [ ] convert to vertical telescope view
-- [ ] Go 'live'
+- [ ] go 'live'
 
 # resources
 - [ ] audit and categorise content
 - [ ] convert to 'bookmarks' panel view
-- [ ] Go 'live'
+- [ ] go 'live'
 
 # misc:
 - [ ] 404 redirect
