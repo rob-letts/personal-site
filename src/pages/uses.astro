@@ -3,14 +3,30 @@ import SiteLayout from "src/layouts/SiteLayout.astro";
 import { data } from "src/data/uses.json"
 
 const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
+
+const formattedData = new Map();
+
+data.forEach(item => {
+  if (!formattedData.has(item.category)) {
+    formattedData.set(item.category, []);
+  }
+
+  formattedData.get(item.category).push(item.name);
+});
 ---
 <SiteLayout theme={theme}>
   {
-    data?.map(({ category, name }) => (
-      <>
-        <h2>{category}</h2>
-        <ul>{name}</ul>
-      </>
-    ))
+    [...formattedData.entries()].map(([category, items]) => {
+      return (
+        <div>
+          <h2>{category}</h2>
+          <ul>
+            {
+              items.map(item => <li>{item}</li>)
+            }
+          </ul>
+        </div>
+      )
+    })
   }
 </SiteLayout>

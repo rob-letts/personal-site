@@ -1,118 +1,83 @@
 ﻿{
   "data": [
     {
-      "id": "1",
-      "category": "RSS",
-      "name": "Feedbin"
+      "category": "Media",
+      "name": "Mindstone"
     },
     {
-      "id": "2",
-      "category": "Control",
+      "category": "Tools",
       "name": "Raycast"
     },
     {
-      "id": "3",
       "category": "Terminal",
       "name": "Warp"
     },
     {
-      "id": "4",
-      "category": "Prompt",
+      "category": "Terminal",
       "name": "Starship"
     },
     {
-      "id": "5",
-      "category": "Terminal Multiplexer",
+      "category": "Terminal",
       "name": "Zellij"
     },
     {
-      "id": "6",
-      "category": "Notes",
+      "category": "Tools",
       "name": "Notion"
     },
     {
-      "id": "7",
-      "category": "Music",
+      "category": "Media",
       "name": "Bandcamp"
     },
     {
-      "id": "8",
-      "category": "Film Logger",
+      "category": "Media",
       "name": "Letterboxd"
     },
     {
-      "id": "9",
-      "category": "Laptop",
+      "category": "Hardware",
       "name": "MacBook M1 Pro (14-inch, 2021)"
     },
     {
-      "id": "10",
-      "category": "Keyboard",
+      "category": "Hardware",
       "name": "Keychron K6"
     },
     {
-      "id": "11",
-      "category": "Mouse",
+      "category": "Hardware",
       "name": "MX Master 3S"
     },
     {
-      "id": "12",
-      "category": "Monitor",
+      "category": "Hardware",
       "name": "LG 34 inch Ultrawide"
     },
     {
-      "id": "17",
-      "category": "Git Interface",
+      "category": "Terminal",
       "name": "Tig"
     },
     {
-      "id": "18",
-      "category": "Git Interface",
-      "name": "Lazygit"
+      "category": "UI",
+      "name": "Catppuccin Mocha"
     },
     {
-      "id": "19",
-      "category": "Work",
-      "name": "Slack"
+      "category": "UI",
+      "name": "Monolisa"
     },
     {
-      "id": "20",
-      "category": "Work",
-      "name": "Jira"
-    },
-    {
-      "id": "21",
-      "category": "Work",
-      "name": "Confluence"
-    },
-    {
-      "id": "22",
-      "category": "Work",
-      "name": "GitHub"
-    },
-    {
-      "id": "23",
-      "category": "Work",
+      "category": "Tools",
       "name": "Figma"
     },
     {
-      "id": "13",
-      "category": "Browser",
+      "category": "Tools",
       "name": "Chrome"
     },
     {
-      "id": "15",
-      "category": "Code Editor",
+      "category": "Tools",
       "name": "VSCode"
     },
     {
-      "id": "16",
-      "category": "Code Editor",
+      "category": "Terminal",
       "name": "Neovim"
     },
     {
-      "id": "14",
-      "category": "Browser",
+      "category": "Tools",
       "name": "Arc"
     }
   ]
