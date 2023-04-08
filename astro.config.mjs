@@ -1,7 +1,7 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify/functions";
-import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
+import autoprefixer from "autoprefixer";
+import cssnano from "cssnano";
 
 export default defineConfig({
   vite: {
@@ -11,6 +11,6 @@ export default defineConfig({
       }
     }
   },
-  output: `server`,
+  output: "server",
   adapter: netlify()
 });

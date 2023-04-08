@@ -2,7 +2,7 @@
 import SiteLayout from "src/layouts/SiteLayout.astro";
 import SiteLinks from "src/components/SiteLinks.astro";
 
-const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``;
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
 ---
 <SiteLayout theme={theme}>
   <h1>

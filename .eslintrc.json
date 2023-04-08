@@ -18,7 +18,7 @@
         "prefer-const": ["error"],
         "indent": ["error", 2],
         "linebreak-style": ["error", "unix"],
-        "quotes": ["error", "backtick"],
+        "quotes": ["error", "double"],
         "semi": ["error", "always"],
         "no-duplicate-imports": ["error"],
         "no-var": ["error"],

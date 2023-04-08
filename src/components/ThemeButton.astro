@@ -3,22 +3,22 @@ import SunIcon from "src/components/icons/SunIcon.astro";
 import MoonIcon from "src/components/icons/MoonIcon.astro";
 ---
 <script>
-  import { updateTheme, getTheme, saveTheme } from 'src/scripts/theme';
+  import { updateTheme, getTheme, saveTheme } from "src/scripts/theme";
 
-  document.addEventListener(`DOMContentLoaded`, () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const theme = getTheme();
 
     if (theme === undefined) {
-      const shouldSetDarkTheme = window?.matchMedia(`(prefers-color-scheme: dark)`).matches;
+      const shouldSetDarkTheme = window?.matchMedia("(prefers-color-scheme: dark)").matches;
         saveTheme(shouldSetDarkTheme);
         updateTheme(shouldSetDarkTheme);
       } else {
-        updateTheme(theme.includes(`dark`));
+        updateTheme(theme.includes("dark"));
       }
   });
 
-  document.querySelector("#theme-button")?.addEventListener(`click`, () => {
-    const shouldSetDarkTheme = getTheme()?.includes(`light`) ?? false;
+  document.querySelector("#theme-button")?.addEventListener("click", () => {
+    const shouldSetDarkTheme = getTheme()?.includes("light") ?? false;
     saveTheme(shouldSetDarkTheme);
     updateTheme(shouldSetDarkTheme);
   });

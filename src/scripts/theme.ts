@@ -8,13 +8,13 @@ export function getTheme(): string | undefined {
 
 export function saveTheme(shouldSetDarkTheme: boolean) {
   document.cookie = `theme=${
-    shouldSetDarkTheme ? `dark-mode` : `light-mode`
+    shouldSetDarkTheme ? "dark-mode" : "light-mode"
   }; SameSite=None; Secure`;
 }
 
 export function updateTheme(shouldSetDarkTheme: boolean) {
   document.documentElement.setAttribute(
-    `class`,
+    "class",
     shouldSetDarkTheme ? "dark-mode" : "light-mode"
   );
 }

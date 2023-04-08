@@ -2,7 +2,7 @@
 import SiteLayout from "src/layouts/SiteLayout.astro";
 import { data } from "src/data/resources.json"
 
-const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ``;
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
 ---
 <SiteLayout theme={theme}>
   <p>Ongoing collection of resources that I like, use, or consume.</p>
