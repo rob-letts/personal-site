@@ -11,7 +11,6 @@
 	},
 	"dependencies": {
 		"@astrojs/netlify": "^2.2.0",
-		"@fontsource/dm-mono": "^4.5.10",
 		"astro": "^2.1.7"
 	},
 	"devDependencies": {
