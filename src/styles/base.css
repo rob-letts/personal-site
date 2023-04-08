@@ -20,11 +20,8 @@
     --step-2: clamp(1.17rem, calc(0.74rem + 1.99vw), 2.67rem);
     --step-3: clamp(1.47rem, calc(0.86rem + 2.78vw), 3.55rem);
     --step-4: clamp(1.83rem, calc(0.98rem + 3.87vw), 4.74rem);
-    --body-padding-block: 2rem;
-    --body-padding-inline: 1.5rem;
-    --swipe-offset-y: calc(var(--body-padding-block) * -1);
-    --swipe-offset-x: calc(var(--body-padding-inline) * -1);
     --transition-speed: 0.2s;
+    --transition-speed-slow: calc(var(--transition-speed) * 2);
     --transition-timing: ease-out;
   }
 
@@ -63,8 +60,8 @@
   body {
     line-height: 1.75;
     font-size: var(--step-0);
-    padding-block: var(--body-padding-block);
-    padding-inline: var(--body-padding-inline);
+    padding-block: 2rem;
+    padding-inline: 1.5rem;
     margin-block: 0;
     margin-inline: auto;
     font-family: DMMono, monospace;
@@ -135,14 +132,20 @@
     text-underline-offset: clamp(4px, 1vw, 8px);
   }
 
+  a.active {
+    color: var(--text-color);
+    font-weight: 600;
+  }
+
   svg {
     fill: var(--text-color);
-    transition: scale var(--transition-speed) var(--transition-timing);
+    transition: scale var(--transition-speed-slow) var(--transition-timing);
     width: var(--step-4);
   }
 
   svg:hover {
     scale: 1.2;
+    transition-duration: var(--transition-speed);
   }
 
   svg:active {
@@ -209,8 +212,8 @@
   }
 
   .name {
-    z-index: -1;
     font-weight: 700;
+    text-decoration: none;
     font-size: var(--step-2);
     background-image: var(--brand-gradient);
     background-clip: text;
