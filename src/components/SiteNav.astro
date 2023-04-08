@@ -2,16 +2,17 @@
 const astroPages = await Astro.glob('../pages/*.astro');
 
 function getName(filePath: string, sequenceToRemove: string) {
-  return filePath.split('/').at(-1)?.replace(sequenceToRemove, "");
+  return filePath.split(`/`).at(-1)?.replace(sequenceToRemove, ``);
 }
 
 const navItems = [
-  "/",
-  ...astroPages.map(page => getName(page.file, ".astro")).filter(item => item !== 'index' && !item?.startsWith("_"))
+  `/`,
+  ...astroPages.map(page => getName(page.file, ".astro"))
+    .filter(item => item !== 'index' && !item?.startsWith("_"))
 ];
 ---
-<nav>
-  <ul>
+<nav class="nav">
+  <ul class="nav-items icon-list">
     {navItems.map((item) => (
       <li>
         <a href={item}>{item}</a>
@@ -19,4 +20,3 @@ const navItems = [
     ))}
   </ul>
 </nav>
-

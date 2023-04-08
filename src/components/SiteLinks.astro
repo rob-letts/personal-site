@@ -1,10 +1,10 @@
 ---
-import BandcampIcon from '@icons/BandcampIcon.astro';
-import GitHubIcon from '@icons/GitHubIcon.astro';
-import LinkedinIcon from '@icons/LinkedinIcon.astro';
-import LetterboxdIcon from '@icons/LetterboxdIcon.astro';
-import DocumentIcon from '@icons/DocumentIcon.astro';
-// import CodepenIcon from '@icons/CodepenIcon.astro';
+import BandcampIcon from 'src/components/icons/BandcampIcon.astro';
+import GitHubIcon from 'src/components/icons/GitHubIcon.astro';
+import LinkedinIcon from 'src/components/icons/LinkedinIcon.astro';
+import LetterboxdIcon from 'src/components/icons/LetterboxdIcon.astro';
+import DocumentIcon from 'src/components/icons/DocumentIcon.astro';
+import CodepenIcon from 'src/components/icons/CodepenIcon.astro';
 
 type AstroComponent = (_props: Record<string, any>) => any;
 type Link = { href: string, icon: AstroComponent }
@@ -15,7 +15,7 @@ const links: Link[] = [
   { href: `/RobLettsCV.pdf`, icon: DocumentIcon },
   { href: `https://letterboxd.com/robletts/films/diary/`, icon: LetterboxdIcon },
   { href: `https://bandcamp.com/robletts`, icon: BandcampIcon },
-  // { href: `https://codepen.io/rob-letts`, icon: CodepenIcon }
+  { href: `https://codepen.io/rob-letts`, icon: CodepenIcon }
 ]
 ---
 <aside>
