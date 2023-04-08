@@ -149,14 +149,14 @@
   }
 
   svg:active {
-    scale: 0.9;
+    scale: 1.1;
   }
 
   ul {
     list-style-position: inside;
   }
 
-  :is(*:focus-visible, aside li:focus-within) {
+  :is(*:focus-visible) {
     outline: 2px dashed var(--text-color);
     outline-offset: 0.25rem;
     border-radius: 3px;
@@ -175,6 +175,10 @@
     display: flex;
     gap: clamp(1rem, 4vw, 2rem);
     list-style: none;
+  }
+
+  .icon-list-link {
+    display: inline-block;
   }
 
   .icon-foreground {
