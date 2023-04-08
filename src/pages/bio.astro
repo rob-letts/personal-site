@@ -1,0 +1,29 @@
+---
+import SiteLayout from "src/layouts/SiteLayout.astro";
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
+---
+<SiteLayout theme={theme}>
+  <section>
+    <p>
+      I'm Rob Letts, a Front End Developer currently based in Crystal Palace, South London.
+    </p>
+
+    <p>
+      Prior to 2020 I used to play bass in a noisy metal band called <a href="https://disciplesofwren.bandcamp.com/album/groundswells-2" target="_blank">Wren</a>,
+      and run a very loud music venue called <a href="https://www.corsicastudios.com/" target="_blank">Corsica Studios</a>.
+    </p>
+
+    <p>
+      Since then I've spent the vast majority of my waking hours living and breathing web development,
+      and I currently work with an awesome team at <a href="http://tixtrack.com/" target="_blank">TixTrack</a> using Vue.js.
+    </p>
+
+    <p>
+      I like to work as close to the <a href="https://css-tricks.com/the-great-divide/" target="_blank">front-of-the-front-end</a> as possible, and feel I'm at my best when my cursor is blinking within a <code>.css</code> file.
+    </p>
+
+    <p>
+      Outside of stylesheets, my attention will usually drift towards coffee, excessive keymapping, CLIs, and roguelikes.
+    </p>
+  </section>
+</SiteLayout>
