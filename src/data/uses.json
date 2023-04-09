@@ -1,88 +1,80 @@
 ﻿{
   "data": [
     {
-      "category": "Media",
-      "name": "Mindstone"
+      "category": "Tools",
+      "name": "RSS: Mindstone"
     },
     {
       "category": "Tools",
-      "name": "Raycast"
+      "name": "Launcher: Raycast"
     },
     {
-      "category": "Terminal",
-      "name": "Warp"
+      "category": "Development",
+      "name": "Terminal: Warp"
     },
     {
-      "category": "Terminal",
-      "name": "Starship"
+      "category": "Development",
+      "name": "Prompt: Starship"
     },
     {
-      "category": "Terminal",
-      "name": "Zellij"
+      "category": "Development",
+      "name": "Terminal Multiplexer: Zellij"
     },
     {
       "category": "Tools",
-      "name": "Notion"
+      "name": "Organisation: Notion"
     },
     {
-      "category": "Media",
-      "name": "Bandcamp"
+      "category": "Tools",
+      "name": "Music: Bandcamp + Spotify"
     },
     {
-      "category": "Media",
-      "name": "Letterboxd"
-    },
-    {
-      "category": "Hardware",
-      "name": "MacBook M1 Pro (14-inch, 2021)"
+      "category": "Tools",
+      "name": "Film Tracker: Letterboxd"
     },
     {
       "category": "Hardware",
-      "name": "Keychron K6"
+      "name": "Laptop: MacBook M1 Pro (14-inch, 2021)"
     },
     {
       "category": "Hardware",
-      "name": "MX Master 3S"
+      "name": "Keyboard: Keychron K6"
     },
     {
       "category": "Hardware",
-      "name": "LG 34 inch Ultrawide"
+      "name": "Mouse: MX Master 3S"
     },
     {
-      "category": "Terminal",
-      "name": "Tig"
+      "category": "Hardware",
+      "name": "Monitor: LG 34 inch Ultrawide"
+    },
+    {
+      "category": "Development",
+      "name": "Git Interface: Tig"
     },
     {
       "category": "UI",
-      "name": "Catppuccin Mocha"
+      "name": "Color Theme: Catppuccin Mocha"
     },
     {
       "category": "UI",
-      "name": "Monolisa"
+      "name": "Font: Monolisa"
     },
     {
       "category": "Tools",
-      "name": "Figma"
+      "name": "Design: Figma"
+    },
+    {
+      "category": "Development",
+      "name": "Browser: Chrome + Arc"
+    },
+    {
+      "category": "Development",
+      "name": "Code Editor: VSCode + Neovim"
     },
     {
       "category": "Tools",
-      "name": "Chrome"
-    },
-    {
-      "category": "Tools",
-      "name": "VSCode"
-    },
-    {
-      "category": "Terminal",
-      "name": "Neovim"
-    },
-    {
-      "category": "Tools",
-      "name": "Arc"
-    },
-    {
-      "category": "Tools",
-      "name": "1Password"
+      "name": "Password Management: 1Password"
     }
   ]
 }

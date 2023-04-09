@@ -2,7 +2,7 @@
 - [x] rewrite bio
 - [x] update uses content
 - [x] fix active nav link focus bug
-- [ ] animated nav
+- [x] animated nav
 - [ ] audit and categorise resources content
 - [ ] aside diamond animation
 - [ ] trim svg viewboxes

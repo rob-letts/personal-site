@@ -207,7 +207,7 @@
 
   .nav-item {
     display: inline-block;
-    margin-right: var(--list-gap);
+    margin-inline-end: 2rem;
   }
 
   .nav-blob {
