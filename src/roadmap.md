@@ -1,23 +1,14 @@
-# index
 - [x] corner animation
-- [ ] trim svg viewboxes
-- [ ] aria text for new svgs
-
-# about
 - [x] rewrite bio
+- [x] update uses content
+- [x] fix active nav link focus bug
+- [ ] animated nav
+- [ ] audit and categorise resources content
 - [ ] aside diamond animation
-
-# uses
-- [x] update content
-- [ ] convert to vertical telescope view
-- [ ] go 'live'
-
-# resources
-- [ ] audit and categorise content
-- [ ] convert to 'bookmarks' panel view
-- [ ] go 'live'
-
-# misc:
+- [ ] trim svg viewboxes
+- [ ] aria text for new svgs?
 - [ ] 404 redirect
 - [ ] custom favicon
 - [ ] https://scrollbar.app/
+- [ ] convert resources to 'bookmarks' panel view and go live
+- [ ] convert uses to vertical telescope view and go live
