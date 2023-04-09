@@ -19,6 +19,7 @@
     --step-2: clamp(1.17rem, calc(0.74rem + 1.99vw), 2.67rem);
     --step-3: clamp(1.47rem, calc(0.86rem + 2.78vw), 3.55rem);
     --step-4: clamp(1.83rem, calc(0.98rem + 3.87vw), 4.74rem);
+    --list-gap: clamp(1rem, 4vw, 2rem);
     --transition-speed: 0.2s;
     --transition-speed-slow: calc(var(--transition-speed) * 2);
     --transition-timing: ease-out;
@@ -60,8 +61,7 @@
     font-size: var(--step-0);
     padding-block: 2rem;
     padding-inline: 1.5rem;
-    margin-block: 0;
-    margin-inline: auto;
+    margin: 0 auto;
     font-family: DMMono, monospace;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -121,7 +121,7 @@
   }
 
   main {
-    max-width: 65ch;
+    max-width: 60ch;
     opacity: 0;
     animation: fade-in var(--transition-speed-slow) var(--transition-timing) forwards;
   }
@@ -151,7 +151,7 @@
     list-style-position: inside;
   }
 
-  :is(*:focus-visible) {
+  *:focus-visible {
     outline: 2px dashed var(--text-color);
     outline-offset: 0.25rem;
     border-radius: 3px;
@@ -168,7 +168,7 @@
 @layer component {
   .icon-list {
     display: flex;
-    gap: clamp(1rem, 4vw, 2rem);
+    gap: var(--list-gap);
     list-style: none;
   }
 
@@ -198,25 +198,34 @@
   }
 
   .nav {
-    display: flex;
+    position: relative;
   }
 
   .nav-link {
     color: var(--text-color);
   }
 
-  .nav-link-active {
-    color: var(--background-color);
-    font-weight: 600;
+  .nav-item {
+    display: inline-block;
+    margin-right: var(--list-gap);
   }
 
-  .nav-item:has(.nav-link-active) {
-    --offset: 0.5rem;
-
+  .nav-blob {
+    position: absolute;
+    z-index: -1;
+    transition: all var(--transition-speed) var(--transition-timing);
+    top: -25%;
+    height: 150%;
+    width: rem;
     border-radius: 4px;
     background: var(--text-color);
-    padding: var(--offset);
-    translate: 0 calc(var(--offset) * -1);
+  }
+
+  .nav-item-active > .nav-link {
+    color: var(--background-color);
+    font-weight: 600;
+    outline-color: var(--background-color);
+    transition: color var(--transition-speed) var(--transition-timing);
   }
 
   .name {
