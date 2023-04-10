@@ -198,6 +198,11 @@
   }
 
   .nav {
+    --nav-item-width: 3rem;
+    --nav-item-width-lg: 5rem;
+    --blob-offset: 25%;
+    --nav-translate-3: 12rem;
+
     position: relative;
   }
 
@@ -208,24 +213,82 @@
   .nav-item {
     display: inline-block;
     margin-inline-end: 2rem;
+    text-align: center;
   }
 
-  .nav-blob {
-    position: absolute;
-    z-index: -1;
-    transition: all var(--transition-speed) var(--transition-timing);
-    top: -25%;
-    height: 150%;
-    width: rem;
-    border-radius: 4px;
-    background: var(--text-color);
+  .nav-item:first-of-type {
+    width: var(--nav-item-width);
   }
 
-  .nav-item-active > .nav-link {
-    color: var(--background-color);
-    font-weight: 600;
-    outline-color: var(--background-color);
-    transition: color var(--transition-speed) var(--transition-timing);
+  .nav-item:nth-of-type(2) {
+    width: var(--nav-item-width-lg);
+  }
+
+  .nav-item:last-of-type {
+    width: var(--nav-item-width-lg);
+  }
+
+  .nav-overlay-link {
+    display: none;
+  }
+
+  @supports (selector(:has(*))) {
+    /* stylelint-disable */
+    .nav-blob {
+      pointer-events: none;
+      position: absolute;
+      top: -25%;
+      overflow: hidden;
+      height: 150%;
+      width: var(--nav-item-width);
+      border-radius: 4px;
+      background: var(--text-color);
+      white-space: nowrap;
+      transition:
+        width var(--transition-speed) var(--transition-timing),
+        translate var(--transition-speed) var(--transition-timing);
+    }
+
+    .nav:has(.nav-item:first-of-type:hover) > .nav-blob {
+      width: var(--nav-item-width);
+      translate: 0;
+    }
+
+    .nav-bio > .nav-blob,
+    .nav:has(.nav-item:nth-of-type(2):hover) > .nav-blob {
+      width: var(--nav-item-width-lg);
+      translate: var(--nav-item-width-lg);
+    }
+
+    .nav-uses > .nav-blob,
+    .nav:has(.nav-item:last-of-type:hover) > .nav-blob {
+      width: var(--nav-item-width-lg);
+      translate: var(--nav-translate-3);
+    }
+
+    .nav:has(.nav-item:first-of-type:hover) > .nav-blob > .nav-overlay-items,
+    .nav-overlay-items {
+      transition: translate var(--transition-speed) var(--transition-timing);
+      translate: 0 var(--blob-offset);
+    }
+
+    .nav-bio .nav-overlay-items,
+    .nav:has(.nav-item:nth-of-type(2):hover) > .nav-blob > .nav-overlay-items {
+      translate: calc(var(--nav-item-width-lg) * -1) var(--blob-offset);
+    }
+
+    .nav-uses .nav-overlay-items,
+    .nav:has(.nav-item:last-of-type:hover) > .nav-blob > .nav-overlay-items {
+      translate: calc(var(--nav-translate-3) * -1) var(--blob-offset);
+    }
+
+    .nav-overlay-link {
+      display: block;
+      color: var(--background-color);
+      font-weight: 600;
+      outline-color: var(--background-color);
+    }
+    /* stylelint-enable */
   }
 
   .name {

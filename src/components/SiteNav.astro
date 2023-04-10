@@ -12,72 +12,29 @@ const navItems = [
 ];
 
 const pathName = Astro.url.pathname;
+const pathNameWithoutSlash = pathName.replace("/", "");
 ---
-<script>
-const navItems = document.querySelectorAll(".nav-item");
-const currentItem = document.querySelector(".nav-item-active") as HTMLElement;
-const blob = document.querySelector(".nav-blob") as HTMLElement;
-const nav = document.querySelector(".nav") as HTMLElement;
-const blobOffset = 32;
 
-updateNavBlob(currentItem, true);
-
-navItems.forEach(item => {
-  item.addEventListener("mouseenter", (event) => {
-    const eventTarget = event.target as HTMLElement;
-
-    if (eventTarget !== currentItem) {
-      currentItem.classList.remove("nav-item-active");
-    }
-
-    updateNav(eventTarget);
-  });
-})
-
-window.addEventListener("resize", () => {
-  updateNavBlob(currentItem, true);
-});
-
-nav.addEventListener("mouseleave", () => {
-  updateNav(currentItem);
-});
-
-function updateNav (target: HTMLElement) {
-  updateNavItems(target);
-  updateNavBlob(target);
-}
-
-function updateNavBlob (target: HTMLElement, first = false) {
-  const navLeft = nav?.getBoundingClientRect().left;
-  const currentLeft = currentItem?.getBoundingClientRect().left;
-  const { width, left: targetLeft } = target.getBoundingClientRect();
-
-  blob.style.width = `${width + blobOffset}px`;
-
-  if (first) {
-    blob.style.left = `${targetLeft - navLeft - blobOffset / 2}px`;
-  } else {
-    blob.style.translate = `${targetLeft - currentLeft}px`;
-  }
-}
-
-function updateNavItems (target: HTMLElement) {
-  navItems.forEach(item => {
-    item.classList.remove("nav-item-active");
-  })
-  target.classList.add("nav-item-active");
-}
-</script>
-
-<nav class="nav">
-  <div class="nav-blob" />
+<nav class={pathNameWithoutSlash ? `nav nav-${pathNameWithoutSlash}` : "nav"}>
   <ul class="nav-items">
     {navItems.map((item) => (
       <li class={`nav-item ${[`/${item}`, item].includes(pathName) ? "nav-item-active" : ""}`}>
         <a href={item} class="nav-link">
           {item}
-        </a>
+          </a>
       </li>
     ))}
   </ul>
+
+  <div class="nav-blob">
+    <ul aria-hidden="true" class="nav-overlay-items">
+      {navItems.map((item) => (
+        <li class="nav-item">
+          <a href={item} class="nav-overlay-link">
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
 </nav>

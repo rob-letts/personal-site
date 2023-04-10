@@ -653,6 +653,12 @@
       "link": "https://joshcollinsworth.com/blog/great-transitions?utm_source=CSS-Weekly&utm_campaign=Issue-543&utm_medium=email",
       "name": "https://joshcollinsworth.com/blog/great-transitions?utm_source=CSS-Weekly&utm_campaign=Issue-543&utm_medium=email",
       "category": "web development"
+    },
+    {
+      "id": "110",
+      "link": "https://cubic-bezier.com/#.17,.67,.83,.67",
+      "name": "https://cubic-bezier.com/#.17,.67,.83,.67",
+      "category": "web development"
     }
   ]
 }
