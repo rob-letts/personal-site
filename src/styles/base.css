@@ -157,12 +157,6 @@
     border-radius: 3px;
     text-decoration: none;
   }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 @layer component {
@@ -193,6 +187,9 @@
   }
 
   .theme-button {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
     width: var(--step-2);
     fill: var(--text-color);
   }
@@ -213,8 +210,11 @@
 
   .nav-item {
     display: inline-block;
-    margin-inline-end: 2rem;
     text-align: center;
+  }
+
+  .nav-item:not(:last-of-type) {
+    margin-inline-end: 2rem;
   }
 
   .nav-item:first-of-type {
