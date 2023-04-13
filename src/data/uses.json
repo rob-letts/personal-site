@@ -2,15 +2,11 @@
   "data": [
     {
       "category": "Tools",
-      "name": "RSS: Mindstone"
-    },
-    {
-      "category": "Tools",
       "name": "Launcher: Raycast"
     },
     {
       "category": "Development",
-      "name": "Terminal: Warp"
+      "name": "Terminal: Kitty"
     },
     {
       "category": "Development",
@@ -66,11 +62,11 @@
     },
     {
       "category": "Development",
-      "name": "Browser: Chrome + Arc"
+      "name": "Browser: Chrome"
     },
     {
       "category": "Development",
-      "name": "Code Editor: VSCode + Neovim"
+      "name": "Code Editor: Neovim"
     },
     {
       "category": "Tools",
