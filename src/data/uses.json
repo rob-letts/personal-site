@@ -2,6 +2,10 @@
   "data": [
     {
       "category": "Tools",
+      "name": "RSS: Blogtrottr"
+    },
+    {
+      "category": "Tools",
       "name": "Launcher: Raycast"
     },
     {
@@ -66,7 +70,7 @@
     },
     {
       "category": "Development",
-      "name": "Code Editor: Neovim"
+      "name": "Code Editor: VSCode"
     },
     {
       "category": "Tools",
