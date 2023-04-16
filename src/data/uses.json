@@ -10,7 +10,7 @@
     },
     {
       "category": "Development",
-      "name": "Terminal: Kitty"
+      "name": "Terminal: Warp"
     },
     {
       "category": "Development",
@@ -70,7 +70,7 @@
     },
     {
       "category": "Development",
-      "name": "Code Editor: VSCode"
+      "name": "Code Editor: VSCode + Neovim"
     },
     {
       "category": "Tools",
