@@ -1,14 +1,14 @@
-- [x] corner animation
-- [x] rewrite bio
-- [x] update uses content
-- [x] fix active nav link focus bug
-- [x] animated nav
-- [ ] audit and categorise resources content
-- [ ] aside diamond animation
-- [ ] trim svg viewboxes
-- [ ] aria text for new svgs?
-- [ ] 404 redirect
-- [ ] custom favicon
+# Bugs
+- [ ] Ascending Nav loads triggers swipe animation
+- [ ] Nav animation performance
 - [ ] https://scrollbar.app/
-- [ ] convert resources to 'bookmarks' panel view and go live
-- [ ] convert uses to vertical telescope view and go live
+
+# Features
+- [ ] uses layout + animation
+- [ ] bio: aside diamond animation
+- [ ] 404 redirect
+
+# Enhancements
+- [ ] check aria text for svgs
+- [ ] trim svg viewboxes
+- [ ] custom favicon
