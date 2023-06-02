@@ -7,10 +7,7 @@ const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : ""
 const formattedData = new Map<string, { name: string, content?: string[] }[]>();
 
 data.forEach(item => {
-  if (!formattedData.has(item.category)) {
-    formattedData.set(item.category, []);
-  }
-
+  if (!formattedData.has(item.category)) formattedData.set(item.category, []);
   formattedData.get(item.category)?.push(item);
 });
 ---

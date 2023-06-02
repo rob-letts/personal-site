@@ -1,0 +1,11 @@
+- [ ]  Update CV
+- [ ]  Ascending Nav loads triggers swipe animation
+- [ ]  Nav animation performance
+- [ ]  https://scrollbar.app/
+- [ ]  uses layout + animation
+- [ ]  bio: aside diamond animation
+- [ ]  404 redirect
+- [ ]  current (music, tv, book)
+- [ ]  check aria text for svgs
+- [ ]  trim svg viewboxes
+- [ ]  custom favicon

@@ -2,7 +2,7 @@
   "data": [
     {
       "category": "Tools",
-      "name": "RSS: Blogtrottr"
+      "name": "Window Switcher: AltTab"
     },
     {
       "category": "Tools",
@@ -70,11 +70,15 @@
     },
     {
       "category": "Development",
-      "name": "Code Editor: Neovim"
+      "name": "Code Editor: VSCode - Insiders / Neovim"
     },
     {
       "category": "Tools",
       "name": "Password Management: 1Password"
+    },
+    {
+      "category": "Tools",
+      "name": "Shell: Zsh"
     }
   ]
 }
