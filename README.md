@@ -3,3 +3,12 @@
 👋 [Available here](https://robletts.dev)
 
 Built with Astro on Netlify
+
+# Roadmap
+- [ ] cancel nav animations when link is clicked
+- [ ] aria text for svgs / aria-label for icon buttons
+- [ ] 404 redirect 
+- [ ] add eyes SVG
+- [ ] trim svg viewboxes
+- [ ] html meta: description, lang, open graph protocol, theme-color, viewport
+- [ ] custom favicon
