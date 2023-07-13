@@ -12,3 +12,18 @@ Built with Astro on Netlify
 - [ ] trim svg viewboxes
 - [ ] html meta: description, lang, open graph protocol, theme-color, viewport
 - [ ] custom favicon
+
+# New CSS
+- :has()
+- Blend Modes
+- SVG Filter Effects
+- Backdrop Filter
+- Container Queries
+- aspect-ratio
+- dvh
+- nesting
+- scroll driven animations
+- view transitions
+- accent color
+- text-wrap: balance
+- scroll snap
