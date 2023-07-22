@@ -194,6 +194,11 @@
     fill: var(--text-color);
   }
 
+  .four-oh-four {
+    max-width: none;
+    text-align: center;
+  }
+
   .nav {
     --nav-item-width: 3rem;
     --nav-item-width-lg: 5rem;

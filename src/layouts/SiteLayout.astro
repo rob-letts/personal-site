@@ -2,7 +2,7 @@
 import "src/styles/base.css";
 import SiteNav from "src/components/SiteNav.astro";
 import ThemeButton from "src/components/ThemeButton.astro";
-const { theme } = Astro.props;
+const { theme, showNav = true, classes } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en" class={theme}>
@@ -19,11 +19,11 @@ const { theme } = Astro.props;
 
 <body>
   <header>
-    <SiteNav />
+    {showNav && <SiteNav />}
     <ThemeButton />
   </header>
 
-  <main>
+  <main class={classes}>
     <slot />
   </main>
 </body>

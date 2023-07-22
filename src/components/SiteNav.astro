@@ -5,10 +5,12 @@ function getName(filePath: string, sequenceToRemove: string) {
   return filePath.split("/").at(-1)?.replace(sequenceToRemove, "");
 }
 
+const exceptions = ["index", "404"];
+
 const navItems = [
   "/",
   ...astroPages.map(page => getName(page.file, ".astro"))
-    .filter(item => item !== "index" && !item?.startsWith("_"))
+    .filter(item => !item?.startsWith("_") && !exceptions.some(exception => exception === item))
 ];
 
 const pathName = Astro.url.pathname;

@@ -1,0 +1,8 @@
+---
+import SiteLayout from "src/layouts/SiteLayout.astro";
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
+---
+<SiteLayout theme={theme} showNav={false} classes="four-oh-four">
+    <p>You've gone wrong</p>
+    <a href="/">Find your way</a>
+</SiteLayout>
