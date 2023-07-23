@@ -4,11 +4,3 @@
 
 Built with Astro on Netlify
 
-# Roadmap
-- [x] 404 redirect 
-- [x] ~~custom favicon~~
-- [x] ~~trim svg viewboxes~~
-- [ ] cancel nav animations when link is clicked
-- [ ] aria text for svgs / aria-label for icon buttons
-- [ ] html meta: description, lang, open graph protocol, theme-color, viewport
-

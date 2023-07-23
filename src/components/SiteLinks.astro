@@ -7,16 +7,39 @@ import DocumentIcon from "src/components/icons/DocumentIcon.astro";
 import CodepenIcon from "src/components/icons/CodepenIcon.astro";
 
 type AstroComponent = (_props: Record<string, any>) => any;
-type Link = { href: string, icon: AstroComponent }
+type Link = { href: string, icon: AstroComponent, label: string }
 
 const links: Link[] = [
-  { href: "https://github.com/rob-letts", icon: GitHubIcon },
-  { href: "https://www.linkedin.com/in/robertletts/", icon: LinkedinIcon },
-  { href: "/RobLettsCV.pdf", icon: DocumentIcon },
-  { href: "https://letterboxd.com/robletts/films/diary/", icon: LetterboxdIcon },
-  { href: "https://bandcamp.com/robletts", icon: BandcampIcon },
-  { href: "https://codepen.io/rob-letts/pens/public", icon: CodepenIcon }
-
+  {
+    href: "https://github.com/rob-letts",
+    icon: GitHubIcon,
+    label: "GitHub Profile"
+  },
+  {
+    href: "https://www.linkedin.com/in/robertletts/",
+    icon: LinkedinIcon,
+    label: "LinkedIn Profile"
+  },
+  {
+    href: "/RobLettsCV.pdf",
+    icon: DocumentIcon,
+    label: "Curriculum Vitae"
+  },
+  {
+    href: "https://letterboxd.com/robletts/films/diary/",
+    icon: LetterboxdIcon,
+    label: "Letterboxd Profile"
+  },
+  {
+    href: "https://bandcamp.com/robletts",
+    icon: BandcampIcon,
+    label: "Bandcamp Profile"
+  },
+  {
+    href: "https://codepen.io/rob-letts/pens/public",
+    icon: CodepenIcon,
+    label: "Codepen Profile"
+  }
 ]
 ---
 <aside>
@@ -26,6 +49,7 @@ const links: Link[] = [
         <li>
           <a
             href={ link.href }
+            aria-label={ link.label }
             target="_blank"
             class="icon-list-link"
           >
