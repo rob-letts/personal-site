@@ -13,6 +13,9 @@ data.forEach(item => {
 ---
 <SiteLayout theme={theme}>
   <p>Up-to-date list of stuff I like to use.</p>
+  <p>For a comprehensive view of my dev environment config,
+    <a href="https://github.com/rob-letts/dotfiles">checkout my dotfiles</a>.
+  </p>
 
   {
     [...formattedData.entries()].sort().map(([category, items]) => {
