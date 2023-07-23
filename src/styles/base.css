@@ -255,7 +255,7 @@
         translate var(--transition-speed) var(--transition-timing);
     }
 
-    .nav:has(.nav-item:first-of-type:hover) > .nav-blob {
+    :is(.nav-bio, .nav-uses):has(.nav-item:first-of-type:hover) > .nav-blob {
       width: var(--nav-item-width);
       translate: 0;
     }
