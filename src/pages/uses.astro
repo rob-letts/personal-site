@@ -1,43 +1,29 @@
 ---
 import SiteLayout from "src/layouts/SiteLayout.astro";
-import { data } from "src/data/uses.json"
+import { data } from "src/data/uses.json";
 
-const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
-
-const formattedData = new Map<string, { name: string, content?: string[] }[]>();
-
-data.forEach(item => {
-  if (!formattedData.has(item.category)) formattedData.set(item.category, []);
-  formattedData.get(item.category)?.push(item);
-});
+const theme = Astro.cookies.has("theme")
+  ? Astro.cookies.get("theme").value
+  : "";
 ---
+
 <SiteLayout theme={theme}>
   <p>Up-to-date list of stuff I like to use.</p>
-  <p>For a comprehensive view of my dev environment config,
+  <ul>
+    <li>Code Editor: Visual Studio Code Insiders</li>
+    <li>Terminal: Kitty</li>
+    <li>Shell: Zsh</li>
+    <li>Prompt: Starship</li>
+    <li>Multiplexer: Zellij</li>
+    <li>Git Interface: Tig</li>
+    <li>Window Switcher: AltTab</li>
+    <li>Launcher: Raycast</li>
+    <li>Organisation: Notion</li>
+    <li>Color Theme: Catppuccin Mocha</li>
+    <li>Font: Monolisa</li>
+  </ul>
+  <p>
+    For a comprehensive view of my dev environment config,
     <a href="https://github.com/rob-letts/dotfiles">checkout my dotfiles</a>.
   </p>
-
-  {
-    [...formattedData.entries()].sort().map(([category, items]) => {
-      return (
-        <div>
-          <h2>{category}</h2>
-          <ul>
-            {
-              items.map((item) => (
-                <li>{item.name}</li>
-                <ul class="nested-list">
-                  {
-                    item.content?.map((content) => (
-                      <li>{content}</li>
-                    ))
-                  }
-                </ul>
-              ))
-            }
-          </ul>
-        </div>
-      )
-    })
-  }
 </SiteLayout>
