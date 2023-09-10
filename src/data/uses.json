@@ -53,6 +53,10 @@
       "name": "Git Interface: Tig"
     },
     {
+      "category": "Development",
+      "name": "GitHub Dashboard: gh-dash"
+    },
+    {
       "category": "UI",
       "name": "Color Theme: Catppuccin Mocha"
     },
@@ -70,7 +74,7 @@
     },
     {
       "category": "Development",
-      "name": "Code Editors: Neovim"
+      "name": "Code Editors: VSCode Insiders"
     },
     {
       "category": "Tools",
