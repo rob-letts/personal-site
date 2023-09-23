@@ -260,6 +260,10 @@
       translate: 0;
     }
 
+    .nav:has(*:focus) > .nav-blob {
+      display: none;
+    }
+
     .nav-bio > .nav-blob,
     .nav:has(.nav-item:nth-of-type(2):hover) > .nav-blob {
       width: var(--nav-item-width-lg);
