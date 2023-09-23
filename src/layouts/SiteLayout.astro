@@ -2,7 +2,9 @@
 import "src/styles/base.css";
 import SiteNav from "src/components/SiteNav.astro";
 import ThemeButton from "src/components/ThemeButton.astro";
-const { theme, showNav = true, classes } = Astro.props;
+const { showNav = true, classes } = Astro.props;
+
+const theme = Astro.cookies.has("theme") ? Astro.cookies.get("theme").value : "";
 ---
 <!DOCTYPE html>
 <html lang="en" class={theme}>

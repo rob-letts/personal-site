@@ -1,12 +1,8 @@
 ---
 import SiteLayout from "src/layouts/SiteLayout.astro";
-
-const theme = Astro.cookies.has("theme")
-  ? Astro.cookies.get("theme").value
-  : "";
 ---
 
-<SiteLayout theme={theme}>
+<SiteLayout>
   <p>Up-to-date list of dev stuff that brings me joy.</p>
   <ul>
     <li>Launcher: Raycast</li>
