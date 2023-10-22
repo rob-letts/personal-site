@@ -23,6 +23,7 @@
     --transition-speed: 0.2s;
     --transition-speed-slow: calc(var(--transition-speed) * 2);
     --transition-timing: ease-out;
+    --underline-offset: clamp(4px, 1vw, 8px);
   }
 
   :root.dark-mode {
@@ -129,7 +130,7 @@
   a {
     color: var(--primary-color);
     font-weight: 700;
-    text-underline-offset: clamp(4px, 1vw, 8px);
+    text-underline-offset: var(--underline-offset);
   }
 
   svg {
@@ -260,7 +261,7 @@
       translate: 0;
     }
 
-    .nav:has(*:focus) > .nav-blob {
+    .nav:has(*:focus-visible) > .nav-blob {
       display: none;
     }
 
@@ -297,6 +298,8 @@
       color: var(--background-color);
       font-weight: 600;
       outline-color: var(--background-color);
+      text-decoration: underline;
+      text-underline-offset: var(--underline-offset);
     }
     /* stylelint-enable */
   }
