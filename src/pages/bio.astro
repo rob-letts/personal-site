@@ -1,24 +1,82 @@
 ---
 import SiteLayout from "src/layouts/SiteLayout.astro";
 ---
+
+<script>
+  const rootStyles = document.documentElement.style;
+
+  document
+    .querySelector("#bio-type")
+    ?.addEventListener("change", ({ target }) => {
+      rootStyles.setProperty(
+        "--display-chill-bio",
+        target.checked ? "block" : "none"
+      );
+      rootStyles.setProperty(
+        "--display-spiel-bio",
+        target.checked ? "none" : "block"
+      );
+    });
+</script>
+
 <SiteLayout>
   <section>
-    <p>
-      I'm Rob Letts, a Front End Developer currently based in Crystal Palace, South London.
+    <label for="bio-type">The Spiel / The Chill</label>
+    <input type="checkbox" id="bio-type" name="bio-type" checked="true" />
+
+    <!-- The Spiel -->
+    <p class="spiel">
+      Front-End Web Developer based in South London, specialising in modern CSS
+      and the Vue.js ecosystem.
+    </p>
+    <p class="spiel">
+      UI/UX and design system specialist focused on interaction design,
+      accessibility, and prioritising platform standards to sustainably further
+      positive web experiences.
+    </p>
+    <p class="spiel">
+      Conscious and empathetic individual that prioritises open communication
+      and empowering colleagues. Previous career in live events and music venue
+      management.
     </p>
 
-    <p>
-      Prior to 2020 I played bass in a noisy metal band called <a href="https://disciplesofwren.bandcamp.com/album/groundswells" target="_blank">Wren</a>,
-      and helped run a music venue / arts club called <a href="https://www.corsicastudios.com/" target="_blank">Corsica Studios</a>.
+    <!-- The Chill -->
+    <p class="chill">
+      I'm Rob Letts, a Front End Developer currently based in Crystal Palace,
+      South London.
     </p>
-
-    <p>
-      Since then I've been all in on front-end, and have fallen <em>deeply</em> in love with CSS and design systems.
-      I currently work with an awesome team at <a href="http://tixtrack.com/" target="_blank">TixTrack</a> using Vue.js.
+    <p class="chill">
+      Prior to 2020 I played bass in a noisy metal band called <a
+        href="https://disciplesofwren.bandcamp.com/album/groundswells"
+        target="_blank">Wren</a
+      >, and helped run a music venue / arts club called <a
+        href="https://www.corsicastudios.com/"
+        target="_blank">Corsica Studios</a
+      >.
     </p>
-
-    <p>
-      Outside of stylesheets, my attention will usually drift towards coffee, CLIs, and roguelikes.
+    <p class="chill">
+      Since then I've been all in on front-end, and have fallen <em>deeply</em> in
+      love with CSS and design systems. I currently work with an awesome team at
+      <a href="http://tixtrack.com/" target="_blank">TixTrack</a> using Vue.js.
+    </p>
+    <p class="chill">
+      Outside of stylesheets, my attention will usually drift towards coffee,
+      CLIs, and roguelikes.
     </p>
   </section>
 </SiteLayout>
+
+<style>
+  :root { 
+    --display-chill-bio: block;
+    --display-spiel-bio: none;
+  }
+
+  .spiel {
+    display: var(--display-spiel-bio, none);
+  }
+
+  .chill {
+    display: var(--display-chill-bio, block);
+  }
+</style>
