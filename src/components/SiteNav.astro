@@ -31,11 +31,11 @@ const pathNameWithoutSlash = pathName.replace("/", "");
   <div class="nav-blob">
     <div aria-hidden="true" class="nav-overlay-items">
       {navItems.map((item) => (
-        <span class="nav-item">
-          <p class="nav-overlay-link">
+        <div class="nav-item">
+          <span class="nav-overlay-link">
             {item}
-          </p>
-        </span>
+          </span>
+        </div>
       ))}
     </div>
   </div>
